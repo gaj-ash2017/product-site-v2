@@ -1,0 +1,639 @@
+/* Global layout styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.spacer {
+  height: 75px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+header .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #f5f5f5
+}
+
+header .logo-area img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(to right, #0d6efd, #5a9bff);
+  color: white;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background: white;
+  color: #0d6efd;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #f8f8f8;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  border-top: 1px solid #ddd;
+}
+
+/* Section wrappers */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.features-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.feature-card {
+  width: 280px;
+  height: 280px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .feature-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-card {
+    width: 100%;
+  }
+}
+
+.feature-card img {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 1rem 0.5rem;
+  font-weight: bold;
+  color: #0d6efd;
+  text-align: center;
+  margin-top: auto;
+}
+
+.feature-card {
+  background: white;
+  flex: 1 1 30%;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* About Page */
+.about-section {
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Contact Page */
+.contact-section,
+.contact-info {
+  max-width: 700px;
+  margin: 6rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2,
+.contact-info h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-section button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.info-block {
+  margin-bottom: 1.5rem;
+}
+
+.info-block h3 {
+  margin-bottom: 0.5rem;
+  color: #0d6efd;
+}
+
+.info-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Product Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.controls select,
+.controls input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* Product Grid */
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Compact Product Card Styles for products.html Only */
+body.products-page #product-list .product {
+  font-size: 0.85rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.products-page #product-list .product img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+body.products-page #product-list .product h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  color: red;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+body.products-page #product-list .product p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0.25rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: left;
+}
+
+body.products-page #product-list .product p .label {
+  min-width: 90px;
+  font-weight: bold;
+  color: #444;
+}
+
+body.products-page #product-list .product p .value {
+  flex: 1;
+  color: #333;
+}
+
+body.products-page #product-list .product img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+  border-radius: 4px;
+}
+
+body.admin-page #product-list .product img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+  display: block;
+  border-radius: 4px;
+}
+
+/* === Admin Page Product Card Styling === */
+body.admin-page #product-list .product {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 460px;
+}
+
+body.admin-page #product-list .product h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+body.admin-page #product-list .product p {
+  margin: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+body.admin-page #product-list .product .label {
+  min-width: 90px;
+  font-weight: bold;
+  color: #444;
+}
+
+body.admin-page #product-list .product .value {
+  flex: 1;
+  color: #333;
+}
+
+body.admin-page .buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+body.admin-page .buttons button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.admin-page .buttons button:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.admin-page .buttons button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.product-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.edit-column {
+  border-left: 1px solid #eee;
+  padding-left: 1rem;
+}
+
+#editForm {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#editForm h2 {
+  margin-top: 0;
+}
+
+#editForm label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#editForm input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#editForm button[type="submit"],
+#editForm button[type="button"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editForm button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#cancelEdit {
+  background-color: #6c757d;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+/* Slide-in Edit Panel */
+/* .edit-column {
+  position: relative;
+  overflow: hidden;
+}
+
+#editPanel {
+  position: absolute;
+  top: 0;
+  right: -110%;
+  width: 100%;
+  transition: right 0.4s ease-in-out;
+  background: white;
+  padding: 1rem;
+  border-left: 1px solid #eee;
+  height: 100%;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.05);
+}
+
+#editPanel.active {
+  right: 0;
+} */
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Highlight search match */
+mark {
+  background-color: yellow;
+}
+
+/* Badge style for Stock Code in admin panel only */
+body.admin-page .badge {
+  background-color: #daf5ba;
+  color: #d50606;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 0.25rem;
+}
+
+.inline-edit-form {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+.inline-edit-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.inline-edit-form input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inline-edit-form button {
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inline-edit-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.inline-edit-form button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* === Add Product Page === */
+form#addProductForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form#addProductForm label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+form#addProductForm input[type="text"],
+form#addProductForm input[type="number"],
+form#addProductForm input[type="file"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form#addProductForm button[type="submit"] {
+  margin-top: 1rem;
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form#addProductForm button:hover {
+  background-color: #084dc2;
+}
+
+#addImagePreview img {
+  max-height: 150px;
+  border: 1px solid #ddd;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* About Company */
+
+.about-company {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: italic;
+  background-color: #ecf2f9;
+  padding: 15px;
+}

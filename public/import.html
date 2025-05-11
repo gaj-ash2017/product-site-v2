@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Import Products (CSV)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="import-page">
+  <h2>📥 Import Products via CSV</h2>
+  <form action="/import-csv" method="POST" enctype="multipart/form-data">
+    <label for="csvfile">Choose CSV file:</label>
+    <input type="file" name="csvfile" id="csvfile" accept=".csv" required />
+    <button type="submit">Upload & Import</button>
+    <p class="note">
+      CSV format:
+      <strong>name, description, category, extraNotes, quantity, imageName</strong>
+    </p>
+  </form>
+</body>
+</html>

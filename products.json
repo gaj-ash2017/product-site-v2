@@ -1,0 +1,882 @@
+[
+  {
+    "stockCode": "CUM3078307-AKM",
+    "name": "ACCESSORY DRIVE ASSEMBLY",
+    "description": "N14C [ CAST IRON ]",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "3078307.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0186918-GR",
+    "name": "ADAPTOR TURBO EXHAUST",
+    "description": "",
+    "category": "EXHAUST",
+    "extraNotes": "GRAND ROCK",
+    "quantity": 4,
+    "image": "0186918.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3069707",
+    "name": "BARREL + PLUNGER",
+    "description": "N14 STC",
+    "category": "INJECTOR",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 10,
+    "image": "3069707.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0214952-02",
+    "name": "BEARING CON ROD [ .020 ]",
+    "description": "BIG CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "0214952.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0214953-01",
+    "name": "BEARING CON ROD [ .030 ]",
+    "description": "BIG CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "AKMI",
+    "quantity": 18,
+    "image": "0214953.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0214952-01",
+    "name": "BEARING CON ROD [ .020 ]",
+    "description": "BIG CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "AKMI",
+    "quantity": 2,
+    "image": "0214952.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901172-05",
+    "name": "BEARING CON ROD [20 thou - 0.50mm ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 36,
+    "image": "3901172.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901174-01",
+    "name": "BEARING CON ROD [40 thou - 1.00mm ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 6,
+    "image": "3901174.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4892796-FED",
+    "name": "BEARING CON ROD [ .020 ] [ LOWER ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 12,
+    "image": "4892796.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4932375-02",
+    "name": "BEARING CON ROD [10 thou - 0.25mm ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 12,
+    "image": "4932375.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3939381-GB",
+    "name": "BEARING CON ROD [ 0.25mm ] [ .010 ] [ UPPER ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 2,
+    "image": "3939381.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4892797-GB",
+    "name": "BEARING CON ROD [ .030 ] [ LOWER ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 12,
+    "image": "4892797.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4893693-02",
+    "name": "BEARING CON ROD [ .STD ] [ LOWER ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 12,
+    "image": "4893693.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901170",
+    "name": "BEARING CON ROD .STD",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 12,
+    "image": "3901170.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4893693-01",
+    "name": "BEARING CON ROD [ .STD ] [ LOWER ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 6,
+    "image": "4893693.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901432-PAI",
+    "name": "BEARING CON ROD [ .020 ]",
+    "description": "C-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3901432.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4089139-GB",
+    "name": "BEARING CON ROD [ .STD ] [ PAIR ]",
+    "description": "ISX",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 6,
+    "image": "4089139.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3016761-PAI",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "L10 | M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3016761-PAI.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3016762-PAI",
+    "name": "BEARING CON ROD [ .020 ]",
+    "description": "L10 | M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3016762.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3016763-PAI",
+    "name": "BEARING CON ROD [ .030 ]",
+    "description": "L10 | M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3016763.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3016760-J",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "L10 | M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 0,
+    "image": "3016760.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3055145-03",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "N14",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "3055145.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3055147-01",
+    "name": "BEARING CON ROD [ .020 ]",
+    "description": "N14",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 10,
+    "image": "3055147.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203671-PAI",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "0203671-PAI.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203670-MCB",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 12,
+    "image": "0203670.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203673-PAI",
+    "name": "BEARING CON ROD [ .030 ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "0203673.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203670-FED",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FEDERAL MOGUL",
+    "quantity": 4,
+    "image": "0203670.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203671-FED",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 8,
+    "image": "0203671-PAI.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3966244-FED",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "QSL9 [ UPPER ]",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 6,
+    "image": "3966244.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3966244-PAI",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "QSL9 [ UPPER ]",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3966244.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203663-02",
+    "name": "BEARING CON ROD [ .030 ]",
+    "description": "SMALL CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 12,
+    "image": "0203663.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203663-01",
+    "name": "BEARING CON ROD [ .030 ]",
+    "description": "SMALL CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "AKMI",
+    "quantity": 12,
+    "image": "0203663.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0203661-01",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "SMALL CAM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 12,
+    "image": "0203661.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3046298",
+    "name": "BODY VALVE AIR COMPRESSOR",
+    "description": "None",
+    "category": "COMPRESSOR",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "image": "3046298.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3067930",
+    "name": "BOLT | SPACER EXHAUST",
+    "description": "N14",
+    "category": "MANIFOLD",
+    "extraNotes": "P.A.I.",
+    "quantity": 48,
+    "image": "3067930.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3900919-FPD",
+    "name": "BOLT CON ROD",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 62,
+    "image": "3900919.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3939409-GB",
+    "name": "BOLT CON ROD",
+    "description": "QSB",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 28,
+    "image": "3939409.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4891179-01",
+    "name": "BOLT CON ROD",
+    "description": "B-SERIES [ FRACTURED ROD ]",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "BLK DIESEL",
+    "quantity": 1,
+    "image": "4891179.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4891179-04",
+    "name": "BOLT CON ROD",
+    "description": "B-SERIES [ FRACTURED ROD ]",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "4891179.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3900919-PAI",
+    "name": "BOLT CON ROD",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 120,
+    "image": "3900919.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3027108",
+    "name": "BOLT CON ROD",
+    "description": "L10 M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "3027108.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3906733-GB",
+    "name": "BOLT DAMPER FLYWHEEL",
+    "description": "C-SERIES",
+    "category": "FLYWHEEL",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 9,
+    "image": "3906733.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3930249-GB",
+    "name": "BOLT EXHAUST MANIFOLD",
+    "description": "[ B-SERIES ] [ KOMATSU ]",
+    "category": "MANIFOLD",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 24,
+    "image": "3930249.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3043647",
+    "name": "BOLT EXHAUST MANIFOLD",
+    "description": "BIG CAM | N14",
+    "category": "MANIFOLD",
+    "extraNotes": "P.A.I.",
+    "quantity": 50,
+    "image": "3043647.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3904217",
+    "name": "BOLT MAIN BEARING CAP",
+    "description": "B-SERIES",
+    "category": "CRANKSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 36,
+    "image": "3904217.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0132770",
+    "name": "BUSH ACCESSORY DRIVE",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "K.M.P.",
+    "quantity": 1,
+    "image": "0132770.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0116391-L",
+    "name": "BUSH ACCESSORY DRIVE",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "K.M.P.",
+    "quantity": 1,
+    "image": "0116391.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3680580-MCB",
+    "name": "BUSH CAM ISX (4)",
+    "description": "ISX",
+    "category": "CAMSHAFT",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 4,
+    "image": "3680580.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3007689",
+    "name": "BUSH CAM THIN WALL",
+    "description": "BIG CAM 855",
+    "category": "CAMSHAFT",
+    "extraNotes": "FP DIESEL",
+    "quantity": 7,
+    "image": "3007689.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3801106-03",
+    "name": "BUSH CAMSHAFT",
+    "description": "BC | N14",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 0,
+    "image": "3801106.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3940059-FED",
+    "name": "BUSH CAMSHAFT",
+    "description": "B-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "K M P",
+    "quantity": 3,
+    "image": "3940059.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901306-FED",
+    "name": "BUSH CAMSHAFT",
+    "description": "B-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "FP DIESEL",
+    "quantity": 4,
+    "image": "3901306.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901306-PAI",
+    "name": "BUSH CAMSHAFT",
+    "description": "B-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 8,
+    "image": "3901306.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901306-MCB",
+    "name": "BUSH CAMSHAFT",
+    "description": "B-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 8,
+    "image": "3901306.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901685",
+    "name": "BUSH CAMSHAFT",
+    "description": "C-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "K M P",
+    "quantity": 7,
+    "image": "3901685.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3820566",
+    "name": "BUSH CAMSHAFT [ SET OF 7 ]",
+    "description": "L10 | M11",
+    "category": "CAMSHAFT",
+    "extraNotes": "SOLD AS SET OF 7",
+    "quantity": 7,
+    "image": "3820566.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM0147610",
+    "name": "BUSH COMPRESSOR HOUSING",
+    "description": "BIG CAM",
+    "category": "COMPRESSOR",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 1,
+    "image": "0147610.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3901085-AKM",
+    "name": "BUSH CON ROD",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K M P",
+    "quantity": 6,
+    "image": "3901085.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3027105-J",
+    "name": "BUSH CON ROD",
+    "description": "L10",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "3027105.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4059448-MCB",
+    "name": "BUSH CON ROD",
+    "description": "ISX",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 5,
+    "image": "4059448.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4059448-FED",
+    "name": "BUSH CON ROD",
+    "description": "ISX",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FEDERAL MOGUL",
+    "quantity": 16,
+    "image": "4059448.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3043909",
+    "name": "BUSH CON ROD",
+    "description": "K-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "3043909.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3064295-PAI",
+    "name": "BUSH CON ROD",
+    "description": "N14",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 8,
+    "image": "3064295.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM4944137-PAI",
+    "name": "BUSH CON ROD",
+    "description": "ISL | QSC | QSL",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "4944137.jpg",
+    "dateAdded": "2025-05-10T21:28:20.746Z"
+  },
+  {
+    "stockCode": "CUM3026189",
+    "name": "BUSH IDLER",
+    "description": "ISM | M11",
+    "category": "IDLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3026189.jpg",
+    "dateAdded": "2025-05-10T22:08:32.480Z"
+  },
+  {
+    "stockCode": "CUM3026188",
+    "name": "BUSH IDLER",
+    "description": "ISM | M11",
+    "category": "IDLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3026188.jpg",
+    "dateAdded": "2025-05-10T22:28:34.316Z"
+  },
+  {
+    "stockCode": "CUMBM27253",
+    "name": "BUSHING CAMSHAFT",
+    "description": "NH220 | SMALL CAM",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "image": "CUMBM27253.jpg",
+    "dateAdded": "2025-05-11T18:57:05.951Z"
+  },
+  {
+    "stockCode": "CUM3939371-GB",
+    "name": "BUSH CON ROD",
+    "description": "QSB",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 8,
+    "image": "CUM3939371-GB.jpg",
+    "dateAdded": "2025-05-11T18:59:07.686Z"
+  },
+  {
+    "stockCode": "CUM3945866-PAI",
+    "name": "CAMFOLLOWER QSC8.3 38MM",
+    "description": "QSC8.3",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 24,
+    "image": "CUM3945866-PAI.jpg",
+    "dateAdded": "2025-05-11T19:02:56.055Z"
+  },
+  {
+    "stockCode": "CUM3945866-GB",
+    "name": "CAMFOLLOWER QSC8.3 38MM",
+    "description": "QSC8.3",
+    "category": "CAMSHAFT",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 12,
+    "image": "CUM3945866-GB.jpg",
+    "dateAdded": "2025-05-11T19:04:28.117Z"
+  },
+  {
+    "stockCode": "CUM3929885",
+    "name": "CAMSHAFT",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "CAMSHAFT",
+    "extraNotes": "CUMMINS",
+    "quantity": 1,
+    "image": "CUM3929885.jpg",
+    "dateAdded": "2025-05-11T19:26:25.368Z"
+  },
+  {
+    "stockCode": "CUM3023177-AKM",
+    "name": "CAMSHAFT",
+    "description": "NH|NT855 | NT495 | NTA855",
+    "category": "CAMSHAFT",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3023177-AKM.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3049024-AKM",
+    "name": "CAMSHAFT",
+    "description": "NH|NT855 | NT495 | NTA855",
+    "category": "CAMSHAFT",
+    "extraNotes": "AKMI",
+    "quantity": 2,
+    "image": "CUM3049024-AKM.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3087856",
+    "name": "CAMSHAFT",
+    "description": "L10 | M11",
+    "category": "CAMSHAFT",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 0,
+    "image": "CUM3087856.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3608786",
+    "name": "CAMSHAFT",
+    "description": "BCIV CPL838 | CPL840",
+    "category": "CAMSHAFT",
+    "extraNotes": "FP DIESEL",
+    "quantity": 2,
+    "image": "CUM3608786.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3801030",
+    "name": "CAMSHAFT",
+    "description": "SMALL CAM",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3801030.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3801749",
+    "name": "CAMSHAFT",
+    "description": "NTE405",
+    "category": "CAMSHAFT",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3801749.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3803738-AKM",
+    "name": "CAMSHAFT",
+    "description": "N14",
+    "category": "CAMSHAFT",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3803738-AKM.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3803903",
+    "name": "CAMSHAFT",
+    "description": "NT | NTC855 BCIV",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3803903.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3923478-AKM",
+    "name": "CAMSHAFT",
+    "description": "C-SERIES",
+    "category": "CAMSHAFT",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3923478-AKM.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3929041",
+    "name": "CAMSHAFT",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CAMSHAFT",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 1,
+    "image": "CUM3929041.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3929734",
+    "name": "CAMSHAFT",
+    "description": "B-SERIES [ 6 CYLINDER ]",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3929734.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3929886-FED",
+    "name": "CAMSHAFT",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CAMSHAFT",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3929886-FED.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM3938163-PAI",
+    "name": "CAMSHAFT",
+    "description": "QSC8.3",
+    "category": "CAMSHAFT",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM3938163-PAI.jpg",
+    "dateAdded": "2025-05-11T19:26:25.369Z"
+  },
+  {
+    "stockCode": "CUM4024849-AKM",
+    "name": "CAMSHAFT",
+    "description": "N14C+",
+    "category": "CAMSHAFT",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM4024849-AKM.jpg",
+    "dateAdded": "2025-05-11T19:26:25.370Z"
+  },
+  {
+    "stockCode": "CUM3058462-MCB",
+    "name": "BUSH ROCKER LEVER",
+    "description": "N14",
+    "category": "ROCKER LEVER",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 12,
+    "image": "CUM3058462-MCB.jpg",
+    "dateAdded": "2025-05-11T20:16:47.167Z"
+  },
+  {
+    "stockCode": "CUM3019733-GB",
+    "name": "BUSH ROCKER LEVER INLET | EXH",
+    "description": "L10 | M11 | QSM11",
+    "category": "ROCKER LEVER",
+    "extraNotes": "FP DIESEL",
+    "quantity": 23,
+    "image": "CUM3019733-GB.jpg",
+    "dateAdded": "2025-05-11T20:18:38.703Z"
+  },
+  {
+    "stockCode": "CUM3005133",
+    "name": "ACCESSORY DRIVE ASSEMBLY",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3005133.jpg",
+    "dateAdded": "2025-05-11T20:22:32.523Z"
+  }
+]

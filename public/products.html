@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body class="products-page">
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <h2 style="text-align: center; margin-top: 1rem">Browse Our Products</h2>
+    <p
+      id="productCount"
+      style="text-align: center; font-weight: bold; margin-bottom: 1rem"
+    ></p>
+
+    <div class="controls">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+      <select id="sortBy">
+        <option value="name-asc">Name A–Z</option>
+        <option value="name-desc">Name Z–A</option>
+        <option value="date-newest">Newest First</option>
+        <option value="date-oldest">Oldest First</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search products..." />
+    </div>
+
+    <div id="product-list"></div>
+
+    <footer id="contact">
+      <p>&copy; 2025 Ashwin Gajan T/A Just Parts. All rights reserved.</p>
+    </footer>
+
+    <script>
+      let allProducts = [];
+
+      fetch("products.json")
+        .then((res) => res.json())
+        .then((products) => {
+          allProducts = products;
+          populateCategoryFilter(products);
+          filterAndSort();
+        });
+
+      function populateCategoryFilter(products) {
+        const categories = [
+          ...new Set(products.map((p) => p.category).filter(Boolean)),
+        ];
+        const filter = document.getElementById("categoryFilter");
+        categories.forEach((cat) => {
+          const opt = document.createElement("option");
+          opt.value = cat;
+          opt.textContent = cat;
+          filter.appendChild(opt);
+        });
+      }
+
+      function highlight(text, keyword) {
+        const regex = new RegExp(`(${keyword})`, "gi");
+        return text.replace(regex, "<mark>$1</mark>");
+      }
+
+      function renderProducts(products) {
+        const container = document.getElementById("product-list");
+        container.innerHTML = "";
+
+        const keyword = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const filteredCount = products.length;
+        const totalCount = allProducts.length;
+
+        // Show count
+        document.getElementById("productCount").textContent =
+          filteredCount === totalCount
+            ? `Showing ${totalCount} product(s)`
+            : `Showing ${filteredCount} of ${totalCount} product(s)`;
+
+        products.forEach((p) => {
+          const div = document.createElement("div");
+          div.className = "product";
+          const img =
+            p.image && p.image.trim() !== "" ? p.image : "default.jpg";
+          const name = keyword ? highlight(p.name, keyword) : p.name;
+          const description = keyword
+            ? highlight(p.description, keyword)
+            : p.description;
+
+          div.innerHTML = `
+      <img src="/uploads/${img}" alt="${p.name}" onerror="this.src='/uploads/default.jpg';">
+      <h3>${name}</h3>
+      <p><span class="label">Category:</span><span class="value">${p.category}</span></p>
+      <p><span class="label">Description:</span><span class="value">${description}</span></p>
+      <p><span class="label">Notes:</span><span class="value">${p.extraNotes}</span></p>
+      <p><span class="label">Quantity:</span><span class="value">${p.quantity}</span></p>
+    `;
+
+          container.appendChild(div);
+        });
+      }
+
+      function filterAndSort() {
+        let filtered = [...allProducts];
+        const cat = document.getElementById("categoryFilter").value;
+        const sort = document.getElementById("sortBy").value;
+        const keyword = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        if (cat) filtered = filtered.filter((p) => p.category === cat);
+        if (keyword)
+          filtered = filtered.filter(
+            (p) =>
+              p.name.toLowerCase().includes(keyword) ||
+              p.description.toLowerCase().includes(keyword)
+          );
+
+        if (sort === "name-asc")
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+        if (sort === "name-desc")
+          filtered.sort((a, b) => b.name.localeCompare(a.name));
+        if (sort === "date-newest") {
+          filtered.sort(
+            (a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)
+          );
+        }
+        if (sort === "date-oldest") {
+          filtered.sort(
+            (a, b) => new Date(a.dateAdded) - new Date(b.dateAdded)
+          );
+        }
+
+        renderProducts(filtered);
+      }
+
+      document
+        .getElementById("categoryFilter")
+        .addEventListener("change", filterAndSort);
+      document
+        .getElementById("sortBy")
+        .addEventListener("change", filterAndSort);
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", filterAndSort);
+    </script>
+  </body>
+</html>
