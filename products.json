@@ -1048,5 +1048,135 @@
     "quantity": 3,
     "image": "CUM3069053-PAI.jpg",
     "dateAdded": "2025-05-12T19:15:24.539Z"
+  },
+  {
+    "stockCode": "CUM4947898",
+    "name": "CONNECTING ROD",
+    "description": "QSC | ISC",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 4,
+    "image": "CUM4947898.jpg",
+    "dateAdded": "2025-05-12T19:21:43.895Z"
+  },
+  {
+    "stockCode": "CUM3067993-GB",
+    "name": "CONNECTION TRUBO OIL DRAIN",
+    "description": "N14",
+    "category": "TURBOCHARGER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 2,
+    "image": "CUM3067993-GB.jpg",
+    "dateAdded": "2025-05-12T19:25:05.692Z"
+  },
+  {
+    "stockCode": "CUM3068479",
+    "name": "CONNECTOR INJECTOR",
+    "description": "N14C",
+    "category": "INJECTOR",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 6,
+    "image": "CUM3068479.jpg",
+    "dateAdded": "2025-05-12T19:27:13.744Z"
+  },
+  {
+    "stockCode": "CUM0153964-AKM",
+    "name": "COVER AIR COMPRESSOR",
+    "description": "BIG CAM",
+    "category": "AIR COMPRESSOR",
+    "extraNotes": "AKMI",
+    "quantity": 2,
+    "image": "CUM0153964-AKM.jpg",
+    "dateAdded": "2025-05-12T19:28:54.366Z"
+  },
+  {
+    "stockCode": "CUM0153964-MCB",
+    "name": "COVER AIR COMPRESSOR",
+    "description": "BIG CAM",
+    "category": "AIR COMPRESSOR",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 4,
+    "image": "CUM0153964-MCB.jpg",
+    "dateAdded": "2025-05-12T19:30:10.576Z"
+  },
+  {
+    "stockCode": "CUM3411458-AKM",
+    "name": "COVER GEAR",
+    "description": "N14C",
+    "category": "TIMING COVER",
+    "extraNotes": "AKMI",
+    "quantity": 2,
+    "image": "CUM3411458-AKM.jpg",
+    "dateAdded": "2025-05-12T19:32:35.728Z"
+  },
+  {
+    "stockCode": "CUM3923898-PAI",
+    "name": "COVER GEAR",
+    "description": "B-SERIES",
+    "category": "TIMING COVER",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3923898-PAI.jpg",
+    "dateAdded": "2025-05-12T19:36:53.623Z"
+  },
+  {
+    "stockCode": "CUM3073707",
+    "name": "CRANKSHAFT .STD",
+    "description": "M11",
+    "category": "CRANKSHAFT",
+    "extraNotes": "",
+    "quantity": 2,
+    "dateAdded": "2025-05-12T19:38:30.959Z",
+    "image": "CUM3073707.jpg"
+  },
+  {
+    "stockCode": "CUM3907804",
+    "name": "CRANKSHAFT .STD",
+    "description": "B-SERIES [ 6 CYLINDER ]",
+    "category": "CRANKSHAFT",
+    "extraNotes": "",
+    "quantity": 4,
+    "dateAdded": "2025-05-12T19:40:35.373Z",
+    "image": "CUM3907804.jpg"
+  },
+  {
+    "stockCode": "CUM4936081-AKM",
+    "name": "CYLINDER HEAD COMMON RAIL",
+    "description": "ISB | QSB",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM4936081-AKM.jpg",
+    "dateAdded": "2025-05-12T19:42:41.525Z"
+  },
+  {
+    "stockCode": "CUM3918999",
+    "name": "DAMPER VIBRATION",
+    "description": "B-SERIES",
+    "category": "FLYWHEEL",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM3918999.jpg",
+    "dateAdded": "2025-05-12T19:47:00.257Z"
+  },
+  {
+    "stockCode": "CUM0211915",
+    "name": "DAMPER VIBRATION",
+    "description": "BIG CAM",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM0211915.jpg",
+    "dateAdded": "2025-05-12T19:49:11.288Z"
+  },
+  {
+    "stockCode": "CUM4101884-AKM",
+    "name": "DAMPER VIBRATION",
+    "description": "ISX",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T19:50:27.021Z",
+    "image": "CUM4101884-AKM.jpg"
   }
 ]
