@@ -1028,5 +1028,25 @@
     "quantity": 7,
     "image": "CUM3006696.jpg",
     "dateAdded": "2025-05-12T12:42:24.189Z"
+  },
+  {
+    "stockCode": "CUM3069053-MCB",
+    "name": "CLAMP INTAKE",
+    "description": "ISC | QSB",
+    "category": "INTAKE",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 3,
+    "image": "CUM3069053-MCB.jpg",
+    "dateAdded": "2025-05-12T19:14:30.300Z"
+  },
+  {
+    "stockCode": "CUM3069053-PAI",
+    "name": "CLAMP INTAKE",
+    "description": "ISC | QSB",
+    "category": "INTAKE",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM3069053-PAI.jpg",
+    "dateAdded": "2025-05-12T19:15:24.539Z"
   }
 ]
