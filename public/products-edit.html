@@ -50,6 +50,11 @@
     <button type="button" onclick="cancelEditForm()">❌ Cancel</button>
   </form>
 
+  <section style="text-align: center; margin: 2rem 0;">
+    <button onclick="cleanupUnusedImages()" style="padding: 0.5rem 1.2rem;">🧹 Cleanup Unused Images</button>
+    <div id="cleanupResult" style="margin-top: 1rem; color: green; font-weight: bold;"></div>
+  </section>
+
   <footer><p>Admin Panel – Manage Products</p></footer>
 
   <script>
@@ -229,6 +234,20 @@
     };
     reader.readAsDataURL(fileInput.files[0]);
   }
+}
+
+function cleanupUnusedImages() {
+  if (!confirm("Are you sure you want to delete unused images?")) return;
+
+  fetch("/cleanup-unused-images", { method: "POST" })
+    .then(res => res.text())
+    .then(msg => {
+      document.getElementById("cleanupResult").textContent = msg;
+    })
+    .catch(err => {
+      document.getElementById("cleanupResult").textContent = "❌ Cleanup failed.";
+      console.error(err);
+    });
 }
   </script>
 </body>

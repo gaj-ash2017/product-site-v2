@@ -878,5 +878,155 @@
     "quantity": 1,
     "image": "CUM3005133.jpg",
     "dateAdded": "2025-05-11T20:22:32.523Z"
+  },
+  {
+    "stockCode": "CUM3907234",
+    "name": "CAPSCREW CYLINDER HEAD",
+    "description": "6CT [ 70MM ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 34,
+    "image": "CUM3907234.jpg",
+    "dateAdded": "2025-05-12T10:14:10.103Z"
+  },
+  {
+    "stockCode": "CUM3907233",
+    "name": "CAPSCREW CYLINDER HEAD",
+    "description": "6CT [ 150MM ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 44,
+    "image": "CUM3907233.jpg",
+    "dateAdded": "2025-05-12T10:16:11.905Z"
+  },
+  {
+    "stockCode": "CUM3968075-GB",
+    "name": "CAPSCREW DAMPER",
+    "description": "QSB",
+    "category": "FLYWHEEL",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 12,
+    "image": "CUM3968075-GB.jpg",
+    "dateAdded": "2025-05-12T10:24:39.255Z"
+  },
+  {
+    "stockCode": "CUM3282081-GB",
+    "name": "CAPSCREW EXHAUST MANIFOLD",
+    "description": "C-SERIES",
+    "category": "MANIFOLD",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 11,
+    "image": "CUM3282081-GB.jpg",
+    "dateAdded": "2025-05-12T10:26:58.183Z"
+  },
+  {
+    "stockCode": "CUM3102651-C",
+    "name": "CAPSCREW FLANGED INECTOR",
+    "description": "QSK",
+    "category": "INJECTOR",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 6,
+    "image": "CUM3102651-C.jpg",
+    "dateAdded": "2025-05-12T10:38:21.716Z"
+  },
+  {
+    "stockCode": "CUM3048353",
+    "name": "CAPSCREW FLYWHEEL HOUSING",
+    "description": "N14",
+    "category": "FLYWHEEL",
+    "extraNotes": "P.A.I.",
+    "quantity": 37,
+    "image": "CUM3048353.jpg",
+    "dateAdded": "2025-05-12T10:41:05.736Z"
+  },
+  {
+    "stockCode": "CUM3678514-GB",
+    "name": "CAPSCREW FLYWHEEL HOUSING",
+    "description": "ISX",
+    "category": "FLYWHEEL",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 24,
+    "image": "CUM3678514-GB.jpg",
+    "dateAdded": "2025-05-12T10:50:00.012Z"
+  },
+  {
+    "stockCode": "CUM3903112-01",
+    "name": "CAPSCREW HEX FLANGED HEAD",
+    "description": "ISX",
+    "category": "",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 4,
+    "image": "CUM3903112-01.jpg",
+    "dateAdded": "2025-05-12T10:52:00.786Z"
+  },
+  {
+    "stockCode": "CUM3903112-02",
+    "name": "CAPSCREW HEX FLANGED HEAD",
+    "description": "ISX",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 44,
+    "image": "CUM3903112-02.jpg",
+    "dateAdded": "2025-05-12T11:02:44.173Z"
+  },
+  {
+    "stockCode": "CUM4082772-PAI",
+    "name": "CAPSCREW OIL PAN",
+    "description": "ISM | M11",
+    "category": "OIL PAN",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "CUM4082772-PAI.jpg",
+    "dateAdded": "2025-05-12T11:04:35.628Z"
+  },
+  {
+    "stockCode": "CUM3920781-PAI",
+    "name": "CAPSCREW ROCKER LEVER",
+    "description": "B-SERIES [ 180MM ]",
+    "category": "ROCKER LEVER",
+    "extraNotes": "P.A.I.",
+    "quantity": 98,
+    "image": "CUM3920781-PAI.jpg",
+    "dateAdded": "2025-05-12T11:06:59.256Z"
+  },
+  {
+    "stockCode": "CUM3901221",
+    "name": "CAPSCREW ROCKER MOUNTING",
+    "description": "B-SERIES | QSB",
+    "category": "ROCKER LEVER",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 12,
+    "image": "CUM3901221.jpg",
+    "dateAdded": "2025-05-12T11:12:58.465Z"
+  },
+  {
+    "stockCode": "CUM3681221-C",
+    "name": "CAPSCREW ROCKER SHAFT",
+    "description": "ISX",
+    "category": "ROCKER LEVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 4,
+    "image": "CUM3681221-C.jpg",
+    "dateAdded": "2025-05-12T12:11:21.005Z"
+  },
+  {
+    "stockCode": "CUM0153582-MCB",
+    "name": "CAPSCREW STARTER",
+    "description": "BIG CAM | N14",
+    "category": "STARTER",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 7,
+    "image": "CUM0153582-MCB.jpg",
+    "dateAdded": "2025-05-12T12:18:23.794Z"
+  },
+  {
+    "stockCode": "CUM3006696",
+    "name": "CLAMP INJECTOR",
+    "description": "34MM INNER DIAMETER",
+    "category": "INJECTOR",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 7,
+    "image": "CUM3006696.jpg",
+    "dateAdded": "2025-05-12T12:42:24.189Z"
   }
 ]
