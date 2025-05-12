@@ -1178,5 +1178,85 @@
     "quantity": 1,
     "dateAdded": "2025-05-12T19:50:27.021Z",
     "image": "CUM4101884-AKM.jpg"
+  },
+  {
+    "stockCode": "CUM3957543",
+    "name": "ELEMENT OIL COOLER",
+    "description": "B-SERIES [ 4 CYLINDER ]",
+    "category": "OIL COOLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3957543.jpg"
+  },
+  {
+    "stockCode": "CUM3957544-L",
+    "name": "ELEMENT OIL COOLER",
+    "description": "BLK DIESEL",
+    "category": "OIL COOLER",
+    "extraNotes": "CUMMINS",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3957544-L.jpg"
+  },
+  {
+    "stockCode": "CUM3021581-AKM",
+    "name": "ELEMENT OIL COOLER",
+    "description": "BIG CAM",
+    "category": "OIL COOLER",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3021581-AKM.jpg"
+  },
+  {
+    "stockCode": "CUM3066842",
+    "name": "ELEMENT OIL COOLER",
+    "description": "BC1V",
+    "category": "OIL COOLER",
+    "extraNotes": "AKMI",
+    "quantity": 2,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3066842.jpg"
+  },
+  {
+    "stockCode": "CUM3016495-AKM",
+    "name": "FLYWHEEL",
+    "description": "DISH TYPE [ 14 INCH ] N14 STC",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3016495-AKM.jpg"
+  },
+  {
+    "stockCode": "CUM3021727",
+    "name": "FLYWHEEL",
+    "description": "855 | N14",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3021727.jpg"
+  },
+  {
+    "stockCode": "CUM3071535-AKM",
+    "name": "FLYWHEEL + RING GEAR",
+    "description": "N14C",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 0,
+    "dateAdded": "2025-05-12T20:16:59.525Z",
+    "image": "CUM3071535-AKM.jpg"
+  },
+  {
+    "stockCode": "CUM3039231",
+    "name": "FLYWHEEL + RING GEAR",
+    "description": "M11",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-12T20:16:59.526Z",
+    "image": "CUM3039231.jpg"
   }
 ]
