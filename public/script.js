@@ -1,4 +1,3 @@
-
 const API_BASE = "";
 const IS_LIVE = location.hostname.includes("onrender.com");
 
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     const editId = new URLSearchParams(location.search).get("editId");
     if (editId) prefillForm(editId);
-    form.addEventListener("submit", async e => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (IS_LIVE) {
         alert("Product adding is disabled on the live site.");
@@ -48,15 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const filter = document.getElementById("categoryFilter");
   const search = document.getElementById("searchBox");
   if (sort && filter) {
-    sort.addEventListener("change", () => displayProducts(sort.value, filter.value, search?.value || ""));
-    filter.addEventListener("change", () => displayProducts(sort.value, filter.value, search?.value || ""));
+    sort.addEventListener("change", () =>
+      displayProducts(sort.value, filter.value, search?.value || "")
+    );
+    filter.addEventListener("change", () =>
+      displayProducts(sort.value, filter.value, search?.value || "")
+    );
   }
   if (search) {
-    search.addEventListener("input", () => displayProducts(sort?.value || "newest", filter?.value || "all", search.value.trim()));
+    search.addEventListener("input", () =>
+      displayProducts(
+        sort?.value || "newest",
+        filter?.value || "all",
+        search.value.trim()
+      )
+    );
   }
 });
 
-async function displayProducts(sort = "newest", filterCategory = "all", searchTerm = "") {
+async function displayProducts(
+  sort = "newest",
+  filterCategory = "all",
+  searchTerm = ""
+) {
   const res = await fetch(`${API_BASE}/products.json`);
   let products = await res.json();
 
@@ -65,24 +78,29 @@ async function displayProducts(sort = "newest", filterCategory = "all", searchTe
 
   const filter = document.getElementById("categoryFilter");
   if (filter) {
-    const uniqueCategories = [...new Set(products.map(p => p.category || "Uncategorized"))];
+    const uniqueCategories = [
+      ...new Set(products.map((p) => p.category || "Uncategorized")),
+    ];
     filter.innerHTML = '<option value="all">All</option>';
-    uniqueCategories.forEach(cat => {
+    uniqueCategories.forEach((cat) => {
       filter.innerHTML += `<option value="${cat}">${cat}</option>`;
     });
   }
 
   if (filterCategory !== "all") {
-    products = products.filter(p => (p.category || "Uncategorized") === filterCategory);
+    products = products.filter(
+      (p) => (p.category || "Uncategorized") === filterCategory
+    );
   }
 
   if (searchTerm) {
     const term = searchTerm.toLowerCase();
-    products = products.filter(p =>
-      (p.name || "").toLowerCase().includes(term) ||
-      (p.description || "").toLowerCase().includes(term) ||
-      (p.category || "").toLowerCase().includes(term) ||
-      (p.extraNotes || "").toLowerCase().includes(term)
+    products = products.filter(
+      (p) =>
+        (p.name || "").toLowerCase().includes(term) ||
+        (p.description || "").toLowerCase().includes(term) ||
+        (p.category || "").toLowerCase().includes(term) ||
+        (p.extraNotes || "").toLowerCase().includes(term)
     );
   }
 
@@ -127,7 +145,7 @@ async function deleteProduct(imagePath) {
 async function prefillForm(id) {
   const res = await fetch(`${API_BASE}/products.json`);
   const products = await res.json();
-  const found = products.find(p => p.id == id);
+  const found = products.find((p) => p.id == id);
   if (!found) return;
   document.getElementById("name").value = found.name;
   document.getElementById("description").value = found.description;

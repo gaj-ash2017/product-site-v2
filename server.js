@@ -226,7 +226,7 @@ app.post("/cleanup-unused-images", (req, res) => {
     let usedImages = new Set();
     try {
       const products = JSON.parse(data);
-      products.forEach(p => {
+      products.forEach((p) => {
         if (p.image && p.image !== "default.jpg") {
           usedImages.add(p.image);
         }
@@ -239,7 +239,7 @@ app.post("/cleanup-unused-images", (req, res) => {
       if (err) return res.status(500).send("❌ Could not read uploads folder");
 
       let deleted = [];
-      files.forEach(file => {
+      files.forEach((file) => {
         if (!usedImages.has(file) && file !== "default.jpg") {
           const filePath = path.join(uploadsDir, file);
           fs.unlinkSync(filePath);
@@ -247,7 +247,9 @@ app.post("/cleanup-unused-images", (req, res) => {
         }
       });
 
-      res.send(`✅ Deleted ${deleted.length} unused image(s): ${deleted.join(", ")}`);
+      res.send(
+        `✅ Deleted ${deleted.length} unused image(s): ${deleted.join(", ")}`
+      );
     });
   });
 });

@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Add Product</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="navbar.css" />
-</head>
-<body class="admin-page">
-  <div id="navbar"></div>
-  <script src="navbar.js"></script>
-  <div class="spacer"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body class="admin-page">
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <div class="spacer"></div>
 
-  <h2 style="text-align: center;">➕ Add New Product</h2>
+    <h2 style="text-align: center">➕ Add New Product</h2>
 
-  <form id="addProductForm" enctype="multipart/form-data" style="max-width: 600px; margin: auto;">
-    <label>Stock Code: <input type="text" name="stockCode" required /></label>
-    <label>Name: <input type="text" name="name" required /></label>
-    <label>Description: <input type="text" name="description" /></label>
-    <label>Category: <input type="text" name="category" /></label>
-    <label>Extra Notes: <input type="text" name="extraNotes" /></label>
-    <label>Quantity: <input type="number" name="quantity" min="0" /></label>
+    <form
+      id="addProductForm"
+      enctype="multipart/form-data"
+      style="max-width: 600px; margin: auto"
+    >
+      <label>Stock Code: <input type="text" name="stockCode" required /></label>
+      <label>Name: <input type="text" name="name" required /></label>
+      <label>Description: <input type="text" name="description" /></label>
+      <label>Category: <input type="text" name="category" /></label>
+      <label>Extra Notes: <input type="text" name="extraNotes" /></label>
+      <label>Quantity: <input type="number" name="quantity" min="0" /></label>
 
-    <label>Upload Image:
-      <input type="file" name="imageFile" accept="image/*" onchange="previewAddImage()" />
-    </label>
-    <div id="addImagePreview" style="margin: 1rem 0; text-align: center;"></div>
+      <label
+        >Upload Image:
+        <input
+          type="file"
+          name="imageFile"
+          accept="image/*"
+          onchange="previewAddImage()"
+        />
+      </label>
+      <div
+        id="addImagePreview"
+        style="margin: 1rem 0; text-align: center"
+      ></div>
 
-    <button type="submit" id="submitBtn">✅ Submit Product</button>
-  </form>
+      <button type="submit" id="submitBtn">✅ Submit Product</button>
+    </form>
 
-  <div id="successMessage" style="text-align: center; margin-top: 1rem; font-weight: bold;"></div>
+    <div
+      id="successMessage"
+      style="text-align: center; margin-top: 1rem; font-weight: bold"
+    ></div>
 
-  <footer style="text-align: center; margin-top: 2rem;">
-    <p>&copy; 2025 Your Business. All rights reserved.</p>
-  </footer>
+    <footer style="text-align: center; margin-top: 2rem">
+      <p>&copy; 2025 Your Business. All rights reserved.</p>
+    </footer>
 
-  <script>
-    function previewAddImage() {
-      const input = document.querySelector('input[name="imageFile"]');
-      const preview = document.getElementById("addImagePreview");
-      preview.innerHTML = "";
-  
-      if (input.files && input.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement("img");
-          img.src = e.target.result;
-          img.style.maxWidth = "150px";
-          img.style.border = "1px solid #ccc";
-          img.style.borderRadius = "4px";
-          preview.appendChild(img);
-        };
-        reader.readAsDataURL(input.files[0]);
+    <script>
+      function previewAddImage() {
+        const input = document.querySelector('input[name="imageFile"]');
+        const preview = document.getElementById("addImagePreview");
+        preview.innerHTML = "";
+
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.style.maxWidth = "150px";
+            img.style.border = "1px solid #ccc";
+            img.style.borderRadius = "4px";
+            preview.appendChild(img);
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
       }
-    }
-  
-    document.getElementById("addProductForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      const messageBox = document.getElementById("successMessage");
-      messageBox.textContent = "Submitting...";
-  
-      fetch("/add-product", {
-        method: "POST",
-        body: formData,
-      })
-        .then(res => {
-          if (!res.ok) {
-            return res.text().then(text => { throw new Error(text); });
-          }
-          return res.text();
-        })
-        .then(msg => {
-          messageBox.textContent = msg;
-          messageBox.style.color = "green";
-          form.reset();
-          document.getElementById("addImagePreview").innerHTML = "";
-        })
-        .catch(err => {
-          messageBox.textContent = `⚠️ ${err.message}`;
-          messageBox.style.color = "red";
-          console.error(err);
+
+      document
+        .getElementById("addProductForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const formData = new FormData(form);
+          const messageBox = document.getElementById("successMessage");
+          messageBox.textContent = "Submitting...";
+
+          fetch("/add-product", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => {
+              if (!res.ok) {
+                return res.text().then((text) => {
+                  throw new Error(text);
+                });
+              }
+              return res.text();
+            })
+            .then((msg) => {
+              messageBox.textContent = msg;
+              messageBox.style.color = "green";
+              form.reset();
+              document.getElementById("addImagePreview").innerHTML = "";
+            })
+            .catch((err) => {
+              messageBox.textContent = `⚠️ ${err.message}`;
+              messageBox.style.color = "red";
+              console.error(err);
+            });
         });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
