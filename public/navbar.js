@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li><a href="add-products.html" class="admin-only">Add Product</a></li>
         <li><a href="import.html" class="admin-only">Import</a></li>
         <li><a href="products-edit.html" class="admin-only">Admin</a></li>
+        <li><a href="categories.html" class="admin-only">Category Admin</a></li>
       </ul>
     </nav>
     <div class="spacer"></div>

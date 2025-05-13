@@ -1,3 +1,4 @@
+// ✅ Full working server.js with integrated product + category management
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -11,100 +12,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 const productsFile = path.join(__dirname, "products.json");
+const categoriesFile = path.join(__dirname, "categories.json");
 const imageUpload = multer({ dest: path.join(__dirname, "public/uploads/") });
 
-// Helper to delete unused images
-function deleteIfUnused(imageName) {
-  if (!imageName || imageName === "default.jpg") return;
-
-  fs.readFile(productsFile, "utf-8", (err, data) => {
-    if (err) return;
-    try {
-      const products = JSON.parse(data);
-      const stillUsed = products.some((p) => p.image === imageName);
-      const imgPath = path.join(__dirname, "public/uploads", imageName);
-
-      if (!stillUsed && fs.existsSync(imgPath)) {
-        fs.unlink(imgPath, () => {
-          console.log(`🧹 Cleaned up unused image: ${imageName}`);
-        });
-      }
-    } catch (e) {
-      console.error("❌ Error parsing JSON for cleanup.");
-    }
-  });
-}
-
-// Serve products.json
+// === PRODUCTS ===
 app.get("/products.json", (req, res) => {
   res.sendFile(productsFile);
 });
 
-// Import CSV
-const upload = multer({ dest: "uploads/" });
-app.post("/import-csv", upload.single("csvfile"), (req, res) => {
-  if (!req.file) return res.status(400).send("No CSV file uploaded.");
-  const results = [];
-
-  fs.createReadStream(req.file.path)
-    .pipe(csv())
-    .on("data", (row) => {
-      const product = {
-        stockCode: row.stockCode?.trim() || "",
-        name: row.name?.trim() || "",
-        description: row.description?.trim() || "",
-        category: row.category?.trim() || "",
-        extraNotes: row.extraNotes?.trim() || "",
-        quantity: parseInt(row.quantity) || 0,
-        image: row.imageName?.trim() || "default.jpg",
-        dateAdded: new Date().toISOString(),
-      };
-      results.push(product);
-    })
-    .on("end", () => {
-      fs.readFile(productsFile, "utf-8", (err, data) => {
-        let existingProducts = [];
-        if (!err && data) {
-          try {
-            existingProducts = JSON.parse(data);
-          } catch (e) {
-            return res.status(500).send("Error parsing existing products.");
-          }
-        }
-
-        results.forEach((newProd) => {
-          const index = existingProducts.findIndex(
-            (p) => p.stockCode.toLowerCase() === newProd.stockCode.toLowerCase()
-          );
-          if (index >= 0) {
-            newProd.dateAdded =
-              existingProducts[index].dateAdded || new Date().toISOString();
-            existingProducts[index] = newProd;
-          } else {
-            existingProducts.push(newProd);
-          }
-        });
-
-        existingProducts = existingProducts.map((p) => ({
-          ...p,
-          dateAdded: p.dateAdded || new Date().toISOString(),
-        }));
-
-        fs.writeFile(
-          productsFile,
-          JSON.stringify(existingProducts, null, 2),
-          (err) => {
-            if (err) return res.status(500).send("Error saving products.");
-            fs.unlink(req.file.path, () => {});
-            res.send("✅ Products imported successfully!");
-          }
-        );
-      });
-    })
-    .on("error", () => res.status(500).send("Error processing CSV."));
-});
-
-// Add product with image
 app.post("/add-product", imageUpload.single("imageFile"), (req, res) => {
   const { stockCode, name, description, category, extraNotes, quantity } =
     req.body;
@@ -155,7 +70,6 @@ app.post("/add-product", imageUpload.single("imageFile"), (req, res) => {
   });
 });
 
-// Edit product
 app.post("/edit-product", imageUpload.single("imageFile"), (req, res) => {
   const updated = {
     stockCode: req.body.stockCode?.trim(),
@@ -182,7 +96,10 @@ app.post("/edit-product", imageUpload.single("imageFile"), (req, res) => {
       fs.renameSync(req.file.path, newPath);
       updated.image = safeName;
 
-      deleteIfUnused(oldImage);
+      if (oldImage !== "default.jpg") {
+        const oldPath = path.join(__dirname, "public/uploads", oldImage);
+        if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+      }
     } else {
       updated.image = oldImage;
     }
@@ -195,7 +112,6 @@ app.post("/edit-product", imageUpload.single("imageFile"), (req, res) => {
   });
 });
 
-// Delete product
 app.post("/delete-product", (req, res) => {
   const stockCode = req.body.stockCode;
 
@@ -210,51 +126,127 @@ app.post("/delete-product", (req, res) => {
 
     fs.writeFile(productsFile, JSON.stringify(products, null, 2), (err) => {
       if (err) return res.status(500).send("Failed to delete product");
-      deleteIfUnused(image);
+
+      const imgPath = path.join(__dirname, "public/uploads", image);
+      if (image !== "default.jpg" && fs.existsSync(imgPath)) {
+        fs.unlinkSync(imgPath);
+      }
+
       res.send("✅ Product deleted.");
     });
   });
 });
 
-// Clean up unused images
-app.post("/cleanup-unused-images", (req, res) => {
-  const uploadsDir = path.join(__dirname, "public/uploads");
 
-  fs.readFile(productsFile, "utf-8", (err, data) => {
-    if (err) return res.status(500).send("❌ Could not read products.json");
 
-    let usedImages = new Set();
-    try {
-      const products = JSON.parse(data);
-      products.forEach((p) => {
-        if (p.image && p.image !== "default.jpg") {
-          usedImages.add(p.image);
-        }
-      });
-    } catch {
-      return res.status(500).send("❌ Error parsing products.json");
-    }
+// === CATEGORY ROUTES ===
+app.get("/categories", (req, res) => {
+  fs.readFile(categoriesFile, "utf-8", (err, data) => {
+    if (err) return res.json([]);
+    res.json(JSON.parse(data));
+  });
+});
 
-    fs.readdir(uploadsDir, (err, files) => {
-      if (err) return res.status(500).send("❌ Could not read uploads folder");
+app.post("/add-category", (req, res) => {
+  const { category } = req.body;
+  if (!category) return res.status(400).send("No category provided");
 
-      let deleted = [];
-      files.forEach((file) => {
-        if (!usedImages.has(file) && file !== "default.jpg") {
-          const filePath = path.join(uploadsDir, file);
-          fs.unlinkSync(filePath);
-          deleted.push(file);
-        }
-      });
+  fs.readFile(categoriesFile, "utf-8", (err, data) => {
+    let categories = [];
+    if (!err && data) categories = JSON.parse(data);
 
-      res.send(
-        `✅ Deleted ${deleted.length} unused image(s): ${deleted.join(", ")}`
-      );
+    if (categories.includes(category))
+      return res.status(400).send("Category exists");
+
+    categories.push(category);
+    fs.writeFile(categoriesFile, JSON.stringify(categories, null, 2), (err) => {
+      if (err) return res.status(500).send("Failed to add category");
+      res.send("✅ Category added!");
     });
   });
 });
 
+app.post("/edit-category", (req, res) => {
+  const { oldCategory, newCategory } = req.body;
+  if (!oldCategory || !newCategory)
+    return res.status(400).send("Missing category data");
+
+  fs.readFile(categoriesFile, "utf-8", (err, data) => {
+    if (err) return res.status(500).send("Error reading categories");
+    let categories = JSON.parse(data);
+
+    const index = categories.indexOf(oldCategory);
+    if (index === -1) return res.status(404).send("Category not found");
+
+    categories[index] = newCategory;
+
+    fs.writeFile(categoriesFile, JSON.stringify(categories, null, 2), (err) => {
+      if (err) return res.status(500).send("Failed to update category");
+      res.send("✅ Category updated.");
+    });
+  });
+});
+
+app.post("/delete-category", (req, res) => {
+  const { category } = req.body;
+  if (!category) return res.status(400).send("⚠️ No category name provided.");
+
+  const categoriesPath = path.join(__dirname, "categories.json");
+
+  fs.readFile(categoriesPath, "utf-8", (err, catData) => {
+    if (err) return res.status(500).send("Error reading categories.");
+
+    let categories = JSON.parse(catData);
+    if (!categories.includes(category))
+      return res.status(404).send("⚠️ Category not found.");
+
+    // Remove the category
+    categories = categories.filter((c) => c !== category);
+
+    fs.writeFile(categoriesPath, JSON.stringify(categories, null, 2), (err) => {
+      if (err) return res.status(500).send("Failed to delete category.");
+
+      // Now update products.json to replace this category
+      fs.readFile(productsFile, "utf-8", (err, prodData) => {
+        if (err) return res.status(500).send("Error reading products.");
+
+        let products = JSON.parse(prodData);
+        let updated = false;
+
+        products = products.map((p) => {
+          if (p.category === category) {
+            p.category = "Uncategorized";
+            updated = true;
+          }
+          return p;
+        });
+
+        if (updated) {
+          fs.writeFile(
+            productsFile,
+            JSON.stringify(products, null, 2),
+            (err) => {
+              if (err)
+                return res
+                  .status(500)
+                  .send("Failed to update product categories.");
+              res.send(
+                "✅ Category deleted and products updated to 'Uncategorized'."
+              );
+            }
+          );
+        } else {
+          res.send("✅ Category deleted. No products needed updating.");
+        }
+      });
+    });
+  });
+});
+
+app.get("/categories.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "categories.json"));
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log("💡 Tip: Use 'nodemon server.js' so your changes auto-refresh!");
 });
