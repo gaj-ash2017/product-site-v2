@@ -71,13 +71,13 @@
   },
   {
     "stockCode": "CUM3901174-01",
-    "name": "BEARING CON ROD [40 thou - 1.00mm ]",
+    "name": "BEARING CON ROD [40 thou ]",
     "description": "B-SERIES",
     "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 6,
-    "image": "3901174.jpg",
-    "dateAdded": "2025-05-10T21:28:20.746Z"
+    "dateAdded": "2025-05-10T21:28:20.746Z",
+    "image": "3901174.jpg"
   },
   {
     "stockCode": "CUM4892796-FED",
@@ -504,10 +504,10 @@
     "name": "BUSH CAMSHAFT",
     "description": "B-SERIES",
     "category": "CAMSHAFT",
-    "extraNotes": "K M P",
+    "extraNotes": "FP DIESEL",
     "quantity": 3,
-    "image": "3940059.jpg",
-    "dateAdded": "2025-05-10T21:28:20.746Z"
+    "dateAdded": "2025-05-10T21:28:20.746Z",
+    "image": "3940059.jpg"
   },
   {
     "stockCode": "CUM3901306-FED",
@@ -681,23 +681,23 @@
   },
   {
     "stockCode": "CUM3945866-PAI",
-    "name": "CAMFOLLOWER QSC8.3 38MM",
-    "description": "QSC8.3",
+    "name": "CAMFOLLOWER",
+    "description": "QSC8.3 38mm",
     "category": "CAMSHAFT",
     "extraNotes": "P.A.I.",
     "quantity": 24,
-    "image": "CUM3945866-PAI.jpg",
-    "dateAdded": "2025-05-11T19:02:56.055Z"
+    "dateAdded": "2025-05-11T19:02:56.055Z",
+    "image": "CUM3945866-PAI.jpg"
   },
   {
     "stockCode": "CUM3945866-GB",
-    "name": "CAMFOLLOWER QSC8.3 38MM",
-    "description": "QSC8.3",
+    "name": "CAMFOLLOWER",
+    "description": "QSC8.3 38mm",
     "category": "CAMSHAFT",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 12,
-    "image": "CUM3945866-GB.jpg",
-    "dateAdded": "2025-05-11T19:04:28.117Z"
+    "dateAdded": "2025-05-11T19:04:28.117Z",
+    "image": "CUM3945866-GB.jpg"
   },
   {
     "stockCode": "CUM3929885",
@@ -721,13 +721,13 @@
   },
   {
     "stockCode": "CUM3049024-AKM",
-    "name": "CAMSHAFT",
+    "name": "CAMSHAFT - FLANGELESS",
     "description": "NH|NT855 | NT495 | NTA855",
     "category": "CAMSHAFT",
     "extraNotes": "AKMI",
     "quantity": 2,
-    "image": "CUM3049024-AKM.jpg",
-    "dateAdded": "2025-05-11T19:26:25.369Z"
+    "dateAdded": "2025-05-11T19:26:25.369Z",
+    "image": "CUM3049024-AKM.jpg"
   },
   {
     "stockCode": "CUM3087856",
@@ -1192,9 +1192,9 @@
   {
     "stockCode": "CUM3957544-L",
     "name": "ELEMENT OIL COOLER",
-    "description": "BLK DIESEL",
+    "description": "B-SERIES [ 6 CYLINDER ]",
     "category": "OIL COOLER",
-    "extraNotes": "CUMMINS",
+    "extraNotes": "",
     "quantity": 1,
     "dateAdded": "2025-05-12T20:16:59.525Z",
     "image": "CUM3957544-L.jpg"
