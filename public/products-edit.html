@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Admin: Edit & Delete Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin: Edit & Delete Products</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
     <style>
@@ -15,7 +15,6 @@
         max-width: 1000px;
         margin: auto;
       }
-
       .product {
         background: white;
         padding: 1rem;
@@ -23,20 +22,17 @@
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
-
       .product img {
         max-width: 100px;
         height: auto;
         margin-bottom: 0.5rem;
         border-radius: 4px;
       }
-
       .buttons {
         margin-top: 1rem;
         display: flex;
         gap: 0.5rem;
       }
-
       .inline-edit-form {
         background: #f9f9f9;
         padding: 1rem;
@@ -44,7 +40,6 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         margin-top: 1rem;
       }
-
       .badge {
         background: crimson;
         color: white;
@@ -52,47 +47,14 @@
         border-radius: 4px;
         font-weight: bold;
       }
-
-      .controls {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-        margin: 1rem auto;
-        max-width: 1000px;
-      }
-
-      .controls select,
-      .controls input {
-        padding: 0.5rem;
-        font-size: 1rem;
-      }
-
-      .cleanup {
-        text-align: center;
-        margin: 2rem 0;
-      }
-
-      .cleanup button {
-        padding: 0.5rem 1rem;
-        background: #dc3545;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
       .attention-tag {
         background-color: #ffe5e5;
         color: #b30000;
         font-size: 0.65rem;
-        margin-left: 1px;
+        margin-left: 4px;
         padding: 2px 6px;
         border-radius: 10px;
         font-weight: 500;
-        display: inline-block;
-        vertical-align: middle;
       }
     </style>
   </head>
@@ -100,9 +62,7 @@
     <div id="navbar"></div>
     <script src="navbar.js"></script>
     <div class="spacer"></div>
-
     <h1 style="text-align: center">🛠️ Admin: Edit & Delete Products</h1>
-
     <div class="controls">
       <select id="categoryFilter">
         <option value="">All Categories</option>
@@ -123,8 +83,6 @@
     <div class="admin-layout">
       <div id="product-list"></div>
     </div>
-
-    <!-- Edit Form -->
     <form
       id="editForm"
       class="inline-edit-form"
@@ -134,11 +92,7 @@
     >
       <h3>Edit Product</h3>
       <input type="hidden" id="editStockCode" name="stockCode" />
-      <div
-        id="editStockCodeDisplay"
-        class="badge"
-        style="margin-bottom: 1rem"
-      ></div>
+      <div id="editStockCodeDisplay" class="badge"></div>
       <label
         >Name: <input type="text" id="editName" name="name" required /></label
       ><br />
@@ -160,8 +114,8 @@
         >Quantity:
         <input type="number" id="editQuantity" name="quantity" /></label
       ><br />
-      <label>
-        Upload New Image:
+      <label
+        >Upload New Image:
         <input
           type="file"
           id="editImageFile"
@@ -176,15 +130,12 @@
         <button type="button" onclick="cancelEditForm()">❌ Cancel</button>
       </div>
     </form>
-
-    <div class="cleanup">
+    <div class="cleanup" style="text-align: center; margin-top: 2rem">
       <button onclick="cleanupUnusedImages()">🧹 Clean Up Unused Images</button>
     </div>
-
     <footer>
       <p style="text-align: center">Admin Panel – Manage Products</p>
     </footer>
-
     <script>
       let allProducts = [];
 
@@ -199,25 +150,32 @@
       fetch("/categories.json")
         .then((res) => res.json())
         .then((categories) => {
-          categories.sort((a, b) => a.localeCompare(b)); // ✅ sort alphabetically
           const select = document.getElementById("editCategory");
-          categories.forEach((cat) => {
+          const sorted = categories.sort((a, b) => {
+            if (a.toLowerCase() === "uncategorized") return -1;
+            if (b.toLowerCase() === "uncategorized") return 1;
+            return a.localeCompare(b);
+          });
+          sorted.forEach((cat) => {
             const opt = document.createElement("option");
             opt.value = cat;
             opt.textContent = cat;
             select.appendChild(opt);
           });
-        })
-        .catch((err) => console.error("Failed to load categories:", err));
+        });
 
       function populateCategoryFilter(products) {
         const categories = [
           ...new Set(products.map((p) => p.category).filter(Boolean)),
         ];
-        categories.sort((a, b) => a.localeCompare(b)); // ✅ sort here too
+        const sorted = categories.sort((a, b) => {
+          if (a.toLowerCase() === "uncategorized") return -1;
+          if (b.toLowerCase() === "uncategorized") return 1;
+          return a.localeCompare(b);
+        });
         const filter = document.getElementById("categoryFilter");
         filter.innerHTML = '<option value="">All Categories</option>';
-        categories.forEach((cat) => {
+        sorted.forEach((cat) => {
           const opt = document.createElement("option");
           opt.value = cat;
           opt.textContent = cat;
@@ -236,55 +194,42 @@
         const keyword = document
           .getElementById("searchInput")
           .value.toLowerCase();
-
         products.forEach((p) => {
           const div = document.createElement("div");
           div.className = "product";
-          const img =
-            p.image && p.image.trim() !== "" ? p.image : "default.jpg";
+          const img = p.image?.trim() || "default.jpg";
           const name = keyword ? highlight(p.name, keyword) : p.name;
           const description = keyword
             ? highlight(p.description, keyword)
             : p.description;
-
           div.innerHTML = `
-      <img src="/uploads/${img}" alt="${
+          <img src="/uploads/${img}" alt="${
             p.name
           }" onerror="this.src='/uploads/default.jpg';">
-      <h3>${name}</h3>
-      <p><span class="label">Stock Code:</span> <span class="value badge">${
-        p.stockCode
-      }</span></p>
-      <p>
-  <span class="label">Category:</span>
-  <span class="value ${p.category === "Uncategorized" ? "uncategorized" : ""}">
-    ${p.category}
-  </span>
-  ${
-    p.category === "Uncategorized"
-      ? '<span class="attention-tag">⚠️ Needs Category</span>'
-      : ""
-  }
-</p>
-      <p><span class="label">Description:</span><span class="value">${description}</span></p>
-      <p><span class="label">Notes:</span><span class="value">${
-        p.extraNotes
-      }</span></p>
-      <p><span class="label">Quantity:</span><span class="value">${
-        p.quantity
-      }</span></p>
-      <div class="buttons">
-        <button onclick="editProduct('${p.stockCode}')">✏️ Edit</button>
-        <button onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
-      </div>
-    `;
-
+          <h3>${name}</h3>
+          <p><span class="label">Stock Code:</span> <span class="value badge">${
+            p.stockCode
+          }</span></p>
+          <p><span class="label">Category:</span> <span class="value">${
+            p.category || "Uncategorized"
+          }</span>
+            ${
+              p.category?.toLowerCase() === "uncategorized"
+                ? '<span class="attention-tag">⚠️ Needs Category</span>'
+                : ""
+            }</p>
+          <p><span class="label">Description:</span> ${description}</p>
+          <p><span class="label">Notes:</span> ${p.extraNotes}</p>
+          <p><span class="label">Quantity:</span> ${p.quantity}</p>
+          <div class="buttons">
+            <button onclick="editProduct('${p.stockCode}')">✏️ Edit</button>
+            <button onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
+          </div>`;
           container.appendChild(div);
         });
-
-        // ✅ Show product count
-        const countText = `Showing ${products.length} of ${allProducts.length} products`;
-        document.getElementById("productCount").textContent = countText;
+        document.getElementById(
+          "productCount"
+        ).textContent = `Showing ${products.length} of ${allProducts.length} products`;
       }
 
       function filterAndSort() {
@@ -294,19 +239,16 @@
         const keyword = document
           .getElementById("searchInput")
           .value.toLowerCase();
-
         if (cat)
           filtered = filtered.filter(
             (p) => p.category.toLowerCase() === cat.toLowerCase()
           );
-        if (keyword) {
+        if (keyword)
           filtered = filtered.filter(
             (p) =>
               p.name.toLowerCase().includes(keyword) ||
               p.description.toLowerCase().includes(keyword)
           );
-        }
-
         if (sort === "name-asc")
           filtered.sort((a, b) => a.name.localeCompare(b.name));
         if (sort === "name-desc")
@@ -319,7 +261,6 @@
           filtered.sort(
             (a, b) => new Date(a.dateAdded) - new Date(b.dateAdded)
           );
-
         renderProducts(filtered);
       }
 
@@ -336,37 +277,33 @@
       function editProduct(code) {
         const p = allProducts.find((p) => p.stockCode === code);
         if (!p) return;
-
         document.getElementById("editStockCode").value = p.stockCode;
-        document.getElementById("editStockCodeDisplay").textContent =
-          "Stock Code: " + p.stockCode;
+        document.getElementById(
+          "editStockCodeDisplay"
+        ).textContent = `Stock Code: ${p.stockCode}`;
         document.getElementById("editName").value = p.name;
         document.getElementById("editDescription").value = p.description;
         document.getElementById("editCategory").value = p.category;
         document.getElementById("editExtraNotes").value = p.extraNotes;
         document.getElementById("editQuantity").value = p.quantity;
-
         const form = document.getElementById("editForm");
         const cards = document.querySelectorAll(".product");
         cards.forEach((card) => {
           if (card.nextSibling === form) card.parentNode.removeChild(form);
         });
-
         const target = Array.from(cards).find(
           (card) => card.querySelector(".value")?.textContent === code
         );
-
         if (target) {
           target.after(form);
           form.style.display = "block";
         }
       }
 
-      function submitEdit(event) {
-        event.preventDefault();
+      function submitEdit(e) {
+        e.preventDefault();
         const form = document.getElementById("editForm");
         const formData = new FormData(form);
-
         fetch("/edit-product", {
           method: "POST",
           body: formData,

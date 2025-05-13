@@ -6,6 +6,19 @@
     <title>Our Products</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <style>
+      .attention-tag {
+        background-color: #ffe5e5;
+        color: #b30000;
+        font-size: 0.65rem;
+        margin-left: 6px;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
   </head>
   <body class="products-page">
     <div id="navbar"></div>
@@ -39,7 +52,8 @@
     <script>
       let allProducts = [];
 
-      fetch("products.json")
+      // Fetch products
+      fetch("/products.json")
         .then((res) => res.json())
         .then((products) => {
           allProducts = products;
@@ -47,14 +61,24 @@
           filterAndSort();
         });
 
+      // Populate Category Dropdown
       function populateCategoryFilter(products) {
         const categories = [
           ...new Set(products.map((p) => p.category).filter(Boolean)),
         ];
-        categories.sort((a, b) => a.localeCompare(b));
+
+        // Ensure "Uncategorized" exists and is first
+        const cleaned = categories.map((cat) => cat.trim()).filter(Boolean);
+        const sorted = cleaned
+          .filter((cat) => cat.toLowerCase() !== "uncategorized")
+          .sort((a, b) => a.localeCompare(b));
+        if (cleaned.some((cat) => cat.toLowerCase() === "uncategorized")) {
+          sorted.unshift("Uncategorized");
+        }
 
         const filter = document.getElementById("categoryFilter");
-        categories.forEach((cat) => {
+        filter.innerHTML = '<option value="">All Categories</option>';
+        sorted.forEach((cat) => {
           const opt = document.createElement("option");
           opt.value = cat;
           opt.textContent = cat;
@@ -83,22 +107,44 @@
           const description = keyword
             ? highlight(p.description, keyword)
             : p.description;
+          const isUncat = p.category.trim().toLowerCase() === "uncategorized";
 
           div.innerHTML = `
-      <img src="/uploads/${img}" alt="${p.name}" onerror="this.src='/uploads/default.jpg';">
-      <h3>${name}</h3>
-      <p><span class="label">Category:</span><span class="value">${p.category}</span></p>
-      <p><span class="label">Description:</span><span class="value">${description}</span></p>
-      <p><span class="label">Notes:</span><span class="value">${p.extraNotes}</span></p>
-      <p><span class="label">Quantity:</span><span class="value">${p.quantity}</span></p>
-    `;
+            <img src="/uploads/${img}" alt="${
+            p.name
+          }" onerror="this.src='/uploads/default.jpg';">
+            <h3>${name}</h3>
+            <p><span class="label">Category:</span> <span class="value">${
+              p.category
+            }</span>
+            ${
+              isUncat
+                ? '<span class="attention-tag">⚠️ Needs Category</span>'
+                : ""
+            }</p>
+            <p><span class="label">Description:</span><span class="value">${description}</span></p>
+            <p><span class="label">Notes:</span><span class="value">${
+              p.extraNotes
+            }</span></p>
+            <p><span class="label">Quantity:</span><span class="value">${
+              p.quantity
+            }</span></p>
+          `;
 
           container.appendChild(div);
         });
 
-        // ✅ Show product count
-        const countText = `Showing ${products.length} of ${allProducts.length} products`;
-        document.getElementById("productCount").textContent = countText;
+        // ✅ Optional Product Count
+        if (!document.getElementById("productCount")) {
+          const countElem = document.createElement("p");
+          countElem.id = "productCount";
+          countElem.style.textAlign = "center";
+          countElem.style.fontWeight = "bold";
+          document.querySelector(".controls").after(countElem);
+        }
+        document.getElementById(
+          "productCount"
+        ).textContent = `Showing ${products.length} of ${allProducts.length} products`;
       }
 
       function filterAndSort() {
@@ -110,27 +156,26 @@
           .value.toLowerCase();
 
         if (cat) filtered = filtered.filter((p) => p.category === cat);
-        if (keyword)
+        if (keyword) {
           filtered = filtered.filter(
             (p) =>
               p.name.toLowerCase().includes(keyword) ||
               p.description.toLowerCase().includes(keyword)
           );
+        }
 
         if (sort === "name-asc")
           filtered.sort((a, b) => a.name.localeCompare(b.name));
         if (sort === "name-desc")
           filtered.sort((a, b) => b.name.localeCompare(a.name));
-        if (sort === "date-newest") {
+        if (sort === "date-newest")
           filtered.sort(
             (a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)
           );
-        }
-        if (sort === "date-oldest") {
+        if (sort === "date-oldest")
           filtered.sort(
             (a, b) => new Date(a.dateAdded) - new Date(b.dateAdded)
           );
-        }
 
         renderProducts(filtered);
       }
