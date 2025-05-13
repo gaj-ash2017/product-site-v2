@@ -137,8 +137,6 @@ app.post("/delete-product", (req, res) => {
   });
 });
 
-
-
 // === CATEGORY ROUTES ===
 app.get("/categories", (req, res) => {
   fs.readFile(categoriesFile, "utf-8", (err, data) => {

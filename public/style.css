@@ -683,6 +683,7 @@ form#addProductForm button:hover {
   color: #888;
   font-size: 0.9rem;
 }
+
 .value.uncategorized {
   color: #b30000;
   font-weight: bold;
