@@ -1238,5 +1238,45 @@
     "quantity": 12,
     "image": "CUM3016761-PAI.jpg",
     "dateAdded": "2025-05-14T20:42:11.913Z"
+  },
+  {
+    "stockCode": "CUM3078307-AKM",
+    "name": "ACCESSORY DRIVE ASSEMBLY [ CAST IRON ]",
+    "description": "N14C",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3078307-AKM.jpg",
+    "dateAdded": "2025-05-14T21:07:11.856Z"
+  },
+  {
+    "stockCode": "CUM3901170",
+    "name": "BEARING CON ROD [ .STD ]",
+    "description": "B-SERIES",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "K.M.P.",
+    "quantity": 12,
+    "image": "CUM3901170.jpg",
+    "dateAdded": "2025-05-14T21:09:11.680Z"
+  },
+  {
+    "stockCode": "CUM3005133",
+    "name": "ACCESSORY DRIVE ASSEMBLY",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-14T21:10:41.669Z",
+    "image": "CUM3005133.jpg"
+  },
+  {
+    "stockCode": "CUM3076225-PAI",
+    "name": "GASKET ACCESSORY DRIVE",
+    "description": "BIG CAM | N14",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "CUM3076225-PAI.jpg",
+    "dateAdded": "2025-05-14T21:13:15.420Z"
   }
 ]
