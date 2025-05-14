@@ -110,16 +110,6 @@
     "image": "4893693.jpg"
   },
   {
-    "stockCode": "CUM3901170",
-    "name": "BEARING CON ROD .STD",
-    "description": "B-SERIES",
-    "category": "CONNECTING ROD AND PISTON",
-    "extraNotes": "K M P",
-    "quantity": 12,
-    "dateAdded": "2025-05-10T21:28:20.746Z",
-    "image": "3901170.jpg"
-  },
-  {
     "stockCode": "CUM4893693-01",
     "name": "BEARING CON ROD [ .STD ] [ LOWER ]",
     "description": "B-SERIES",
@@ -148,16 +138,6 @@
     "quantity": 6,
     "dateAdded": "2025-05-10T21:28:20.746Z",
     "image": "4089139.jpg"
-  },
-  {
-    "stockCode": "CUM3016761-PAI",
-    "name": "BEARING CON ROD [ .010 ]",
-    "description": "L10 | M11",
-    "category": "CONNECTING ROD AND PISTON",
-    "extraNotes": "P.A.I.",
-    "quantity": 12,
-    "dateAdded": "2025-05-10T21:28:20.746Z",
-    "image": "3016761-PAI.jpg"
   },
   {
     "stockCode": "CUM3016762-PAI",
@@ -210,16 +190,6 @@
     "image": "3055147.jpg"
   },
   {
-    "stockCode": "CUM0203671-PAI",
-    "name": "BEARING CON ROD [ .010 ]",
-    "description": "NH220",
-    "category": "CONNECTING ROD AND PISTON",
-    "extraNotes": "P.A.I.",
-    "quantity": 12,
-    "dateAdded": "2025-05-10T21:28:20.746Z",
-    "image": "0203671-PAI.jpg"
-  },
-  {
     "stockCode": "CUM0203670-MCB",
     "name": "BEARING CON ROD [ .STD ]",
     "description": "NH220",
@@ -248,16 +218,6 @@
     "quantity": 4,
     "dateAdded": "2025-05-10T21:28:20.746Z",
     "image": "0203670.jpg"
-  },
-  {
-    "stockCode": "CUM0203671-FED",
-    "name": "BEARING CON ROD [ .010 ]",
-    "description": "NH220",
-    "category": "CONNECTING ROD AND PISTON",
-    "extraNotes": "FP DIESEL",
-    "quantity": 8,
-    "dateAdded": "2025-05-10T21:28:20.746Z",
-    "image": "0203671-PAI.jpg"
   },
   {
     "stockCode": "CUM3966244-FED",
@@ -302,7 +262,7 @@
   {
     "stockCode": "CUM0203661-01",
     "name": "BEARING CON ROD [ .010 ]",
-    "description": "SMALL CAM",
+    "description": "SMALL CAM ENGINE",
     "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 12,

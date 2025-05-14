@@ -1,53 +1,24 @@
-
-/* Product Controls */
-.controls {
+/* === Admin Layout & Centering === */
+.admin-layout {
     display: flex;
-    gap: 1rem;
     justify-content: center;
+    padding: 2rem;
     flex-wrap: wrap;
-    padding: 1rem;
-    max-width: 1000px;
+    gap: 2rem;
+    max-width: 1400px;
     margin: auto;
 }
 
-.controls select,
-.controls input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 250px; 
-}
-
-.attention-tag {
-    background-color: #ffcccb;
-    color: #dc03a2;
-    font-size: 0.8rem;
-    margin-left: 8px;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-weight: bold; } 
-
-/* Product Grid */
+/* === Product Grid Container === */
 #product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
 }
 
-body.admin-page #product-list .product img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin: 0 auto 0.5rem;
-    display: block;
-    border-radius: 4px;
-}
-
-/* === Admin Page Product Card Styling === */
+/* === Product Card Styling === */
 body.admin-page #product-list .product {
     background: #fff;
     border: 1px solid #ccc;
@@ -60,8 +31,22 @@ body.admin-page #product-list .product {
     justify-content: space-between;
     height: 100%;
     min-height: 460px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
+/* === Card Image Styling === */
+body.admin-page #product-list .product img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 auto 0.5rem;
+    display: block;
+    border-radius: 4px;
+}
+
+/* === Card Header & Text === */
 body.admin-page #product-list .product h3 {
     margin: 0 0 0.4rem;
     font-size: 0.8rem;
@@ -91,6 +76,7 @@ body.admin-page #product-list .product .value {
     color: #333;
 }
 
+/* === Buttons on Cards === */
 body.admin-page .buttons {
     display: flex;
     justify-content: flex-start;
@@ -116,26 +102,27 @@ body.admin-page .buttons button:last-child {
     color: #fff;
 }
 
-.admin-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1400px;
+/* === Controls at Top === */
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 1000px;
     margin: auto;
 }
 
-.product-column {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
+.controls select,
+.controls input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 250px;
 }
 
-.edit-column {
-    border-left: 1px solid #eee;
-    padding-left: 1rem;
-}
-
+/* === Edit Form and Tags === */
 #editForm {
     display: none;
     background: #f3eeee;
@@ -143,10 +130,6 @@ body.admin-page .buttons button:last-child {
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-#editForm h2 {
-    margin-top: 0;
 }
 
 #editForm label {
@@ -184,7 +167,18 @@ body.admin-page .buttons button:last-child {
     margin-left: 0.5rem;
 }
 
-/* Badge style for Stock Code in admin panel only */
+/* === Attention Tags === */
+.attention-tag {
+    background-color: #ffcccb;
+    color: #dc03a2;
+    font-size: 0.8rem;
+    margin-left: 8px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* === Badge for Stock Code === */
 body.admin-page .badge {
     background-color: #7bb930;
     color: #d50606;
@@ -192,4 +186,5 @@ body.admin-page .badge {
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.9rem;
-    margin-left: 0.25rem; }
+    margin-left: 0.25rem;
+}

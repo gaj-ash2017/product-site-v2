@@ -245,6 +245,35 @@ app.get("/categories.json", (req, res) => {
   res.sendFile(path.join(__dirname, "categories.json"));
 });
 
+
+// This route removes images from /uploads not linked in products.json
+app.post("/cleanup-unused-images", (req, res) => {
+  const uploadsDir = path.join(__dirname, "public", "uploads");
+  const products = JSON.parse(fs.readFileSync("products.json"));
+  const usedImages = new Set(products.map((p) => p.image).filter(Boolean));
+
+  fs.readdir(uploadsDir, (err, files) => {
+    if (err) {
+      console.error("Error reading uploads directory:", err);
+      return res
+        .status(500)
+        .json({ error: "Failed to read uploads directory" });
+    }
+
+    const deleted = [];
+
+    files.forEach((file) => {
+      if (file === "default.jpg") return; // Never delete default image
+      if (!usedImages.has(file)) {
+        fs.unlinkSync(path.join(uploadsDir, file));
+        deleted.push(file);
+      }
+    });
+
+    res.json({ success: true, deleted });
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

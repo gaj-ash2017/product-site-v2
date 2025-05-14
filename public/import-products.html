@@ -5,11 +5,9 @@
     <title>Import Products (CSV)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="import-products.css">
+    <link rel="stylesheet" href="import-products.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <style>
-      
-    </style>
+    <style></style>
   </head>
   <body class="import-page">
     <div id="navbar"></div>
@@ -37,24 +35,6 @@
         <div id="feedback" class="message"></div>
       </form>
     </div>
-
-    <script>
-      document
-        .getElementById("importForm")
-        .addEventListener("submit", function (e) {
-          const fileInput = document.getElementById("csvfile");
-          const feedback = document.getElementById("feedback");
-
-          if (!fileInput.files.length) {
-            e.preventDefault();
-            feedback.textContent = "⚠️ Please choose a CSV file first.";
-            feedback.style.color = "red";
-            return;
-          }
-
-          feedback.textContent = "Uploading...";
-          feedback.style.color = "black";
-        });
-    </script>
+    <script src="import-products.js"></script>
   </body>
 </html>
