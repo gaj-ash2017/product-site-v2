@@ -3,9 +3,19 @@ let allProducts = [];
 fetch("/products.json")
   .then((res) => res.json())
   .then((products) => {
+    console.log("✅ Raw Products:", products);
+
+    products.sort((a, b) => {
+      const codeA = a.stockCode?.toUpperCase() || "";
+      const codeB = b.stockCode?.toUpperCase() || "";
+      return codeA.localeCompare(codeB);
+    });
+
+    console.log("✅ Sorted Products:", products);
+
     allProducts = products;
     populateCategoryFilter(products);
-    filterAndSort();
+    renderProducts(products);
   });
 
 fetch("/categories.json")
@@ -90,6 +100,16 @@ function renderProducts(products) {
     "productCount"
   ).textContent = `Showing ${products.length} of ${allProducts.length} products`;
 }
+
+document.getElementById("stockSearch").addEventListener("input", function () {
+  const query = this.value.trim().toLowerCase();
+
+  const filtered = allProducts.filter((product) =>
+    product.stockCode?.toLowerCase().includes(query)
+  );
+
+  renderProducts(filtered);
+});
 
 function filterAndSort() {
   let filtered = [...allProducts];

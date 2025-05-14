@@ -1178,5 +1178,65 @@
     "quantity": 5,
     "dateAdded": "2025-05-13T15:09:56.787Z",
     "image": "CUM3678770.jpg"
+  },
+  {
+    "stockCode": "CUM0116391-L",
+    "name": "BUSH ACCESSORY DRIVE",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "K.M.P.",
+    "quantity": 1,
+    "image": "CUM0116391-L.jpg",
+    "dateAdded": "2025-05-14T20:27:29.980Z"
+  },
+  {
+    "stockCode": "CUM0132770",
+    "name": "BUSH ACCESSORY DRIVE",
+    "description": "BIG CAM",
+    "category": "ACCESSORY DRIVE",
+    "extraNotes": "K.M.P.",
+    "quantity": 1,
+    "image": "CUM0132770.jpg",
+    "dateAdded": "2025-05-14T20:30:59.009Z"
+  },
+  {
+    "stockCode": "CUM0186918-GR",
+    "name": "ADAPTOR TURBO EXHAUST",
+    "description": "BIG CAM | N14",
+    "category": "EXHAUST",
+    "extraNotes": "GRAND ROCK",
+    "quantity": 4,
+    "image": "CUM0186918-GR.jpg",
+    "dateAdded": "2025-05-14T20:33:57.881Z"
+  },
+  {
+    "stockCode": "CUM0203671-FED",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 8,
+    "image": "CUM0203671-FED.jpg",
+    "dateAdded": "2025-05-14T20:39:54.014Z"
+  },
+  {
+    "stockCode": "CUM0203671-PAI",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "NH220",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "CUM0203671-PAI.jpg",
+    "dateAdded": "2025-05-14T20:40:35.907Z"
+  },
+  {
+    "stockCode": "CUM3016761-PAI",
+    "name": "BEARING CON ROD [ .010 ]",
+    "description": "L10 | M11",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "CUM3016761-PAI.jpg",
+    "dateAdded": "2025-05-14T20:42:11.913Z"
   }
 ]

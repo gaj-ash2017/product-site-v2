@@ -188,3 +188,17 @@ body.admin-page .badge {
     font-size: 0.9rem;
     margin-left: 0.25rem;
 }
+
+/* === Search Bar */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#stockSearch {
+    padding: 10px 15px;
+    width: 300px;
+    max-width: 90%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px; }
