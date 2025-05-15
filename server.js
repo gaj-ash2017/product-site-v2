@@ -4,10 +4,6 @@ const path = require("path");
 const multer = require("multer");
 const csv = require("csv-parser");
 
-const sqlite3 = require("sqlite3").verbose();
-const dbPath = "/data/messages.db"; // ✅ Hardcoded
-const db = new sqlite3.Database(dbPath);
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -179,8 +175,7 @@ app.post("/sort-products", (req, res) => {
     });
 
     fs.writeFile(filePath, JSON.stringify(products, null, 2), (err) => {
-      if (err)
-        return res.status(500).send("❌ Failed to write sorted products");
+      if (err) return res.status(500).send("❌ Failed to write sorted products");
       res.send("✅ Products successfully sorted by stockCode and saved.");
     });
   });
@@ -382,73 +377,34 @@ app.post("/submit-contact", (req, res) => {
     return res.status(400).send("❌ Missing fields.");
   }
 
-  const sql = `INSERT INTO messages (name, email, message, date)
-               VALUES (?, ?, ?, ?)`;
-  const date = new Date().toISOString();
+  const contactPath = path.join(__dirname, "messages.json");
+  const newEntry = {
+    name: name.trim(),
+    email: email.trim(),
+    message: message.trim(),
+    date: new Date().toISOString(),
+  };
 
-  db.run(sql, [name.trim(), email.trim(), message.trim(), date], (err) => {
-    if (err) {
-      console.error("❌ DB error:", err.message);
-      return res.status(500).send("❌ Failed to save message.");
-    }
-    res.send("✅ Message received! Thank you.");
-  });
-});
-
-app.get("/messages-list", (req, res) => {
-  const sql = "SELECT * FROM messages ORDER BY id DESC";
-
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      console.error("❌ DB read error:", err.message);
-      return res.status(500).json({ error: "Failed to fetch messages" });
-    }
-    res.json(rows);
-  });
-});
-
-app.get("/export-messages", (req, res) => {
-  const sql = "SELECT * FROM messages ORDER BY id DESC";
-
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      console.error("❌ Failed to export messages:", err.message);
-      return res.status(500).send("❌ Could not export messages.");
+  fs.readFile(contactPath, "utf-8", (err, data) => {
+    let messages = [];
+    if (!err && data) {
+      try {
+        messages = JSON.parse(data);
+      } catch {
+        return res.status(500).send("❌ Error parsing messages.json");
+      }
     }
 
-    res.json(rows);
-  });
-});
-
-app.post("/import-messages", express.json(), (req, res) => {
-  const messages = req.body;
-  if (!Array.isArray(messages)) return res.status(400).send("❌ Invalid data.");
-
-  const sql = `INSERT OR IGNORE INTO messages (name, email, message, date) VALUES (?, ?, ?, ?)`;
-  let inserted = 0;
-
-  db.serialize(() => {
-    messages.forEach((msg) => {
-      db.run(sql, [msg.name, msg.email, msg.message, msg.date], (err) => {
-        if (!err) inserted++;
-      });
+    messages.push(newEntry);
+    fs.writeFile(contactPath, JSON.stringify(messages, null, 2), (err) => {
+      if (err) return res.status(500).send("❌ Failed to save message.");
+      res.send("✅ Message received! Thank you.");
     });
-
-    res.send(`✅ Imported ${inserted} messages.`);
   });
 });
 
-app.post("/delete-all-messages", (req, res) => {
-  const sql = `DELETE FROM messages`;
-
-  db.run(sql, [], function (err) {
-    if (err) {
-      console.error("❌ Failed to delete messages:", err.message);
-      return res.status(500).send("❌ Failed to delete messages.");
-    }
-
-    res.send(`✅ Deleted all messages. Rows affected: ${this.changes}`);
-  });
+app.get("/messages.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "messages.json"));
 });
 
 app.listen(PORT, () => {

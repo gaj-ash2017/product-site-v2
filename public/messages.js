@@ -1,4 +1,4 @@
-fetch("/messages-list")
+fetch("/messages.json")
   .then((res) => res.json())
   .then((messages) => {
     const tbody = document.querySelector("#messageTable tbody");
