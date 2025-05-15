@@ -8,7 +8,7 @@ const csv = require("csv-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const dbPath = path.join(__dirname, "data", "messages.db");
+const dbPath = path.join("/data", "messages.db");
 const db = new sqlite3.Database(dbPath);
 
 app.use(express.static(path.join(__dirname, "public")));
