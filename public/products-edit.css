@@ -123,7 +123,7 @@ body.admin-page .buttons button:last-child {
 }
 
 /* === Edit Form and Tags === */
-#editForm {
+/* #editForm {
     display: none;
     background: #f3eeee;
     border: 1px solid #ddd;
@@ -165,7 +165,7 @@ body.admin-page .buttons button:last-child {
     background-color: #6c757d;
     color: white;
     margin-left: 0.5rem;
-}
+} */
 
 /* === Attention Tags === */
 .attention-tag {
@@ -201,4 +201,83 @@ body.admin-page .badge {
     max-width: 90%;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px; }
+    border-radius: 8px;
+}
+
+/* === edit and delete buttons */
+
+.edit-button {
+    background-color: #007acc;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.edit-button:hover {
+    background-color: #005fa3;
+}
+
+/* === sort products.json */
+
+.sort-controls {
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+
+.sort-controls button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sort-controls button:hover {
+    background-color: #4048d4; }
+
+
+        .search-edit-box {
+            max-width: 400px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+    
+        #editSearchInput {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+    
+        #editSearchResults {
+            margin-top: 6px;
+            text-align: left;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .search-result {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    
+        .search-result:hover {
+            background-color: #f2f2f2;     }

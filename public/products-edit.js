@@ -91,9 +91,11 @@ function renderProducts(products) {
           <p><span class="label">Notes:</span> ${p.extraNotes}</p>
           <p><span class="label">Quantity:</span> ${p.quantity}</p>
           <div class="buttons">
-            <button onclick="editProduct('${p.stockCode}')">✏️ Edit</button>
-            <button onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
-          </div>`;
+  <a href="edit-product.html?stockCode=${
+    p.stockCode
+  }" class="edit-button">✏️ Edit</a>
+  <button onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
+</div>`;
     container.appendChild(div);
   });
   document.getElementById(
@@ -143,7 +145,7 @@ document
 document.getElementById("sortBy").addEventListener("change", filterAndSort);
 document.getElementById("searchInput").addEventListener("input", filterAndSort);
 
-function editProduct(code) {
+/* function editProduct(code) {
   const p = allProducts.find((p) => p.stockCode === code);
   if (!p) return;
   document.getElementById("editStockCode").value = p.stockCode;
@@ -167,9 +169,9 @@ function editProduct(code) {
     target.after(form);
     form.style.display = "block";
   }
-}
+} */
 
-function submitEdit(e) {
+/* function submitEdit(e) {
   e.preventDefault();
   const form = document.getElementById("editForm");
   const formData = new FormData(form);
@@ -182,14 +184,14 @@ function submitEdit(e) {
       alert(msg);
       location.reload();
     });
-}
+} */
 
-function cancelEditForm() {
+/* function cancelEditForm() {
   const form = document.getElementById("editForm");
   form.reset();
   form.style.display = "none";
   document.getElementById("imagePreview").innerHTML = "";
-}
+} */
 
 function deleteProduct(stockCode) {
   if (!confirm("Delete this product?")) return;
@@ -223,6 +225,20 @@ function previewImage() {
   }
 }
 
+function sortProducts() {
+  if (
+    !confirm(
+      "Sort all products by stock code? This will overwrite products.json."
+    )
+  )
+    return;
+
+  fetch("/sort-products", { method: "POST" })
+    .then((res) => res.text())
+    .then((msg) => alert(msg))
+    .catch((err) => alert("❌ Sort failed"));
+}
+
 function cleanupUnusedImages() {
   if (!confirm("Clean up unused images? This cannot be undone.")) return;
 
@@ -249,3 +265,36 @@ function cleanupUnusedImages() {
         "❌ Failed to clean up images.";
     });
 }
+
+fetch("/products.json")
+  .then((res) => res.json())
+  .then((products) => {
+    allProducts = products;
+    populateCategoryFilter(products);
+    renderProducts(products);
+
+    // ✅ Setup edit search
+    const input = document.getElementById("editSearchInput");
+    const results = document.getElementById("editSearchResults");
+
+    input.addEventListener("input", () => {
+      const keyword = input.value.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (keyword.length < 2) return;
+
+      const filtered = allProducts.filter((p) =>
+        p.stockCode.toLowerCase().includes(keyword)
+      );
+
+      filtered.forEach((p) => {
+        const div = document.createElement("div");
+        div.className = "search-result";
+        div.textContent = `${p.stockCode} — ${p.name}`;
+        div.onclick = () => {
+          window.location.href = `edit-product.html?stockCode=${p.stockCode}`;
+        };
+        results.appendChild(div);
+      });
+    });
+  });

@@ -15,18 +15,16 @@
 
     <section class="contact-section">
       <h2>Contact Us</h2>
-      <form onsubmit="event.preventDefault(); alert('Message submitted!');">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">📨 Send Message</button>
       </form>
+      
+      <div id="contactStatus"></div>
+      
+      <script src="contact.js"></script>
     </section>
 
     <footer id="contact">

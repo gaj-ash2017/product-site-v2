@@ -1,0 +1,53 @@
+form#editForm {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+form#editForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+form#editForm input[type="text"],
+form#editForm input[type="number"],
+form#editForm input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form#editForm button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+form#editForm button:hover {
+    background-color: #005fa3;
+}
+
+#productTitle {
+    text-align: center;
+    margin: 30px auto 20px;
+    font-size: 1.5rem;
+    color: #222;
+}

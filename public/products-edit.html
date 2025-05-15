@@ -15,6 +15,9 @@
     <h1 style="text-align: center">🛠️ Admin: Edit & Delete Products</h1>
     <div class="search-bar">
       <input type="text" id="stockSearch" placeholder="🔍 Search by stock code..." />
+      <div class="sort-controls">
+        <button onclick="sortProducts()">🧾 Sort Products by Stock Code</button>
+      </div>
     </div>
     <div class="controls">
       <select id="categoryFilter">
@@ -32,11 +35,15 @@
         placeholder="Search name or description..."
       />
     </div>
+    <div class="search-edit-box">
+      <input type="text" id="editSearchInput" placeholder="🔍 Search by stock code..." />
+      <div id="editSearchResults" class="search-results"></div>
+    </div>
     <p id="productCount" style="text-align: center; font-weight: bold"></p>
     <div class="admin-layout">
       <div id="product-list"></div>
     </div>
-    <form
+    <!-- <form
       id="editForm"
       class="inline-edit-form"
       style="display: none"
@@ -82,11 +89,14 @@
         <button type="submit">💾 Save</button>
         <button type="button" onclick="cancelEditForm()">❌ Cancel</button>
       </div>
-    </form>
+    </form> -->
     <div class="cleanup" style="text-align: center; margin-top: 2rem">
       <button onclick="cleanupUnusedImages()">🧹 Clean Up Unused Images</button>
     </div>
     <div id="cleanupResult" style="margin-top: 1rem; font-size: 0.9rem; color: #333;"></div>
+
+    
+    
     <footer>
       <p style="text-align: center">Admin Panel – Manage Products</p>
     </footer>

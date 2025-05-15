@@ -1,5 +1,5 @@
 document.getElementById("importForm").addEventListener("submit", function (e) {
-  const fileInput = document.getElementById("csvfile");
+  const fileInput = document.getElementById("csvFile");
   const feedback = document.getElementById("feedback");
 
   if (!fileInput.files.length) {

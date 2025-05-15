@@ -1,4 +1,3 @@
-// ✅ Full working server.js with integrated product + category management
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -13,7 +12,15 @@ app.use(express.json());
 
 const productsFile = path.join(__dirname, "products.json");
 const categoriesFile = path.join(__dirname, "categories.json");
+
+// Ensure tmp/ directory exists
+const tmpDir = path.join(__dirname, "tmp");
+if (!fs.existsSync(tmpDir)) {
+  fs.mkdirSync(tmpDir);
+}
+
 const imageUpload = multer({ dest: path.join(__dirname, "public/uploads/") });
+const csvUpload = multer({ dest: tmpDir }); // for importing CSVs
 
 // === PRODUCTS ===
 app.get("/products.json", (req, res) => {
@@ -145,6 +152,35 @@ app.get("/categories", (req, res) => {
   });
 });
 
+// === SORT PRODUCTS.JSON
+
+// ✅ Permanently sort products.json by stockCode
+app.post("/sort-products", (req, res) => {
+  const filePath = path.join(__dirname, "products.json");
+
+  fs.readFile(filePath, "utf-8", (err, data) => {
+    if (err) return res.status(500).send("❌ Error reading products.json");
+
+    let products = [];
+    try {
+      products = JSON.parse(data);
+    } catch {
+      return res.status(500).send("❌ Invalid JSON format in products.json");
+    }
+
+    products.sort((a, b) => {
+      const codeA = a.stockCode?.toUpperCase() || "";
+      const codeB = b.stockCode?.toUpperCase() || "";
+      return codeA.localeCompare(codeB);
+    });
+
+    fs.writeFile(filePath, JSON.stringify(products, null, 2), (err) => {
+      if (err) return res.status(500).send("❌ Failed to write sorted products");
+      res.send("✅ Products successfully sorted by stockCode and saved.");
+    });
+  });
+});
+
 app.post("/add-category", (req, res) => {
   const { category } = req.body;
   if (!category) return res.status(400).send("No category provided");
@@ -198,13 +234,11 @@ app.post("/delete-category", (req, res) => {
     if (!categories.includes(category))
       return res.status(404).send("⚠️ Category not found.");
 
-    // Remove the category
     categories = categories.filter((c) => c !== category);
 
     fs.writeFile(categoriesPath, JSON.stringify(categories, null, 2), (err) => {
       if (err) return res.status(500).send("Failed to delete category.");
 
-      // Now update products.json to replace this category
       fs.readFile(productsFile, "utf-8", (err, prodData) => {
         if (err) return res.status(500).send("Error reading products.");
 
@@ -245,8 +279,7 @@ app.get("/categories.json", (req, res) => {
   res.sendFile(path.join(__dirname, "categories.json"));
 });
 
-
-// This route removes images from /uploads not linked in products.json
+// === CLEANUP UNUSED IMAGES ===
 app.post("/cleanup-unused-images", (req, res) => {
   const uploadsDir = path.join(__dirname, "public", "uploads");
   const products = JSON.parse(fs.readFileSync("products.json"));
@@ -263,7 +296,7 @@ app.post("/cleanup-unused-images", (req, res) => {
     const deleted = [];
 
     files.forEach((file) => {
-      if (file === "default.jpg") return; // Never delete default image
+      if (file === "default.jpg") return;
       if (!usedImages.has(file)) {
         fs.unlinkSync(path.join(uploadsDir, file));
         deleted.push(file);
@@ -274,6 +307,107 @@ app.post("/cleanup-unused-images", (req, res) => {
   });
 });
 
+// === IMPORT STOCKS CSV ===
+app.post("/import-csv", csvUpload.single("csvFile"), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send("⚠️ No CSV file uploaded.");
+  }
+
+  const results = [];
+  fs.createReadStream(req.file.path)
+    .pipe(csv())
+    .on("data", (data) => results.push(data))
+    .on("end", () => {
+      const productsFile = path.join(__dirname, "products.json");
+
+      fs.readFile(productsFile, "utf-8", (err, data) => {
+        let existingProducts = [];
+        if (!err && data) {
+          try {
+            existingProducts = JSON.parse(data);
+          } catch {
+            return res.status(500).send("❌ Error parsing products.json");
+          }
+        }
+
+        const existingStockCodes = new Set(
+          existingProducts.map((p) => p.stockCode)
+        );
+        const newProducts = results
+          .filter((p) => p.stockCode && !existingStockCodes.has(p.stockCode))
+          .map((p) => ({
+            stockCode: p.stockCode?.trim(),
+            name: p.name?.trim() || "Unnamed",
+            description: p.description?.trim() || "",
+            category: p.category?.trim() || "Uncategorized",
+            extraNotes: p.extraNotes?.trim() || "",
+            quantity: parseInt(p.quantity) || 0,
+            image: "default.jpg",
+            dateAdded: new Date().toISOString(),
+          }));
+
+        const merged = [...existingProducts, ...newProducts];
+
+        // Backup before write
+        const backupPath = productsFile + ".bak";
+        fs.copyFileSync(productsFile, backupPath);
+
+        fs.writeFile(productsFile, JSON.stringify(merged, null, 2), (err) => {
+          fs.unlinkSync(req.file.path); // Clean up temp file
+          if (err) {
+            console.error("❌ Failed to save merged products.json", err);
+            return res.status(500).send("Failed to save product data.");
+          }
+
+          res.send(
+            `✅ Imported ${newProducts.length} new products. 📦 Total in system: ${merged.length}`
+          );
+        });
+      });
+    })
+    .on("error", (err) => {
+      console.error("❌ Error parsing CSV:", err);
+      res.status(500).send("Error parsing CSV.");
+    });
+});
+
+app.post("/submit-contact", (req, res) => {
+  const { name, email, message } = req.body;
+  if (!name || !email || !message) {
+    return res.status(400).send("❌ Missing fields.");
+  }
+
+  const contactPath = path.join(__dirname, "messages.json");
+  const newEntry = {
+    name: name.trim(),
+    email: email.trim(),
+    message: message.trim(),
+    date: new Date().toISOString(),
+  };
+
+  fs.readFile(contactPath, "utf-8", (err, data) => {
+    let messages = [];
+    if (!err && data) {
+      try {
+        messages = JSON.parse(data);
+      } catch {
+        return res.status(500).send("❌ Error parsing messages.json");
+      }
+    }
+
+    messages.push(newEntry);
+    fs.writeFile(contactPath, JSON.stringify(messages, null, 2), (err) => {
+      if (err) return res.status(500).send("❌ Failed to save message.");
+      res.send("✅ Message received! Thank you.");
+    });
+  });
+});
+
+app.get("/messages.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "messages.json"));
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log("💡 Tip: Use 'nodemon server.js' so your changes auto-refresh!");
 });

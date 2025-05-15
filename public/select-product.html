@@ -1,0 +1,31 @@
+<h2>Select Product to Edit</h2>
+
+<select id="productSelect">
+  <option value="">-- Choose a product --</option>
+</select>
+
+<button onclick="goToEdit()">✏️ Edit Product</button>
+
+<script>
+  fetch("/products.json")
+    .then(res => res.json())
+    .then(products => {
+      const select = document.getElementById("productSelect");
+      products.sort((a, b) => a.stockCode.localeCompare(b.stockCode));
+      products.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.stockCode;
+        opt.textContent = `${p.stockCode} — ${p.name}`;
+        select.appendChild(opt);
+      });
+    });
+
+  function goToEdit() {
+    const code = document.getElementById("productSelect").value;
+    if (code) {
+      window.location.href = `edit-product.html?stockCode=${code}`;
+    } else {
+      alert("Please select a product.");
+    }
+  }
+</script>
