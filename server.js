@@ -4,6 +4,9 @@ const path = require("path");
 const multer = require("multer");
 const csv = require("csv-parser");
 
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("messages.db");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -377,34 +380,30 @@ app.post("/submit-contact", (req, res) => {
     return res.status(400).send("❌ Missing fields.");
   }
 
-  const contactPath = path.join(__dirname, "messages.json");
-  const newEntry = {
-    name: name.trim(),
-    email: email.trim(),
-    message: message.trim(),
-    date: new Date().toISOString(),
-  };
+  const sql = `INSERT INTO messages (name, email, message, date)
+               VALUES (?, ?, ?, ?)`;
+  const date = new Date().toISOString();
 
-  fs.readFile(contactPath, "utf-8", (err, data) => {
-    let messages = [];
-    if (!err && data) {
-      try {
-        messages = JSON.parse(data);
-      } catch {
-        return res.status(500).send("❌ Error parsing messages.json");
-      }
+  db.run(sql, [name.trim(), email.trim(), message.trim(), date], (err) => {
+    if (err) {
+      console.error("❌ DB error:", err.message);
+      return res.status(500).send("❌ Failed to save message.");
     }
-
-    messages.push(newEntry);
-    fs.writeFile(contactPath, JSON.stringify(messages, null, 2), (err) => {
-      if (err) return res.status(500).send("❌ Failed to save message.");
-      res.send("✅ Message received! Thank you.");
-    });
+    res.send("✅ Message received! Thank you.");
   });
 });
+   
 
-app.get("/messages.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "messages.json"));
+app.get("/messages-list", (req, res) => {
+  const sql = "SELECT * FROM messages ORDER BY id DESC";
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error("❌ DB read error:", err.message);
+      return res.status(500).json({ error: "Failed to fetch messages" });
+    }
+    res.json(rows);
+  });
 });
 
 app.listen(PORT, () => {
