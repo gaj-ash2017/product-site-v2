@@ -406,6 +406,19 @@ app.get("/messages-list", (req, res) => {
   });
 });
 
+app.get("/export-messages", (req, res) => {
+  const sql = "SELECT * FROM messages ORDER BY id DESC";
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error("❌ Failed to export messages:", err.message);
+      return res.status(500).send("❌ Could not export messages.");
+    }
+
+    res.json(rows);
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log("💡 Tip: Use 'nodemon server.js' so your changes auto-refresh!");
