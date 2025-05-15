@@ -1,0 +1,12 @@
+# Node.js dependencies
+node_modules/
+
+# Lock file
+package-lock.json
+
+# SQLite DB backup (optional)
+*.db
+
+# VS Code, Mac system files, etc.
+.DS_Store
+*.log

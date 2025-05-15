@@ -2,13 +2,14 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
+const sqlite3 = require("sqlite3").verbose(); // ✅ THIS LINE
 const csv = require("csv-parser");
-
-const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("messages.db");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const dbPath = path.join(__dirname, "data", "messages.db");
+const db = new sqlite3.Database(dbPath);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
@@ -178,7 +179,8 @@ app.post("/sort-products", (req, res) => {
     });
 
     fs.writeFile(filePath, JSON.stringify(products, null, 2), (err) => {
-      if (err) return res.status(500).send("❌ Failed to write sorted products");
+      if (err)
+        return res.status(500).send("❌ Failed to write sorted products");
       res.send("✅ Products successfully sorted by stockCode and saved.");
     });
   });
@@ -392,7 +394,6 @@ app.post("/submit-contact", (req, res) => {
     res.send("✅ Message received! Thank you.");
   });
 });
-   
 
 app.get("/messages-list", (req, res) => {
   const sql = "SELECT * FROM messages ORDER BY id DESC";
@@ -416,6 +417,24 @@ app.get("/export-messages", (req, res) => {
     }
 
     res.json(rows);
+  });
+});
+
+app.post("/import-messages", express.json(), (req, res) => {
+  const messages = req.body;
+  if (!Array.isArray(messages)) return res.status(400).send("❌ Invalid data.");
+
+  const sql = `INSERT OR IGNORE INTO messages (name, email, message, date) VALUES (?, ?, ?, ?)`;
+  let inserted = 0;
+
+  db.serialize(() => {
+    messages.forEach((msg) => {
+      db.run(sql, [msg.name, msg.email, msg.message, msg.date], (err) => {
+        if (!err) inserted++;
+      });
+    });
+
+    res.send(`✅ Imported ${inserted} messages.`);
   });
 });
 
