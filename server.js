@@ -438,6 +438,20 @@ app.post("/import-messages", express.json(), (req, res) => {
   });
 });
 
+app.post("/delete-all-messages", (req, res) => {
+  const sql = `DELETE FROM messages`;
+
+  db.run(sql, [], function (err) {
+    if (err) {
+      console.error("❌ Failed to delete messages:", err.message);
+      return res.status(500).send("❌ Failed to delete messages.");
+    }
+
+    res.send(`✅ Deleted all messages. Rows affected: ${this.changes}`);
+  });
+});
+
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log("💡 Tip: Use 'nodemon server.js' so your changes auto-refresh!");
