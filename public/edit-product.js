@@ -78,18 +78,59 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.innerHTML = "<h3>❌ Failed to load product data.</h3>";
     });
 
-  document.getElementById("editForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+    document.getElementById("editForm").addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    fetch("/edit-product", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.text())
-      .then((msg) => {
-        alert(msg);
-        window.location.href = "products-edit.html";
-      });
-  });
+      const form = e.target;
+      const formData = new FormData(form);
+      const fileInput = document.getElementById("imageFile");
+      const productImage = document.getElementById("productImage");
+
+      fetch("/edit-product", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.text())
+        .then((msg) => {
+          alert(msg);
+
+          // ✅ If image was uploaded, update preview
+          if (fileInput.files.length > 0) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              productImage.src = e.target.result;
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+          }
+
+          // ✅ Reset form fields
+          form.reset();
+
+          // ✅ Optionally set the preview back to default if no new image
+          if (fileInput.files.length === 0) {
+            productImage.src = "/uploads/default.jpg";
+          }
+        })
+        .catch((err) => {
+          alert("❌ Failed to save changes.");
+          console.error(err);
+        });
+    });
+});
+
+document.getElementById("imageFile").addEventListener("change", function () {
+  const fileInput = this;
+  const preview = document.getElementById("productImage");
+
+  if (fileInput.files && fileInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      preview.src = e.target.result;
+      preview.style.opacity = 0;
+      setTimeout(() => {
+        preview.style.opacity = 1;
+      }, 100); // simple fade-in
+    };
+    reader.readAsDataURL(fileInput.files[0]);
+  }
 });

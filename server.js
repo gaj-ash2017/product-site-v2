@@ -89,6 +89,7 @@ app.post("/edit-product", imageUpload.single("imageFile"), (req, res) => {
 
   fs.readFile(productsFile, "utf-8", (err, data) => {
     if (err) return res.status(500).send("Error reading products file");
+
     let products = JSON.parse(data);
     const index = products.findIndex((p) => p.stockCode === updated.stockCode);
     if (index === -1) return res.status(404).send("Product not found");
@@ -97,21 +98,38 @@ app.post("/edit-product", imageUpload.single("imageFile"), (req, res) => {
     const oldImage = products[index].image;
 
     if (req.file) {
-      const ext = path.extname(req.file.originalname);
-      const safeName = updated.stockCode + ext;
-      const newPath = path.join(req.file.destination, safeName);
-      fs.renameSync(req.file.path, newPath);
-      updated.image = safeName;
+      const ext = path.extname(req.file.originalname) || ".jpg";
 
-      if (oldImage !== "default.jpg") {
-        const oldPath = path.join(__dirname, "public/uploads", oldImage);
-        if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+      // ✅ Always use the original stock code from existing product entry
+      const actualCode = products[index].stockCode;
+      const safeName = actualCode + ext;
+
+      const oldImage = products[index].image;
+      const newPath = path.join(__dirname, "public/uploads", safeName);
+
+      console.log("✅ Received file:", req.file.originalname);
+      console.log("🧾 Renaming to:", newPath);
+
+      try {
+        fs.renameSync(req.file.path, newPath);
+        updated.image = safeName;
+        updated.imageUpdatedAt = new Date().toISOString();
+
+        if (oldImage && oldImage !== "default.jpg" && oldImage !== safeName) {
+          const oldPath = path.join(__dirname, "public/uploads", oldImage);
+          if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+        }
+      } catch (err) {
+        console.error("❌ Error renaming image:", err);
+        updated.image = oldImage;
       }
     } else {
       updated.image = oldImage;
+      updated.imageUpdatedAt = products[index].imageUpdatedAt || null;
     }
-
+    
     products[index] = updated;
+
     fs.writeFile(productsFile, JSON.stringify(products, null, 2), (err) => {
       if (err) return res.status(500).send("Failed to save updated product");
       res.send("✅ Product updated successfully!");

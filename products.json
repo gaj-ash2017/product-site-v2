@@ -833,151 +833,151 @@
     "stockCode": "CUM3802172-PAI",
     "name": "KIT PISTON [ .020 ]",
     "description": "B-SERIES",
-    "category": "22072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802172-PAI.jpg"
   },
   {
     "stockCode": "CUM3802234-AKM",
     "name": "RING SET [ .040 ]",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "AKMI",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802234-AKM.jpg"
   },
   {
     "stockCode": "CUM3802234-FPD",
     "name": "RING SET [ .040 ]",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 12,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802234-FPD.jpg"
   },
   {
     "stockCode": "CUM3802234-PAI",
     "name": "RING SET [ .040 ]",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802234-PAI.jpg"
   },
   {
     "stockCode": "CUM3802249-FED",
     "name": "KIT PISTON [ .50MM OVERSIZE ]",
     "description": "B-SERIES",
-    "category": "23072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802249-FED.jpg"
   },
   {
     "stockCode": "CUM3802249-PAI",
     "name": "KIT PISTON [ .50MM OVERSIZE ]",
     "description": "B-SERIES",
-    "category": "22072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 4,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802249-PAI.jpg"
   },
   {
     "stockCode": "CUM3802356-MCB",
     "name": "KIT VALVE EXHAUST",
     "description": "B-SERIES",
-    "category": "15022024-001",
+    "category": "CYLINDER HEAD",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802356-MCB.jpg"
   },
   {
     "stockCode": "CUM3802422-01",
     "name": "RING SET [ .020 ]",
     "description": "B-SERIES",
-    "category": "23022024-004",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802422-01.jpg"
   },
   {
     "stockCode": "CUM3802423",
     "name": "RING SET [ .040 ]",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802423.jpg"
   },
   {
     "stockCode": "CUM3802562-FED",
     "name": "KIT PISTON [ .STD ]",
     "description": "B-SERIES",
-    "category": "16072024-012",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802562-FED.jpg"
   },
   {
     "stockCode": "CUM3802564-PAI",
     "name": "KIT PISTON [ .050 ]",
     "description": "B-SERIES",
-    "category": "20072024-002",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802564-PAI.jpg"
   },
   {
     "stockCode": "CUM3802750-C",
     "name": "RING SET",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802750-C.jpg"
   },
   {
     "stockCode": "CUM3802750-FED",
     "name": "RING SET",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "FP DIESEL",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802750-FED.jpg"
   },
   {
     "stockCode": "CUM3802758-PAI",
     "name": "KIT PISTON [ .050MM ]",
     "description": "B-SERIES",
-    "category": "21072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802758-PAI.jpg"
   },
   {
     "stockCode": "CUM3802820-FPD",
     "name": "KIT SEAL & SLEEVE CRANK [ FRONT ]",
     "description": "B-SERIES",
-    "category": "09022024-001",
+    "category": "CRANKSHAFT",
     "extraNotes": "FEDERAL MOGUL",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3802820-FPD.jpg"
   },
   {
     "stockCode": "CUM3803738-AKM",
@@ -1003,11 +1003,11 @@
     "stockCode": "CUM3804990-01",
     "name": "RING SET [ .STD ]",
     "description": "B-SERIES",
-    "category": "12022024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3804990-01.jpg"
   },
   {
     "stockCode": "CUM3820566",
@@ -1023,11 +1023,11 @@
     "stockCode": "CUM3900267",
     "name": "GROMMET CAM FOLLOWER COVER",
     "description": "B-SERIES",
-    "category": "26022024-002",
+    "category": "CAMSHAFT",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 38,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3900267.jpg"
   },
   {
     "stockCode": "CUM3900919-FPD",
@@ -1133,11 +1133,11 @@
     "stockCode": "CUM3901356-PAI",
     "name": "GASKET TURBO",
     "description": "B-SERIES",
-    "category": "01042024-007",
+    "category": "TURBOCHARGER",
     "extraNotes": "P.A.I.",
     "quantity": 4,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3901356-PAI.jpg"
   },
   {
     "stockCode": "CUM3901432-PAI",
@@ -1166,18 +1166,18 @@
     "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3901706.jpg"
   },
   {
     "stockCode": "CUM3901793",
     "name": "PIN PISTON",
     "description": "B-SERIES",
-    "category": "16072024-007",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "P.A.I.",
     "quantity": 10,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3901793.jpg"
   },
   {
     "stockCode": "CUM3903112-01",
@@ -1203,41 +1203,41 @@
     "stockCode": "CUM3903463",
     "name": "COVER INSPECTION",
     "description": "B-SERIES",
-    "category": "01052024-2705",
+    "category": "Uncategorized",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3903463.jpg"
   },
   {
     "stockCode": "CUM3903463-PAI",
     "name": "COVER INSPECTION",
     "description": "B-SERIES",
-    "category": "01052024-2505",
+    "category": "Uncategorized",
     "extraNotes": "P.A.I.",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3903463-PAI.jpg"
   },
   {
     "stockCode": "CUM3904166-C",
     "name": "SLEEVE SALVAGE",
     "description": "B-SERIES",
-    "category": "16072024-002",
+    "category": "CYLINDER BLOCK",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3904166-C.jpg"
   },
   {
     "stockCode": "CUM3904166-PAI",
     "name": "SLEEVE SALVAGE",
     "description": "B-SERIES",
-    "category": "16072024-002",
+    "category": "CYLINDER BLOCK",
     "extraNotes": "P.A.I.",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3904166-PAI.jpg"
   },
   {
     "stockCode": "CUM3904217",
@@ -1253,31 +1253,31 @@
     "stockCode": "CUM3904353-MCB",
     "name": "SEAL OIL CRANK FRONT",
     "description": "B-SERIES",
-    "category": "09022024-001",
+    "category": "CRANKSHAFT",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3904353-MCB.jpg"
   },
   {
     "stockCode": "CUM3905443-FED",
     "name": "GASKET MANIFOLD EXHAUST",
     "description": "B-SERIES",
-    "category": "21062024-001",
+    "category": "MANIFOLD EXHAUST",
     "extraNotes": "K M P",
     "quantity": 8,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3905443-FED.jpg"
   },
   {
     "stockCode": "CUM3906206",
     "name": "GUIDE VALVE",
     "description": "B-SERIES",
-    "category": "01042024-008",
+    "category": "CYLINDER HEAD",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 62,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3906206.jpg"
   },
   {
     "stockCode": "CUM3906733-GB",
@@ -1326,18 +1326,18 @@
     "category": "AIR INTAKE CONNECTION",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3911732.jpg"
   },
   {
     "stockCode": "CUM3912473",
     "name": "SEAL RING FLYWHEEL HOUSING",
     "description": "B-SERIES",
-    "category": "01042024-008",
+    "category": "FLYWHEEL HOUSING",
     "extraNotes": "P.A.I.",
     "quantity": 5,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3912473.jpg"
   },
   {
     "stockCode": "CUM3918999",
@@ -1383,11 +1383,11 @@
     "stockCode": "CUM3928499-PAI",
     "name": "THERMOSTAT",
     "description": "B-SERIES",
-    "category": "01042024-007",
+    "category": "THERMOSTAT",
     "extraNotes": "P.A.I.",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3928499-PAI.jpg"
   },
   {
     "stockCode": "CUM3929041",
@@ -1443,41 +1443,41 @@
     "stockCode": "CUM3930906-01",
     "name": "GASKET VALVE COVER",
     "description": "B-SERIES",
-    "category": "01052024-2505",
+    "category": "VALVE COVER",
     "extraNotes": "K M P",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3930906-01.jpg"
   },
   {
     "stockCode": "CUM3931623-PAI",
     "name": "TAPPET VALVE",
     "description": "B-SERIES",
-    "category": "16072024-007",
+    "category": "VALVE TAPPET",
     "extraNotes": "P.A.I.",
     "quantity": 32,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3931623-PAI.jpg"
   },
   {
     "stockCode": "CUM3932453",
     "name": "SPRING VALVE",
     "description": "B-SERIES",
-    "category": "01052024-2605",
+    "category": "CYLINDER HEAD",
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 15,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3932453.jpg"
   },
   {
     "stockCode": "CUM3935449",
     "name": "ISOLATOR NOISE VALVE COVER",
     "description": "B-SERIES",
-    "category": "01042024-009",
+    "category": "VALVE COVER",
     "extraNotes": "BLK DIESEL",
     "quantity": 5,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3935449.jpg"
   },
   {
     "stockCode": "CUM3938163-PAI",
@@ -1533,21 +1533,21 @@
     "stockCode": "CUM3942915",
     "name": "GASKET OIL COOLER FILTER HEAD",
     "description": "B-SERIES",
-    "category": "01042024-011",
+    "category": "ENGINE OIL COOLER",
     "extraNotes": "P.A.I.",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3942915.jpg"
   },
   {
     "stockCode": "CUM3942915-C",
     "name": "GASKET OIL COOLER FILTER HEAD",
     "description": "B-SERIES",
-    "category": "01042024-008",
-    "extraNotes": "",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "GENUINE CUMMINS",
     "quantity": 5,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3942915-C.jpg"
   },
   {
     "stockCode": "CUM3942915-FED",
@@ -1556,8 +1556,8 @@
     "category": "ENGINE OIL COOLER",
     "extraNotes": "FP DIESEL",
     "quantity": 4,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3942915-FED.jpg"
   },
   {
     "stockCode": "CUM3945866-GB",
@@ -1633,11 +1633,11 @@
     "stockCode": "CUM3970407-GB",
     "name": "HOSE INTAKE TURBO 6BT 63 ID X 90",
     "description": "B-SERIES",
-    "category": "01052024-2605",
+    "category": "TURBOCHARGER",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM3970407-GB.jpg"
   },
   {
     "stockCode": "CUM4024849-AKM",
@@ -1653,11 +1653,11 @@
     "stockCode": "CUM4025044-GB",
     "name": "KIT PISTON",
     "description": "B-SERIES",
-    "category": "22072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "default.jpg"
   },
   {
     "stockCode": "CUM4059448-FED",
@@ -1703,11 +1703,11 @@
     "stockCode": "CUM4089725-GB",
     "name": "KIT PISTON",
     "description": "B-SERIES",
-    "category": "22072024-001",
+    "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM4089725-GB.jpg"
   },
   {
     "stockCode": "CUM4101884-AKM",
@@ -1783,11 +1783,12 @@
     "stockCode": "CUM4932124-PAI",
     "name": "GASKET OIL COOLER",
     "description": "B-SERIES",
-    "category": "23072024-001",
+    "category": "ENGINE OIL COOLER",
     "extraNotes": "P.A.I.",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T19:48:51.671Z",
+    "image": "CUM4932124-PAI.jpg",
+    "imageUpdatedAt": "2025-05-15T21:29:23.199Z"
   },
   {
     "stockCode": "CUM4932375-02",
@@ -1833,11 +1834,11 @@
     "stockCode": "CUM4991240-GB",
     "name": "PULLEY IDLER",
     "description": "B-SERIES",
-    "category": "16072024-013",
+    "category": "Uncategorized",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "CUM4991240-GB.jpg"
   },
   {
     "stockCode": "CUMBM27253",
@@ -1856,8 +1857,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1550HD.jpg"
   },
   {
     "stockCode": "PK-08PK1560",
@@ -1866,8 +1867,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1560.jpg"
   },
   {
     "stockCode": "PK-08PK1565HD",
@@ -1876,8 +1877,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 1,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1565HD.jpg"
   },
   {
     "stockCode": "PK-08PK1575",
@@ -1886,8 +1887,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "GOODYEAR",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1575.jpg"
   },
   {
     "stockCode": "PK-08PK1580",
@@ -1896,8 +1897,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "NEWSTAR",
     "quantity": 2,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1580.jpg"
   },
   {
     "stockCode": "PK-08PK1700HD",
@@ -1906,8 +1907,8 @@
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 6,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1700HD.jpg"
   },
   {
     "stockCode": "PK-08PK1890",
@@ -1916,7 +1917,7 @@
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 3,
-    "image": "default.jpg",
-    "dateAdded": "2025-05-15T07:13:09.966Z"
+    "dateAdded": "2025-05-15T07:13:09.966Z",
+    "image": "PK-08PK1890.jpg"
   }
 ]

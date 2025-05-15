@@ -72,9 +72,16 @@ function renderProducts(products) {
       ? highlight(p.description, keyword)
       : p.description;
     div.innerHTML = `
-          <img src="/uploads/${img}" alt="${
+          <div class="image-wrapper">
+  <img src="/uploads/${p.image}?t=${Date.now()}" alt="${
       p.name
     }" onerror="this.src='/uploads/default.jpg';">
+  ${
+    p.imageUpdatedAt && new Date() - new Date(p.imageUpdatedAt) < 10000 // if updated within last 10 seconds
+      ? '<span class="updated-tag">✔️ Updated!</span>'
+      : ""
+  }
+</div>
           <h3>${name}</h3>
           <p><span class="label">Stock Code:</span> <span class="value badge">${
             p.stockCode
