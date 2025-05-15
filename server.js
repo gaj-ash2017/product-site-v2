@@ -2,14 +2,14 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
-const sqlite3 = require("sqlite3").verbose(); // ✅ THIS LINE
 const csv = require("csv-parser");
+
+const sqlite3 = require("sqlite3").verbose();
+const dbPath = "/data/messages.db"; // ✅ Hardcoded
+const db = new sqlite3.Database(dbPath);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-const dbPath = path.join("/data", "messages.db"); // ✅ Hardcoded /data
-const db = new sqlite3.Database(dbPath);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
@@ -450,7 +450,6 @@ app.post("/delete-all-messages", (req, res) => {
     res.send(`✅ Deleted all messages. Rows affected: ${this.changes}`);
   });
 });
-
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
