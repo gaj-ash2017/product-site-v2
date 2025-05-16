@@ -3,38 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Products</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="products.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="products-edit-clean.css">
   </head>
-  <body class="products-page">
-    <div id="navbar"></div>
-    <script src="navbar.js"></script>
-
-    <h2 style="text-align: center; margin-top: 1rem">Browse Our Products</h2>
-
-    <div class="controls">
-      <select id="categoryFilter">
-        <option value="">All Categories</option>
-      </select>
-      <select id="sortBy">
-        <option value="name-asc">Name A–Z</option>
-        <option value="name-desc">Name Z–A</option>
-        <option value="date-newest">Newest First</option>
-        <option value="date-oldest">Oldest First</option>
-      </select>
-      <input type="text" id="searchInput" placeholder="Search products..." />
+  <body>
+    <!-- Fixed Top Header -->
+    <div class="header-panel">
+      <div id="navbar"></div>
+      <script src="navbar.js"></script>
     </div>
-    <p
-      id="productCount"
-      style="text-align: center; font-weight: bold; margin-bottom: 1rem"
-    ></p>
-    <div id="product-list"></div>
 
-    <footer id="contact">
-      <p>&copy; 2025 Ashwin Gajan T/A Just Parts. All rights reserved.</p>
-    </footer>
+    <!-- Main Layout Container (Sidebar + Main Panel) -->
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h1>🛠️ Product Controls</h1>
+        <!-- filters, search, etc. -->
+      </div>
+
+      <!-- Main Content Panel -->
+      <div class="main-panel">
+        <div id="product-list"></div>
+      </div>
+    </div>
+    <div class="dashboard-container">
+      <!-- Left Sidebar -->
+      <div class="sidebar">
+        <h1>🛠️ Product Controls</h1>
+
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="">Sort By</option>
+          <option value="name-asc">A-Z</option>
+          <option value="name-desc">Z-A</option>
+          <option value="date-newest">Newest</option>
+          <option value="date-oldest">Oldest</option>
+        </select>
+
+        <input type="text" id="searchInput" placeholder="🔍 Search name/desc" />
+        <input
+          type="text"
+          id="stockSearch"
+          placeholder="🔍 Search stock code"
+        />
+
+        <div id="productCount">Showing 0 products</div>
+      </div>
+
+      <!-- Right Scrollable Content -->
+      <div class="main-panel">
+        <div id="product-list"></div>
+      </div>
+    </div>
     <script src="products.js"></script>
   </body>
 </html>

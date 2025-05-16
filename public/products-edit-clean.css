@@ -1,0 +1,151 @@
+/*****************************************
+  1. HEADER PANEL
+******************************************/
+.header-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/*****************************************
+    2. LAYOUT CONTAINER
+  ******************************************/
+.dashboard-container {
+    display: flex;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+}
+
+/*****************************************
+    3. SIDEBAR (Search, Filters, Sort)
+  ******************************************/
+.sidebar {
+    width: 280px;
+    background: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar select,
+.sidebar input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+#productCount {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*****************************************
+    4. MAIN PANEL (Scrollable Area)
+  ******************************************/
+.main-panel {
+    margin-left: 280px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+/*****************************************
+    5. PRODUCT DISPLAY GRID
+  ******************************************/
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*****************************************
+    6. PRODUCT CARDS
+  ******************************************/
+.product {
+    width: 300px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product img {
+    height: 120px;
+    /* ⬅️ smaller image height */
+    width: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.product h3 {
+    font-size: 1rem;
+    margin: 8px 0 4px;
+    line-height: 1.2;
+    height: 40px;
+    overflow: hidden;
+}
+
+.product p {
+    font-size: 0.85rem;
+    margin: 4px 0;
+    flex-grow: 1;
+}
+
+/* Button Container */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Shared Button Style */
+.btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Button Colors */
+.edit-btn {
+    background-color: #007bff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+/* Hover */
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.9;
+}

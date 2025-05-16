@@ -100,8 +100,8 @@ function renderProducts(products) {
           <div class="buttons">
   <a href="edit-product.html?stockCode=${
     p.stockCode
-  }" class="edit-button">✏️ Edit</a>
-  <button onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
+  }" class="btn edit-btn">✏️ Edit</a>
+  <button class="btn delete-btn" onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
 </div>`;
     container.appendChild(div);
   });
