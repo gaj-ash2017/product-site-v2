@@ -149,3 +149,21 @@
 .delete-btn:hover {
     opacity: 0.9;
 }
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .right-panel {
+        padding-top: 0;
+    } }

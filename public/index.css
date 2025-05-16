@@ -58,7 +58,8 @@
 .feature-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+    box-shadow: 5px 5px darkblue;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
@@ -121,4 +122,5 @@ footer {
     background-color: #222;
     color: #ccc;
     font-size: 0.9rem;
-    border-top: 1px solid #444; }
+    border-top: 1px solid #444;
+}
