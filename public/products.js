@@ -42,11 +42,11 @@ function renderProducts(products) {
     div.innerHTML = `
       <img src="/uploads/${p.image}" alt="${p.name}" onerror="this.src='/uploads/default.jpg'">
       <h3>${p.name}</h3>
-      <p>
-       <span class="label">Stock Code</span>
-       <span class="colon">:</span>
-       <span class="value">${p.stockCode}</span>
-      </p>
+      //<p>
+       //<span class="label">Stock Code</span>
+       //<span class="colon">:</span>
+       //<span class="value">${p.stockCode}</span>
+      //</p>
       <p>
        <span class="label">Category</span>
        <span class="colon">:</span>
