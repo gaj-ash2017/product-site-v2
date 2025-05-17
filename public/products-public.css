@@ -68,6 +68,7 @@ html {
 #productCount {
     font-weight: bold;
     margin-top: 20px;
+    color: blue;
 }
 
 
@@ -99,11 +100,19 @@ html {
 }
 
 .product img {
-    width: 100%;
+    display: block;
+    margin: 0 auto 12px;
+    max-width: 90%;
     height: 160px;
     object-fit: cover;
     border-radius: 6px;
-    margin-bottom: 12px;
+    border: 1px solid rebeccapurple;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .product h3 {

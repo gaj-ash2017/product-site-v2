@@ -55,7 +55,7 @@ function renderProducts(products) {
 
   document.getElementById(
     "productCount"
-  ).textContent = `Showing ${products.length} products`;
+  ).textContent = `Showing ${products.length} of ${allProducts.length} products`;
 }
 
 // Filter and sort handler
