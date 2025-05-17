@@ -127,17 +127,6 @@ html {
 }
 
 /* === Mobile Adjustments === */
-.hamburger {
-    display: none;
-    background: #007acc;
-    color: white;
-    padding: 12px 16px;
-    font-size: 1rem;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
 
 @media (max-width: 768px) {
     .dashboard-container {
@@ -168,4 +157,5 @@ html {
     .product {
         width: 90%;
         max-width: 400px;
-    } }
+    }
+}
