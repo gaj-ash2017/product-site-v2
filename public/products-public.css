@@ -160,7 +160,36 @@ html {
         max-width: 400px;
     }
 
-    .hamburger {
-        display: block;
+        .hamburger {
+            display: none;
+            /* ... rest of styles ... */
+        }
+    
+        @media (max-width: 768px) {
+            .dashboard-container {
+                flex-direction: column;
+            }
+    
+            .left-panel {
+                display: none;
+                /* ... rest ... */
+            }
+    
+            .left-panel.open {
+                display: block;
+            }
+    
+            .hamburger {
+                display: block;
+            }
+    
+            #product-list {
+                justify-content: center;
+            }
+    
+            .product {
+                width: 90%;
+                max-width: 400px;
+            }     
+        }
     }
-}
