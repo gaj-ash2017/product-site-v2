@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="products-edit-clean.css" />
-  </head>
-  <body>
-    <!-- Fixed Top Header -->
-    <div class="header-panel">
-      <div id="navbar"></div>
-      <!-- ✅ Hamburger Menu (mobile only) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="products-public.css" />
+  <style>
+    .filters {
+      background: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      width: 100%;
+      text-align: center;
+    }
 
-      <script src="navbar.js"></script>
+    .filters h2 {
+      margin: 0 0 16px;
+      font-size: 1.2rem;
+    }
+
+    .filters label {
+      display: block;
+      margin: 12px auto 4px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      width: 300px;
+      text-align: left;
+    }
+
+    .filters select,
+    .filters input {
+      width: 300px;
+      max-width: 90%;
+      padding: 8px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    #productCount {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <div class="header-panel">
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+  </div>
+
+  <!-- ✅ Main Layout -->
+  <div class="dashboard-container">
+
+    <!-- ✅ Filters Block -->
+    <div class="filters">
+      <h2>🛍️ Browse Products</h2>
+
+      <label for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+
+      <label for="searchInput">Search Products:</label>
+      <input type="text" id="searchInput" placeholder="Search by name or description..." />
+
+      <label for="sortBy">Sort Products:</label>
+      <select id="sortBy">
+        <option value="">Sort by</option>
+        <option value="name-asc">A → Z</option>
+        <option value="name-desc">Z → A</option>
+        <option value="date-newest">Newest First</option>
+        <option value="date-oldest">Oldest First</option>
+      </select>
+
+      <p id="productCount">Showing 0 products</p>
     </div>
-    <button id="mobileMenuToggle" class="hamburger">☰ Filters</button>
-    <hr style="margin: 0" />
 
-    <!-- Main Layout Container (Sidebar + Main Panel) -->
-    <div class="dashboard-container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <h1>🛠️ Product Controls</h1>
-        <!-- filters, search, etc. -->
-      </div>
-
-      <!-- Main Content Panel -->
-      <div class="main-panel">
-        <div id="product-list"></div>
-      </div>
+    <!-- ✅ Product Display -->
+    <div class="right-panel">
+      <div id="product-list"></div>
     </div>
-    <div class="dashboard-container">
-      <!-- Left Sidebar -->
-      <div class="sidebar">
-        <h1>🛠️ Product Controls</h1>
 
-        <select id="categoryFilter">
-          <option value="">All Categories</option>
-        </select>
+  </div>
 
-        <select id="sortBy">
-          <option value="">Sort By</option>
-          <option value="name-asc">A-Z</option>
-          <option value="name-desc">Z-A</option>
-          <option value="date-newest">Newest</option>
-          <option value="date-oldest">Oldest</option>
-        </select>
-
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="🔍 Search Name/Description"
-        />
-        <input
-          type="text"
-          id="stockSearch"
-          placeholder="🔍 Search stock code"
-        />
-
-        <div id="productCount">Showing 0 products</div>
-      </div>
-
-      <!-- Right Scrollable Content -->
-      <div class="main-panel">
-        <div id="product-list"></div>
-      </div>
-    </div>
-    <script>
-      document
-        .getElementById("mobileMenuToggle")
-        ?.addEventListener("click", () => {
-          document.querySelector(".left-panel")?.classList.toggle("open");
-        });
-    </script>
-    <script src="products.js"></script>
-  </body>
+  <!-- ✅ JS -->
+  <script src="products.js"></script>
+</body>
 </html>

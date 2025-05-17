@@ -1,8 +1,8 @@
+/* === Global Reset === */
 * {
     box-sizing: border-box;
 }
 
-/* === Base Reset === */
 body,
 html {
     margin: 0;
@@ -21,42 +21,35 @@ html {
     z-index: 1000;
 }
 
-/* === Split Layout === */
+/* === Main Layout === */
 .dashboard-container {
     display: flex;
-    flex-direction: row;
-    min-height: calc(100vh - 60px);
-    /* adjust if navbar is taller */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* === Left Panel === */
-.left-panel {
-    width: 340px;
+/* === Filters Section === */
+.filters {
     background: #fff;
     padding: 20px;
-    border-right: 1px solid #ddd;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 60px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    z-index: 1;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
 }
 
-.left-panel h2 {
+.filters h2 {
     margin: 0 0 16px;
     font-size: 1.2rem;
 }
 
-.left-panel label {
+.filters label {
     display: block;
     font-size: 0.9rem;
     font-weight: bold;
     margin: 12px 0 4px;
 }
 
-.left-panel select,
-.left-panel input {
+.filters select,
+.filters input {
     width: 100%;
     padding: 8px;
     font-size: 1rem;
@@ -81,12 +74,13 @@ html {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .product {
     background: white;
-    width: 280px;
+    width: 90%;
+    max-width: 400px;
     border-radius: 10px;
     border: 1px solid #ddd;
     padding: 16px;
@@ -112,50 +106,13 @@ html {
     line-height: 1.4;
 }
 
-
-/* === Mobile Hamburger Button === */
-.hamburger {
-    display: none;
-    background: #007acc;
-    color: white;
-    padding: 12px 16px;
-    font-size: 1rem;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
-
-/* === Mobile Adjustments === */
-
-@media (max-width: 768px) {
+/* === Responsive === */
+@media (min-width: 769px) {
     .dashboard-container {
         flex-direction: column;
     }
 
-    .left-panel {
-        display: none;
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        height: auto;
-        box-shadow: none;
-    }
-
-    .left-panel.open {
-        display: block;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    #product-list {
-        justify-content: center;
-    }
-
     .product {
-        width: 90%;
-        max-width: 400px;
+        width: 280px;
     }
 }
