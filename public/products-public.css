@@ -31,9 +31,15 @@ html {
 /* === Filters Section === */
 .filters {
     background: #fff;
-    padding: 20px;
+    padding: 40px 20px 20px;
+    /* extra top padding */
     border-bottom: 1px solid #ddd;
     width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+    /* increased offset for taller navbar */
+    z-index: 999;
 }
 
 .filters h2 {
@@ -43,14 +49,17 @@ html {
 
 .filters label {
     display: block;
-    font-size: 0.9rem;
+    margin: 12px auto 4px;
     font-weight: bold;
-    margin: 12px 0 4px;
+    font-size: 0.9rem;
+    width: 300px;
+    text-align: left;
 }
 
 .filters select,
 .filters input {
-    width: 100%;
+    width: 300px;
+    max-width: 90%;
     padding: 8px;
     font-size: 1rem;
     margin-bottom: 10px;
@@ -61,9 +70,11 @@ html {
     margin-top: 20px;
 }
 
+
 /* === Right Panel (Products) === */
 .right-panel {
     flex-grow: 1;
+    padding-top: 20px;
     padding: 20px;
     overflow-y: auto;
     background: #f9f9f9;
