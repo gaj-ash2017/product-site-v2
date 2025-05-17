@@ -121,11 +121,32 @@ html {
 }
 
 .product p {
+    display: flex;
+    align-items: baseline;
     font-size: 0.9rem;
     margin: 4px 0;
-    line-height: 1.4;
 }
 
+.product .label {
+    width: 100px;
+    /* Slightly smaller */
+    font-weight: bold;
+    text-align: left;
+}
+
+.product .colon {
+    width: 8px;
+    text-align: left;
+    padding-left: 2px;
+    /* closer to label */
+    padding-right: 8px;
+    /* space before value */
+    color: #333;
+}
+
+.product .value {
+    flex: 1;
+    text-align: left; }
 /* === Responsive === */
 @media (min-width: 769px) {
     .dashboard-container {

@@ -40,16 +40,34 @@ function renderProducts(products) {
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
-      <img src="/uploads/${p.image}" alt="${
-      p.name
-    }" onerror="this.src='/uploads/default.jpg'">
+      <img src="/uploads/${p.image}" alt="${p.name}" onerror="this.src='/uploads/default.jpg'">
       <h3>${p.name}</h3>
-      <p><strong>Stock Code:</strong> ${p.stockCode}</p>
-      <p><strong>Category:</strong> ${p.category || "Uncategorized"}</p>
-      <p><strong>Description:</strong> ${p.description}</p>
-      <p><strong>Notes:</strong> ${p.extraNotes}</p>
-      <p><strong>Quantity:</strong> ${p.quantity}</p>
-    `;
+      <p>
+       <span class="label">Stock Code</span>
+       <span class="colon">:</span>
+       <span class="value">${p.stockCode}</span>
+      </p>
+      <p>
+       <span class="label">Category</span>
+       <span class="colon">:</span>
+       <span class="value">${p.category}</span>
+      </p>
+      <p>
+       <span class="label">Description</span>
+       <span class="colon">:</span>
+       <span class="value">${p.description}</span>
+      </p>
+      <p>
+       <span class="label">Notes</span>
+       <span class="colon">:</span>
+       <span class="value">${p.extraNotes}</span>
+      </p>
+      <p>
+       <span class="label">Quantity</span>
+       <span class="colon">:</span>
+       <span class="value">${p.quantity}</span>
+      </p>
+`;
     container.appendChild(div);
   });
 
