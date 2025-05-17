@@ -1,7 +1,7 @@
-
-
 * {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+}
+
 /* === Base Reset === */
 body,
 html {
@@ -109,4 +109,58 @@ html {
 .product p {
     font-size: 0.9rem;
     margin: 4px 0;
-    line-height: 1.4; }
+    line-height: 1.4;
+}
+
+
+/* === Mobile Hamburger Button === */
+.hamburger {
+    display: none;
+    background: #007acc;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .left-panel.open {
+        display: block;
+    }
+
+    .right-panel {
+        padding: 16px;
+    }
+
+    #product-list {
+        justify-content: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

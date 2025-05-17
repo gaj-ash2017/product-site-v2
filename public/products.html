@@ -6,15 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="products-edit-clean.css">
+    <link rel="stylesheet" href="products-edit-clean.css" />
   </head>
   <body>
     <!-- Fixed Top Header -->
     <div class="header-panel">
       <div id="navbar"></div>
+      
       <script src="navbar.js"></script>
     </div>
-
+    <hr style="margin: 0;" />
+<!-- ✅ Hamburger Menu (mobile only) -->
+<button id="mobileMenuToggle" class="hamburger">☰ Filters</button>
     <!-- Main Layout Container (Sidebar + Main Panel) -->
     <div class="dashboard-container">
       <!-- Sidebar -->
@@ -45,7 +48,11 @@
           <option value="date-oldest">Oldest</option>
         </select>
 
-        <input type="text" id="searchInput" placeholder="🔍 Search name/desc" />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔍 Search Name/Description"
+        />
         <input
           type="text"
           id="stockSearch"
@@ -60,6 +67,11 @@
         <div id="product-list"></div>
       </div>
     </div>
+    <script>
+    document.getElementById("mobileMenuToggle")?.addEventListener("click", () => {
+      document.querySelector(".left-panel")?.classList.toggle("open");
+    });
+    </script>
     <script src="products.js"></script>
   </body>
 </html>
