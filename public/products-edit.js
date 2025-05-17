@@ -91,12 +91,8 @@ function renderProducts(products) {
           <p>
            <span class="label">Category</span>
            <span class="colon">:</span>
-           <span class="value">${p.category || "Uncategorized"}</span>
-             ${
-               p.category?.toLowerCase() === "uncategorized"
-                 ? '<span class="attention-tag">⚠️ Needs Category</span>'
-                 : ""
-             }
+           <span class="value ${p.category?.toLowerCase() === "uncategorized" ? "uncategorized-tag" : ""}">
+           ${p.category || "Uncategorized"}</span>
           </p>
           <p>
            <span class="label">Description</span>
