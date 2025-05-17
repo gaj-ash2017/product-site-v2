@@ -116,22 +116,36 @@
 
 .product p {
     display: flex;
-    justify-content: space-between;
+    align-items: baseline;
     font-size: 0.9rem;
     margin: 4px 0;
     line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.product p:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .product .label {
+    width: 100px;
     font-weight: bold;
-    color: #555;
-    min-width: 100px;
+    text-align: left;
+}
+
+.product .colon {
+    width: 6px;
+    text-align: center;
+    padding-right: 6px;
 }
 
 .product .value {
-    text-align: right;
-    flex: 1; }
-
+    flex: 1;
+    text-align: left; }
 /* Button Container */
 .buttons {
     display: flex;

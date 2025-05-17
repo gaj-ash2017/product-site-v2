@@ -83,25 +83,43 @@ function renderProducts(products) {
   }
 </div>
           <h3>${name}</h3>
-          <p><span class="label">Stock Code:</span> <span class="value badge">${
-            p.stockCode
-          }</span></p>
-          <p><span class="label">Category:</span> <span class="value">${
-            p.category || "Uncategorized"
-          }</span>
-            ${
-              p.category?.toLowerCase() === "uncategorized"
-                ? '<span class="attention-tag">⚠️ Needs Category</span>'
-                : ""
-            }</p>
-          <p><span class="label">Description:</span> ${description}</p>
-          <p><span class="label">Notes:</span> ${p.extraNotes}</p>
-          <p><span class="label">Quantity:</span> ${p.quantity}</p>
+          <p>
+           <span class="label">Stock Code</span>
+           <span class="colon">:</span>
+           <span class="value badge">${p.stockCode}</span>
+          </p>
+          <p>
+           <span class="label">Category</span>
+           <span class="colon">:</span>
+           <span class="value">${p.category || "Uncategorized"}</span>
+             ${
+               p.category?.toLowerCase() === "uncategorized"
+                 ? '<span class="attention-tag">⚠️ Needs Category</span>'
+                 : ""
+             }
+          </p>
+          <p>
+           <span class="label">Description</span>
+           <span class="colon">:</span>
+           <span class="value">${p.description}</span>
+          </p>
+          <p>
+           <span class="label">Notes</span>
+           <span class="colon">:</span>
+           <span class="value">${p.extraNotes}</span>
+          </p>
+          <p>
+           <span class="label">Quantity</span>
+           <span class="colon">:</span>
+           <span class="value">${p.quantity}</span>
+          </p>
           <div class="buttons">
   <a href="edit-product.html?stockCode=${
     p.stockCode
   }" class="btn edit-btn">✏️ Edit</a>
-  <button class="btn delete-btn" onclick="deleteProduct('${p.stockCode}')">🗑️ Delete</button>
+  <button class="btn delete-btn" onclick="deleteProduct('${
+    p.stockCode
+  }')">🗑️ Delete</button>
 </div>`;
     container.appendChild(div);
   });

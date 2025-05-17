@@ -116,8 +116,14 @@ html {
 }
 
 .product h3 {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
+    color: crimson;
+    text-align: center;
     margin: 0 0 6px;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .product p {
@@ -125,6 +131,10 @@ html {
     align-items: baseline;
     font-size: 0.9rem;
     margin: 4px 0;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .product .label {
@@ -146,7 +156,9 @@ html {
 
 .product .value {
     flex: 1;
-    text-align: left; }
+    text-align: left;
+}
+
 /* === Responsive === */
 @media (min-width: 769px) {
     .dashboard-container {
