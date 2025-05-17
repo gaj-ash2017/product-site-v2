@@ -13,10 +13,11 @@
     <div class="header-panel">
       <div id="navbar"></div>
       <!-- ✅ Hamburger Menu (mobile only) -->
-<button id="mobileMenuToggle" class="hamburger">☰ Filters</button>
+
       <script src="navbar.js"></script>
     </div>
-    <hr style="margin: 0;" />
+    <button id="mobileMenuToggle" class="hamburger">☰ Filters</button>
+    <hr style="margin: 0" />
 
     <!-- Main Layout Container (Sidebar + Main Panel) -->
     <div class="dashboard-container">
@@ -68,9 +69,11 @@
       </div>
     </div>
     <script>
-    document.getElementById("mobileMenuToggle")?.addEventListener("click", () => {
-      document.querySelector(".left-panel")?.classList.toggle("open");
-    });
+      document
+        .getElementById("mobileMenuToggle")
+        ?.addEventListener("click", () => {
+          document.querySelector(".left-panel")?.classList.toggle("open");
+        });
     </script>
     <script src="products.js"></script>
   </body>

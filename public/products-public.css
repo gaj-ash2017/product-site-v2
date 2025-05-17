@@ -127,6 +127,18 @@ html {
 }
 
 /* === Mobile Adjustments === */
+.hamburger {
+    display: none;
+    background: #007acc;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .dashboard-container {
         flex-direction: column;
@@ -135,20 +147,18 @@ html {
     .left-panel {
         display: none;
         width: 100%;
-        height: auto;
         border-right: none;
         border-bottom: 1px solid #ddd;
-        position: relative;
+        height: auto;
         box-shadow: none;
-        padding: 20px;
     }
 
     .left-panel.open {
         display: block;
     }
 
-    .right-panel {
-        padding: 16px;
+    .hamburger {
+        display: block;
     }
 
     #product-list {
@@ -158,38 +168,4 @@ html {
     .product {
         width: 90%;
         max-width: 400px;
-    }
-
-        .hamburger {
-            display: none;
-            /* ... rest of styles ... */
-        }
-    
-        @media (max-width: 768px) {
-            .dashboard-container {
-                flex-direction: column;
-            }
-    
-            .left-panel {
-                display: none;
-                /* ... rest ... */
-            }
-    
-            .left-panel.open {
-                display: block;
-            }
-    
-            .hamburger {
-                display: block;
-            }
-    
-            #product-list {
-                justify-content: center;
-            }
-    
-            .product {
-                width: 90%;
-                max-width: 400px;
-            }     
-        }
-    }
+    } }
