@@ -91,7 +91,11 @@ function renderProducts(products) {
           <p>
            <span class="label">Category</span>
            <span class="colon">:</span>
-           <span class="value ${p.category?.toLowerCase() === "uncategorized" ? "uncategorized-tag" : ""}">
+           <span class="value ${
+             p.category?.toLowerCase() === "uncategorized"
+               ? "uncategorized-tag"
+               : ""
+           }">
            ${p.category || "Uncategorized"}</span>
           </p>
           <p>
@@ -165,54 +169,6 @@ document
   .addEventListener("change", filterAndSort);
 document.getElementById("sortBy").addEventListener("change", filterAndSort);
 document.getElementById("searchInput").addEventListener("input", filterAndSort);
-
-/* function editProduct(code) {
-  const p = allProducts.find((p) => p.stockCode === code);
-  if (!p) return;
-  document.getElementById("editStockCode").value = p.stockCode;
-  document.getElementById(
-    "editStockCodeDisplay"
-  ).textContent = `Stock Code: ${p.stockCode}`;
-  document.getElementById("editName").value = p.name;
-  document.getElementById("editDescription").value = p.description;
-  document.getElementById("editCategory").value = p.category;
-  document.getElementById("editExtraNotes").value = p.extraNotes;
-  document.getElementById("editQuantity").value = p.quantity;
-  const form = document.getElementById("editForm");
-  const cards = document.querySelectorAll(".product");
-  cards.forEach((card) => {
-    if (card.nextSibling === form) card.parentNode.removeChild(form);
-  });
-  const target = Array.from(cards).find(
-    (card) => card.querySelector(".value")?.textContent === code
-  );
-  if (target) {
-    target.after(form);
-    form.style.display = "block";
-  }
-} */
-
-/* function submitEdit(e) {
-  e.preventDefault();
-  const form = document.getElementById("editForm");
-  const formData = new FormData(form);
-  fetch("/edit-product", {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => res.text())
-    .then((msg) => {
-      alert(msg);
-      location.reload();
-    });
-} */
-
-/* function cancelEditForm() {
-  const form = document.getElementById("editForm");
-  form.reset();
-  form.style.display = "none";
-  document.getElementById("imagePreview").innerHTML = "";
-} */
 
 function deleteProduct(stockCode) {
   if (!confirm("Delete this product?")) return;
@@ -319,3 +275,32 @@ fetch("/products.json")
       });
     });
   });
+
+const stockInput = document.getElementById("stockQuickJump");
+const suggestionBox = document.getElementById("stockSuggestions");
+
+stockInput.addEventListener("input", function () {
+  const query = this.value.trim().toLowerCase();
+  suggestionBox.innerHTML = "";
+
+  if (!query) return;
+
+  const matches = allProducts.filter((p) =>
+    p.stockCode.toLowerCase().includes(query)
+  );
+
+  matches.forEach((p) => {
+    const li = document.createElement("li");
+    li.textContent = p.stockCode;
+    li.onclick = () => {
+      window.location.href = `edit-product.html?stockCode=${p.stockCode}`;
+    };
+    suggestionBox.appendChild(li);
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!stockInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+    suggestionBox.innerHTML = "";
+  }
+});
