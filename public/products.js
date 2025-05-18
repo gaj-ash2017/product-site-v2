@@ -31,12 +31,24 @@ function populateCategoryFilter(products) {
   });
 }
 
+function highlight(text, keyword) {
+  const regex = new RegExp(`(${keyword})`, "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+}
+
 // Render visible product cards
 function renderProducts(products) {
   const container = document.getElementById("product-list");
   container.innerHTML = "";
 
+  const keyword = document.getElementById("searchInput").value.toLowerCase();
+
   products.forEach((p) => {
+    const name = keyword ? highlight(p.name, keyword) : p.name;
+    const description = keyword
+      ? highlight(p.description, keyword)
+      : p.description;
+    const notes = keyword ? highlight(p.extraNotes, keyword) : p.extraNotes;
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
@@ -51,12 +63,12 @@ function renderProducts(products) {
       <p>
        <span class="label">Description</span>
        <span class="colon">:</span>
-       <span class="value">${p.description}</span>
+       <span class="value">${description}</span>
       </p>
       <p>
        <span class="label">Notes</span>
        <span class="colon">:</span>
-       <span class="value">${p.extraNotes}</span>
+       <span class="value">${notes}</span>
       </p>
       <p>
        <span class="label">Quantity</span>

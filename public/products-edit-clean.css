@@ -211,6 +211,11 @@
     cursor: pointer;
 }
 
+mark {
+    background-color: #fffca2;
+    padding: 0 2px;
+    border-radius: 3px; }
+
 #stockSuggestions li:hover {
     background-color: #f0f0f0; }
 @keyframes pulseWarning {

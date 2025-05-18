@@ -54,15 +54,45 @@ function populateCategoryFilter(products) {
   });
 }
 
+const stockInput = document.getElementById("stockQuickJump");
+const suggestionBox = document.getElementById("stockSuggestions");
+
+stockInput.addEventListener("input", function () {
+  const query = this.value.trim().toLowerCase();
+  suggestionBox.innerHTML = "";
+
+  if (!query) return;
+
+  const matches = allProducts.filter((p) =>
+    p.stockCode.toLowerCase().includes(query)
+  );
+
+  matches.forEach((p) => {
+    const li = document.createElement("li");
+    li.textContent = p.stockCode;
+    li.onclick = () => {
+      window.location.href = `edit-product.html?stockCode=${p.stockCode}`;
+    };
+    suggestionBox.appendChild(li);
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!stockInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+    suggestionBox.innerHTML = "";
+  }
+});
+
 function highlight(text, keyword) {
   const regex = new RegExp(`(${keyword})`, "gi");
   return text.replace(regex, "<mark>$1</mark>");
 }
 
 function renderProducts(products) {
+  const keyword = document.getElementById("searchInput").value.toLowerCase();
   const container = document.getElementById("product-list");
   container.innerHTML = "";
-  const keyword = document.getElementById("searchInput").value.toLowerCase();
+  /* const keyword = document.getElementById("searchInput").value.toLowerCase(); */
   products.forEach((p) => {
     const div = document.createElement("div");
     div.className = "product";
@@ -71,6 +101,7 @@ function renderProducts(products) {
     const description = keyword
       ? highlight(p.description, keyword)
       : p.description;
+    const notes = keyword ? highlight(p.extraNotes, keyword) : p.extraNotes;
     div.innerHTML = `
           <div class="image-wrapper">
   <img src="/uploads/${p.image}?t=${Date.now()}" alt="${
@@ -99,15 +130,15 @@ function renderProducts(products) {
            ${p.category || "Uncategorized"}</span>
           </p>
           <p>
-           <span class="label">Description</span>
-           <span class="colon">:</span>
-           <span class="value">${p.description}</span>
-          </p>
-          <p>
-           <span class="label">Notes</span>
-           <span class="colon">:</span>
-           <span class="value">${p.extraNotes}</span>
-          </p>
+ <span class="label">Description</span>
+ <span class="colon">:</span>
+ <span class="value">${description}</span>
+</p>
+<p>
+ <span class="label">Notes</span>
+ <span class="colon">:</span>
+ <span class="value">${notes}</span>
+</p>
           <p>
            <span class="label">Quantity</span>
            <span class="colon">:</span>
@@ -275,32 +306,3 @@ fetch("/products.json")
       });
     });
   });
-
-const stockInput = document.getElementById("stockQuickJump");
-const suggestionBox = document.getElementById("stockSuggestions");
-
-stockInput.addEventListener("input", function () {
-  const query = this.value.trim().toLowerCase();
-  suggestionBox.innerHTML = "";
-
-  if (!query) return;
-
-  const matches = allProducts.filter((p) =>
-    p.stockCode.toLowerCase().includes(query)
-  );
-
-  matches.forEach((p) => {
-    const li = document.createElement("li");
-    li.textContent = p.stockCode;
-    li.onclick = () => {
-      window.location.href = `edit-product.html?stockCode=${p.stockCode}`;
-    };
-    suggestionBox.appendChild(li);
-  });
-});
-
-document.addEventListener("click", (e) => {
-  if (!stockInput.contains(e.target) && !suggestionBox.contains(e.target)) {
-    suggestionBox.innerHTML = "";
-  }
-});

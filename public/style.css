@@ -12,6 +12,13 @@ body {
   height: 75px;
 }
 
+mark {
+  background-color: #fffca2;
+  /* Soft yellow */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
 /* Responsive Footer */
 @media (max-width: 600px) {
   footer {
