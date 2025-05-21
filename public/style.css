@@ -19,6 +19,24 @@ mark {
   border-radius: 3px;
 }
 
+.page-content {
+  padding-top: 160px;
+  /* header + navbar + comfy margin */
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.page-wrapper {
+  padding-top: 160px;
+  /* accounts for header + navbar height */
+  padding-bottom: 40px;
+  min-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+
 /* Responsive Footer */
 @media (max-width: 600px) {
   footer {

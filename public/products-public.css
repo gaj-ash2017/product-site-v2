@@ -1,87 +1,75 @@
-/* === Global Reset === */
+/* ✅ products-public.css */
+
+/* === Base Reset === */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body,
 html {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
+    height: 100%;
 }
 
-/* === Navbar Panel === */
-.header-panel {
-    position: sticky;
-    top: 0;
-    background: white;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-    z-index: 1000;
-}
-
-/* === Main Layout === */
+/* === Layout Container === */
 .dashboard-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* === Filters Section === */
-.filters {
-    background: #fff;
-    padding: 40px 20px 20px;
-    /* extra top padding */
-    border-bottom: 1px solid #ddd;
+/* === Sticky Top Controls === */
+.top-controls {
+    position: fixed;
+    top: 150px;
+    /* Header (90px) + navbar (60px) */
+    left: 0;
     width: 100%;
+    background: #f4f4f4;
+    padding: 1rem 2rem;
+    z-index: 800;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
-    position: sticky;
-    top: 100px;
-    /* increased offset for taller navbar */
-    z-index: 999;
 }
 
-.filters h2 {
-    margin: 0 0 16px;
-    font-size: 1.2rem;
+.top-controls h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
-.filters label {
+.top-controls label {
     display: block;
-    margin: 12px auto 4px;
+    margin-top: 12px;
     font-weight: bold;
-    font-size: 0.9rem;
-    width: 300px;
-    text-align: left;
+    font-size: 0.95rem;
 }
 
-.filters select,
-.filters input {
+.top-controls select,
+.top-controls input {
     width: 300px;
     max-width: 90%;
     padding: 8px;
+    margin-top: 4px;
     font-size: 1rem;
-    margin-bottom: 10px;
 }
 
 #productCount {
+    margin-top: 15px;
     font-weight: bold;
-    margin-top: 20px;
-    color: blue;
+    color: #0a58ca;
 }
 
-
-/* === Right Panel (Products) === */
+/* Push product list down below top-controls */
 .right-panel {
-    flex-grow: 1;
-    padding-top: 20px;
+    margin-top: 325px;
+    /* Enough to clear header + navbar + top-controls */
     padding: 20px;
-    overflow-y: auto;
-    background: #f9f9f9;
 }
 
-/* === Product Cards === */
 #product-list {
     display: flex;
     flex-wrap: wrap;
@@ -91,10 +79,9 @@ html {
 
 .product {
     background: white;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
+    width: 280px;
     border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -102,70 +89,42 @@ html {
 .product img {
     display: block;
     margin: 0 auto 12px;
-    max-width: 90%;
+    width: 160px;
     height: 160px;
     object-fit: cover;
     border-radius: 6px;
-    border: 1px solid rebeccapurple;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
 }
 
 .product h3 {
-    font-size: 0.85rem;
-    color: crimson;
+    font-size: 1.1rem;
     text-align: center;
-    margin: 0 0 6px;
-    line-height: 1.4;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #c1121f;
 }
 
 .product p {
-    display: flex;
-    align-items: baseline;
     font-size: 0.9rem;
     margin: 4px 0;
     line-height: 1.4;
+    display: flex;
+    align-items: baseline;
     border-bottom: 1px solid #eee;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
+    padding-bottom: 4px;
 }
 
-.product .label {
+.label {
     width: 100px;
-    /* Slightly smaller */
     font-weight: bold;
     text-align: left;
 }
 
-.product .colon {
-    width: 8px;
-    text-align: left;
-    padding-left: 2px;
-    /* closer to label */
-    padding-right: 8px;
-    /* space before value */
-    color: #333;
+.colon {
+    margin-right: 6px;
+    color: #666;
 }
 
-.product .value {
+.value {
     flex: 1;
-    text-align: left;
-}
-
-/* === Responsive === */
-@media (min-width: 769px) {
-    .dashboard-container {
-        flex-direction: column;
-    }
-
-    .product {
-        width: 280px;
-    }
 }

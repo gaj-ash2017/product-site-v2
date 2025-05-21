@@ -103,6 +103,19 @@
     }
 }
 
+.site-title {
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
+
+.site-title .line1 {
+    font-weight: bold;
+}
+
+.site-title .line2 {
+    font-style: italic;
+    color: #555; }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;

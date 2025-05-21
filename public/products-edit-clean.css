@@ -33,7 +33,7 @@
     padding: 20px;
     border-right: 1px solid #ddd;
     position: fixed;
-    top: 60px;
+    top: 150px;
     bottom: 0;
     left: 0;
     overflow-y: auto;
@@ -47,6 +47,13 @@
     font-size: 0.9rem;
 }
 
+.sidebar h1 {
+    font-size: 1.2rem;
+    color: crimson;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #productCount {
     margin-top: 10px;
     font-weight: bold;
@@ -58,7 +65,7 @@
   ******************************************/
 .main-panel {
     margin-left: 280px;
-    margin-top: 60px;
+    margin-top: 25px;
     padding: 20px;
     height: calc(100vh - 60px);
     overflow-y: auto;
@@ -93,7 +100,7 @@
 .product img {
     display: block;
     margin: 0 auto 12px;
-    max-width: 90%;
+    max-width: 160px;
     height: 160px;
     object-fit: cover;
     border-radius: 6px;
@@ -214,10 +221,13 @@
 mark {
     background-color: #fffca2;
     padding: 0 2px;
-    border-radius: 3px; }
+    border-radius: 3px;
+}
 
 #stockSuggestions li:hover {
-    background-color: #f0f0f0; }
+    background-color: #f0f0f0;
+}
+
 @keyframes pulseWarning {
     0% {
         opacity: 1;

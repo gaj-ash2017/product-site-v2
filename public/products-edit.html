@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="products-edit-clean.css">
+    <link rel="stylesheet" href="products-edit-clean.css" />
   </head>
   <body>
     <!-- Fixed Top Header -->
@@ -14,6 +14,7 @@
       <div id="navbar"></div>
       <script src="navbar.js"></script>
     </div>
+    <div class="spacer"></div>
 
     <!-- Main Layout Container (Sidebar + Main Panel) -->
     <div class="dashboard-container">
@@ -45,7 +46,11 @@
           <option value="date-oldest">Oldest</option>
         </select>
 
-        <input type="text" id="searchInput" placeholder="🔍 Search by Name / Description" />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔍 Search by Name / Description"
+        />
         <input
           type="text"
           id="stockSearch"
@@ -53,8 +58,13 @@
         />
 
         <label for="stockQuickJump">Quick Edit Stock Code:</label>
-<input type="text" id="stockQuickJump" placeholder="Enter stock code..." autocomplete="off" />
-<ul id="stockSuggestions" class="suggestions-list"></ul>
+        <input
+          type="text"
+          id="stockQuickJump"
+          placeholder="Enter stock code..."
+          autocomplete="off"
+        />
+        <ul id="stockSuggestions" class="suggestions-list"></ul>
 
         <div id="productCount">Showing 0 products</div>
       </div>

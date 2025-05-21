@@ -2,10 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
 
   const header = `
-    <header>
+    <header class="site-header">
       <div class="logo-area">
-        <img src="./images/9800i.jpeg" alt="Logo" />
-        <span>Ashwin Gajan T/A Just Parts</span>
+        <img src="./images/9800i.jpeg" alt="Logo" class="logo" />
+        <div class="company-name">
+          <div>ASHWIN GAJAN</div>
+          <div>T/A JUST PARTS</div>
+          <div>Specialising in Heavy Duty American Truck Parts</div>
+        </div>
         <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
     </header>
@@ -24,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <li><a href="products-edit.html" class="admin-only">Admin</a></li>
         <li><a href="categories.html" class="admin-only">Category Admin</a></li>
         <li><a href="messages.html" class="admin-only">View Messages</a></li>
-        
       </ul>
     </nav>
     <div class="spacer"></div>
@@ -34,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navbarContainer) {
     navbarContainer.innerHTML = header + navbar;
 
-    // Highlight current page
     const links = navbarContainer.querySelectorAll(".navbar-menu a");
     links.forEach((link) => {
       if (link.getAttribute("href") === currentPage) {
@@ -42,14 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Hamburger toggle
     const hamburger = document.getElementById("hamburger");
     const navbarMenu = document.querySelector(".navbar-menu");
     hamburger.addEventListener("click", () => {
       navbarMenu.classList.toggle("show");
     });
 
-    // Admin visibility logic
     const isAdmin =
       window.location.hostname.includes("localhost") ||
       window.location.hostname.includes("admin");
