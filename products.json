@@ -907,7 +907,8 @@
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 1,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "CUM3802422-01.jpg"
+    "image": "CUM3802422-01.jpg",
+    "imageUpdatedAt": "2025-05-22T10:07:26.341Z"
   },
   {
     "stockCode": "CUM3802423",
@@ -1701,13 +1702,14 @@
   },
   {
     "stockCode": "CUM4089725-GB",
-    "name": "KIT PISTON",
+    "name": "KIT PISTON [ .STD ]",
     "description": "B-SERIES",
     "category": "CONNECTING ROD AND PISTON",
     "extraNotes": "GENUINE CUMMINS",
     "quantity": 2,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "CUM4089725-GB.jpg"
+    "image": "CUM4089725-GB.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "CUM4101884-AKM",
@@ -1912,12 +1914,327 @@
   },
   {
     "stockCode": "PK-08PK1890",
-    "name": "BELT FAN RIBBED",
+    "name": "BELT FAN RIBBED - 8PK1890",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 3,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1890.jpg"
+    "image": "PK-08PK1890.jpg",
+    "imageUpdatedAt": null
+  },
+  {
+    "stockCode": "CUM3283335-PAI",
+    "name": "GASKET CYLINDER HEAD [.STD]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 7,
+    "image": "CUM3283335-PAI.jpg",
+    "dateAdded": "2025-05-22T09:27:34.408Z"
+  },
+  {
+    "stockCode": "CUM3802070-PAI",
+    "name": "KIT MAIN BEARING [.STD]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "image": "CUM3802070-PAI.jpg",
+    "dateAdded": "2025-05-22T09:29:43.723Z"
+  },
+  {
+    "stockCode": "CUM3802013-MCB",
+    "name": "KIT MAIN BEARING [.030]",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 1,
+    "image": "CUM3802013-MCB.jpg",
+    "dateAdded": "2025-05-22T09:31:55.529Z"
+  },
+  {
+    "stockCode": "CUM3930336",
+    "name": "PUMP OIL",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "LUBE PUMP",
+    "extraNotes": "INTERSTATE",
+    "quantity": 1,
+    "image": "CUM3930336.jpg",
+    "dateAdded": "2025-05-22T09:35:39.327Z"
+  },
+  {
+    "stockCode": "CUM3802362",
+    "name": "GASKET SET UPPER [0.25MM OVERSIZE]",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3802362.jpg",
+    "dateAdded": "2025-05-22T09:39:30.822Z"
+  },
+  {
+    "stockCode": "CUM3283336-FED",
+    "name": "GASKET CYLINDER HEAD [0.25MM]",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "FP DIESEL",
+    "quantity": 2,
+    "image": "CUM3283336-FED.jpg",
+    "dateAdded": "2025-05-22T09:51:58.799Z"
+  },
+  {
+    "stockCode": "CUM3283337-FED",
+    "name": "GASKET CYLINDER HEAD [0.25MM]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3283337-FED.jpg",
+    "dateAdded": "2025-05-22T09:53:36.297Z"
+  },
+  {
+    "stockCode": "CUM3283339-PAI",
+    "name": "GASKET CYLINDER HEAD [0.50MM]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "dateAdded": "2025-05-22T09:55:10.425Z",
+    "image": "CUM3283339-PAI.jpg",
+    "imageUpdatedAt": "2025-05-22T09:56:03.480Z"
+  },
+  {
+    "stockCode": "CUM3284623-PAI",
+    "name": "GASKET PUSH ROD COVER",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "Uncategorized",
+    "extraNotes": "K.M.P.",
+    "quantity": 2,
+    "dateAdded": "2025-05-22T09:58:56.400Z",
+    "image": "CUM3284623-PAI.jpg",
+    "imageUpdatedAt": "2025-05-22T09:59:41.893Z"
+  },
+  {
+    "stockCode": "CUM3802073-PAI",
+    "name": "KIT MAIN BEARING [.030]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3802073-PAI.jpg",
+    "dateAdded": "2025-05-22T10:02:50.018Z"
+  },
+  {
+    "stockCode": "CUM3818823-MCB",
+    "name": "STUD TURBO MOUNTING",
+    "description": "B-SERIES | QSL9",
+    "category": "TURBOCHARGER",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 62,
+    "image": "CUM3818823-MCB.jpg",
+    "dateAdded": "2025-05-22T10:11:16.456Z"
+  },
+  {
+    "stockCode": "CUM3901049",
+    "name": "PAN OIL",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "PAN OIL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3901049.jpg",
+    "dateAdded": "2025-05-22T10:14:20.532Z"
+  },
+  {
+    "stockCode": "CUM3901774-MCB",
+    "name": "RING GEAR",
+    "description": "B-SERIES [ 159 TEETH ]",
+    "category": "FLYWHEEL",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 5,
+    "dateAdded": "2025-05-22T10:16:51.763Z",
+    "image": "CUM3901774-MCB.jpg",
+    "imageUpdatedAt": "2025-05-22T10:17:41.481Z"
+  },
+  {
+    "stockCode": "CUM3903309",
+    "name": "RING GEAR",
+    "description": "B-SERIES [ 173 TEETH ]",
+    "category": "FLYWHEEL",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 2,
+    "image": "CUM3903309.jpg",
+    "dateAdded": "2025-05-22T10:19:57.425Z"
+  },
+  {
+    "stockCode": "CUM3903475",
+    "name": "SEAL RING INSPECTION COVER",
+    "description": "B-SERIES | ISX",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM3903475.jpg",
+    "dateAdded": "2025-05-22T10:22:16.117Z"
+  },
+  {
+    "stockCode": "CUM3904553-FED",
+    "name": "GASKET EXHAUST MANIFOLD",
+    "description": "B-SERIES",
+    "category": "MANIFOLD EXHAUST",
+    "extraNotes": "FP DIESEL",
+    "quantity": 8,
+    "image": "CUM3904553-FED.jpg",
+    "dateAdded": "2025-05-22T10:24:58.193Z"
+  },
+  {
+    "stockCode": "CUM3910810",
+    "name": "LOVER ROCKER [ EXHAUST ]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "ROCKER LEVER",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3910810.jpg",
+    "dateAdded": "2025-05-22T10:27:03.144Z"
+  },
+  {
+    "stockCode": "CUM3910903-AKM",
+    "name": "RING GEAR",
+    "description": "B-SERIES [ 152 TEETH ]",
+    "category": "FLYWHEEL",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3910903-AKM.jpg",
+    "dateAdded": "2025-05-22T10:28:51.033Z"
+  },
+  {
+    "stockCode": "CUM3911536",
+    "name": "GASKET OIL PAN",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "PAN OIL",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "CUM3911536.jpg",
+    "dateAdded": "2025-05-22T10:30:49.122Z"
+  },
+  {
+    "stockCode": "CUM3918076",
+    "name": "PUMP FUEL TRANSFER",
+    "description": "B-SERIES [ PLUNGER TYPE ]",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3918076.jpg",
+    "dateAdded": "2025-05-22T10:33:27.280Z"
+  },
+  {
+    "stockCode": "CUM3920282",
+    "name": "BELT ALTERNATOR",
+    "description": "B-SERIES | M11",
+    "category": "ALTERNATOR",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 3,
+    "dateAdded": "2025-05-22T10:35:46.496Z",
+    "image": "CUM3920282.jpg",
+    "imageUpdatedAt": null
+  },
+  {
+    "stockCode": "CUM3921640",
+    "name": "SEAL VALVE STEM",
+    "description": "B-SERIES [ FLAT TYPE ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 37,
+    "image": "CUM3921640.jpg",
+    "dateAdded": "2025-05-22T10:38:20.421Z"
+  },
+  {
+    "stockCode": "CUM3928492-GB",
+    "name": "HOSE ELBOW INTERCOOLER",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 2,
+    "image": "CUM3928492-GB.jpg",
+    "dateAdded": "2025-05-22T10:40:08.243Z"
+  },
+  {
+    "stockCode": "CUM3931605",
+    "name": "GASKET COVER INTAKE MANIFOLD",
+    "description": "B-SERIES [ 4 CYL ]",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM3931605.jpg",
+    "dateAdded": "2025-05-22T10:42:47.818Z"
+  },
+  {
+    "stockCode": "CUM3931716",
+    "name": "HOUSING FLYWHEEL",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "FLYWHEEL HOUSING",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3931716.jpg",
+    "dateAdded": "2025-05-22T10:45:00.240Z"
+  },
+  {
+    "stockCode": "CUM3936256",
+    "name": "HOUSING GEAR",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "FRONT GEAR COVER",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "image": "CUM3936256.jpg",
+    "dateAdded": "2025-05-22T10:48:10.932Z"
+  },
+  {
+    "stockCode": "CUM3957912",
+    "name": "SEAL VALVE STEM",
+    "description": "B-SERIES [ NEW TYPE - HAT ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "",
+    "quantity": 24,
+    "image": "CUM3957912.jpg",
+    "dateAdded": "2025-05-22T10:51:09.901Z"
+  },
+  {
+    "stockCode": "CUM3959052-FED",
+    "name": "GASKET OIL PAN",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "PAN OIL",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM3959052-FED.jpg",
+    "dateAdded": "2025-05-22T10:52:41.366Z"
+  },
+  {
+    "stockCode": "CUM3967060",
+    "name": "KIT BEARING CON ROD [.STD] PAIR",
+    "description": "B-SERIES | ISB | QSB [ UPPER & LOWER ]",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "FP DIESEL",
+    "quantity": 6,
+    "image": "CUM3967060.jpg",
+    "dateAdded": "2025-05-22T10:55:16.579Z"
+  },
+  {
+    "stockCode": "CUM4955861-FED",
+    "name": "KIT MAIN BEARING [.020]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM4955861-FED.jpg",
+    "dateAdded": "2025-05-22T11:47:58.725Z"
+  },
+  {
+    "stockCode": "CUM4955862-FED",
+    "name": "KIT MAIN BEARING [.030]",
+    "description": "B-SERIES [ 6 CYL ]",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM4955862-FED.jpg",
+    "dateAdded": "2025-05-22T11:55:46.371Z"
   }
 ]

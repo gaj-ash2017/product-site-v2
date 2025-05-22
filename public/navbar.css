@@ -99,6 +99,12 @@ body {
         background: #007acc;
         width: 100%;
         margin-top: 1rem;
+
+        /* NEW! Make the menu scrollable */
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-bottom: 1rem;
+        z-index: 1000;
     }
 
     .navbar-menu.show {
