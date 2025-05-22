@@ -1854,67 +1854,73 @@
   },
   {
     "stockCode": "PK-08PK1550HD",
-    "name": "BELT FAN RIBBED",
+    "name": "BELT FAN RIBBED - 8PK1550HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 1,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1550HD.jpg"
+    "image": "PK-08PK1550HD.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1560",
-    "name": "BELT FAN RIBBED",
+    "name": "BELT FAN RIBBED - 8PK1560HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 3,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1560.jpg"
+    "image": "PK-08PK1560.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1565HD",
-    "name": "BELT FAN RIBBED",
+    "name": "BELT FAN RIBBED - 8PK1565HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 1,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1565HD.jpg"
+    "image": "PK-08PK1565HD.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1575",
-    "name": "BELT RIBBED",
+    "name": "BELT RIBBED - 8PK1575HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "GOODYEAR",
     "quantity": 2,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1575.jpg"
+    "image": "PK-08PK1575.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1580",
-    "name": "BELT RIBBBED",
+    "name": "BELT RIBBBED - 8PK1580HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "NEWSTAR",
     "quantity": 2,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1580.jpg"
+    "image": "PK-08PK1580.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1700HD",
-    "name": "BELT FAN RIBBED",
+    "name": "BELT FAN RIBBED - 8PK1700HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
     "quantity": 6,
     "dateAdded": "2025-05-15T07:13:09.966Z",
-    "image": "PK-08PK1700HD.jpg"
+    "image": "PK-08PK1700HD.jpg",
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "PK-08PK1890",
-    "name": "BELT FAN RIBBED - 8PK1890",
+    "name": "BELT FAN RIBBED - 8PK1890HD",
     "description": "B-SERIES",
     "category": "FAN DRIVE",
     "extraNotes": "DAYCO",
@@ -2088,13 +2094,14 @@
   },
   {
     "stockCode": "CUM3910810",
-    "name": "LOVER ROCKER [ EXHAUST ]",
+    "name": "LEVER ROCKER [ EXHAUST ]",
     "description": "B-SERIES [ 6 CYL ]",
     "category": "ROCKER LEVER",
     "extraNotes": "FP DIESEL",
     "quantity": 1,
+    "dateAdded": "2025-05-22T10:27:03.144Z",
     "image": "CUM3910810.jpg",
-    "dateAdded": "2025-05-22T10:27:03.144Z"
+    "imageUpdatedAt": null
   },
   {
     "stockCode": "CUM3910903-AKM",
@@ -2236,5 +2243,529 @@
     "quantity": 1,
     "image": "CUM4955862-FED.jpg",
     "dateAdded": "2025-05-22T11:55:46.371Z"
+  },
+  {
+    "stockCode": "CUM3034663",
+    "name": "SHIM LINER [ .020MM - .008MM ]",
+    "description": "ISM | L10 | M11",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "P.A.I.",
+    "quantity": 4,
+    "image": "CUM3034663.jpg",
+    "dateAdded": "2025-05-22T17:58:25.409Z"
+  },
+  {
+    "stockCode": "CUM3037425",
+    "name": "BELT ALTERNATOR",
+    "description": "L10 | M11",
+    "category": "ALTERNATOR",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3037425.jpg",
+    "dateAdded": "2025-05-22T18:01:41.566Z"
+  },
+  {
+    "stockCode": "CUM3037425-CUM",
+    "name": "BELT ALTERNATOR",
+    "description": "L10 | M11",
+    "category": "ALTERNATOR",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM3037425-CUM.jpg",
+    "dateAdded": "2025-05-22T18:03:17.959Z"
+  },
+  {
+    "stockCode": "CUM3059408-PAI",
+    "name": "THERMOSTAT OIL COOLER",
+    "description": "L10 | M11 | N14",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3059408-PAI.jpg",
+    "dateAdded": "2025-05-22T18:05:16.431Z"
+  },
+  {
+    "stockCode": "CUM3063843",
+    "name": "PIN PISTON",
+    "description": "L10 | M11 | ISM",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "P.A.I.",
+    "quantity": 6,
+    "image": "CUM3063843.jpg",
+    "dateAdded": "2025-05-22T18:07:15.647Z"
+  },
+  {
+    "stockCode": "CUM3288645",
+    "name": "BELT RIBBED",
+    "description": "L10 | M11",
+    "category": "",
+    "extraNotes": "GATES",
+    "quantity": 1,
+    "image": "CUM3288645.jpg",
+    "dateAdded": "2025-05-22T18:09:59.613Z"
+  },
+  {
+    "stockCode": "CUM3800745AKM",
+    "name": "PUMP WATER",
+    "description": "M11 [ SHORT SHAFT ]",
+    "category": "PUMP WATER",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "dateAdded": "2025-05-22T18:12:12.254Z",
+    "image": "CUM3800745AKM.jpg",
+    "imageUpdatedAt": null
+  },
+  {
+    "stockCode": "CUM3803402-AKM",
+    "name": "PUMP WATER",
+    "description": "L10 | M11 [ 4 HOLE MOUNTING ]",
+    "category": "PUMP WATER",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3803402-AKM.jpg",
+    "dateAdded": "2025-05-22T18:14:32.760Z"
+  },
+  {
+    "stockCode": "CUM3803404-PAI",
+    "name": "GASKET SET LOWER",
+    "description": "L10 | M11",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3803404-PAI.jpg",
+    "dateAdded": "2025-05-22T18:16:02.246Z"
+  },
+  {
+    "stockCode": "CUM3803573-PAI",
+    "name": "KIT SEAL ALTERNATOR DRIVE",
+    "description": "L10 | M11",
+    "category": "ALTERNATOR",
+    "extraNotes": "P.A.I.",
+    "quantity": 2,
+    "image": "CUM3803573-PAI.jpg",
+    "dateAdded": "2025-05-22T18:18:05.563Z"
+  },
+  {
+    "stockCode": "CUM3803703-PAI",
+    "name": "KIT CYLINDER LINER [ LINER + O RING ]",
+    "description": "ISM | L10 | M11",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "P.A.I.",
+    "quantity": 5,
+    "image": "CUM3803703-PAI.jpg",
+    "dateAdded": "2025-05-22T18:20:02.264Z"
+  },
+  {
+    "stockCode": "CUM3803963-FED",
+    "name": "KIT CYLINDER",
+    "description": "L10 | M11",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "FP DIESEL",
+    "quantity": 6,
+    "image": "CUM3803963-FED.jpg",
+    "dateAdded": "2025-05-22T18:22:30.440Z"
+  },
+  {
+    "stockCode": "CUM3819760",
+    "name": "GASKET MANIFOLD EXHAUST",
+    "description": "L10 | M11",
+    "category": "MANIFOLD EXHAUST",
+    "extraNotes": "P.A.I.",
+    "quantity": 16,
+    "image": "CUM3819760.jpg",
+    "dateAdded": "2025-05-22T18:24:08.777Z"
+  },
+  {
+    "stockCode": "CUM3882590",
+    "name": "HOUSING FLYWHEEL",
+    "description": "ISM | L10 | M11",
+    "category": "FLYWHEEL HOUSING",
+    "extraNotes": "AKMI",
+    "quantity": 1,
+    "image": "CUM3882590.jpg",
+    "dateAdded": "2025-05-22T18:26:02.410Z"
+  },
+  {
+    "stockCode": "CUM3883287-PAI",
+    "name": "VALVE EXHAUST",
+    "description": "L10 | M11",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 8,
+    "image": "CUM3883287-PAI.jpg",
+    "dateAdded": "2025-05-22T18:27:48.624Z"
+  },
+  {
+    "stockCode": "CUM3895488",
+    "name": "ROLLER CAM FOLLOWER",
+    "description": "L10 | M11",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "CUM3895488.jpg",
+    "dateAdded": "2025-05-22T18:29:22.891Z"
+  },
+  {
+    "stockCode": "CUM4003950-FED",
+    "name": "PUMP OIL",
+    "description": "ISM | L10 | M11",
+    "category": "LUBE PUMP",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM4003950-FED.jpg",
+    "dateAdded": "2025-05-22T18:31:00.756Z"
+  },
+  {
+    "stockCode": "CUM4025126-FED",
+    "name": "KIT MAIN BEARING [ .010 ]",
+    "description": "L10 | M11",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "FP DIESEL",
+    "quantity": 2,
+    "image": "CUM4025126-FED.jpg",
+    "dateAdded": "2025-05-22T18:32:58.104Z"
+  },
+  {
+    "stockCode": "CUM4952630-PAI",
+    "name": "THERMOSTAT OIL COOLER",
+    "description": "ISM | L10 | M11",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM4952630-PAI.jpg",
+    "dateAdded": "2025-05-22T18:35:22.980Z"
+  },
+  {
+    "stockCode": "NAV3601218C2",
+    "name": "ARM PITMAN 9800 [ ISX ]",
+    "description": "9800 [ ISX ]",
+    "category": "",
+    "extraNotes": "NAVISTAR",
+    "quantity": 1,
+    "image": "NAV3601218C2.jpg",
+    "dateAdded": "2025-05-22T18:39:33.708Z"
+  },
+  {
+    "stockCode": "10PK1300HD",
+    "name": "BELT FAN - 10PK1300HD",
+    "description": "ERF [ ISX ]",
+    "category": "FAN DRIVE",
+    "extraNotes": "DAYCO",
+    "quantity": 1,
+    "dateAdded": "2025-05-22T18:46:04.008Z",
+    "image": "10PK1300HD.jpg",
+    "imageUpdatedAt": null
+  },
+  {
+    "stockCode": "CUM3535399-GB",
+    "name": "CLAMP TURBO",
+    "description": "ISX",
+    "category": "TURBOCHARGER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM3535399-GB.jpg",
+    "dateAdded": "2025-05-22T18:48:52.170Z"
+  },
+  {
+    "stockCode": "CUM3679714-GB",
+    "name": "CONNECTION OIL SUCTION OIL PAN FRONT",
+    "description": "ISX",
+    "category": "PAN OIL",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM3679714-GB.jpg",
+    "dateAdded": "2025-05-22T18:50:35.685Z"
+  },
+  {
+    "stockCode": "CUM4973532-PAI",
+    "name": "GASKET OIL COOLER",
+    "description": "ISX",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "P.A.I.",
+    "quantity": 7,
+    "image": "CUM4973532-PAI.jpg",
+    "dateAdded": "2025-05-22T18:52:34.295Z"
+  },
+  {
+    "stockCode": "CUM3558515",
+    "name": "GASKET POWER STEERING PUMP",
+    "description": "ISX | N14",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 9,
+    "image": "CUM3558515.jpg",
+    "dateAdded": "2025-05-22T18:54:26.265Z"
+  },
+  {
+    "stockCode": "CUM3680284",
+    "name": "GASKET PRESSURE ECM",
+    "description": "ISX",
+    "category": "",
+    "extraNotes": "P.A.I.",
+    "quantity": 1,
+    "image": "CUM3680284.jpg",
+    "dateAdded": "2025-05-22T18:57:15.936Z"
+  },
+  {
+    "stockCode": "CUM4955596-GB",
+    "name": "GASKET SET UPPER",
+    "description": "ISX [ INDUSTRIAL ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM4955596-GB.jpg",
+    "dateAdded": "2025-05-22T18:59:27.483Z"
+  },
+  {
+    "stockCode": "CUM4026657-FED",
+    "name": "GUIDE VALVE STEM",
+    "description": "ISM | ISX",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "FP DIESEL",
+    "quantity": 4,
+    "image": "CUM4026657-FED.jpg",
+    "dateAdded": "2025-05-22T19:02:36.519Z"
+  },
+  {
+    "stockCode": "CUM4952508",
+    "name": "HEAD OIL COOLER - DOUBLE",
+    "description": "ISX - DOUBLE",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM4952508.jpg",
+    "dateAdded": "2025-05-22T19:04:58.959Z"
+  },
+  {
+    "stockCode": "CUM4062567RX",
+    "name": "INJECTOR RECON",
+    "description": "ISX [ EARLY ]",
+    "category": "INJECTOR",
+    "extraNotes": "RECON",
+    "quantity": 1,
+    "image": "CUM4062567RX.jpg",
+    "dateAdded": "2025-05-22T19:07:05.105Z"
+  },
+  {
+    "stockCode": "CUM3680414-GB",
+    "name": "ISOLATOR NOISE VALVE COVER",
+    "description": "ISX",
+    "category": "VALVE COVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 11,
+    "image": "CUM3680414-GB.jpg",
+    "dateAdded": "2025-05-22T19:09:21.733Z"
+  },
+  {
+    "stockCode": "CUM4089845-FED",
+    "name": "KIT MAIN BEARING [ .010 ]",
+    "description": "ISX",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "FP DIESEL",
+    "quantity": 1,
+    "image": "CUM4089845-FED.jpg",
+    "dateAdded": "2025-05-22T19:12:09.642Z"
+  },
+  {
+    "stockCode": "CUM4089896-G",
+    "name": "KIT PISTON + RINGS [ MONOTHERM ]",
+    "description": "ISX",
+    "category": "CONNECTING ROD AND PISTON",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 4,
+    "image": "CUM4089896-G.jpg",
+    "dateAdded": "2025-05-22T19:14:33.258Z"
+  },
+  {
+    "stockCode": "CUM3413098",
+    "name": "LEVER ENGINE BRAKE",
+    "description": "ISX",
+    "category": "ROCKER LEVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "dateAdded": "2025-05-22T19:19:16.224Z",
+    "image": "CUM3413098.jpg",
+    "imageUpdatedAt": null
+  },
+  {
+    "stockCode": "CUM4298199",
+    "name": "LEVER ENGINE BRAKE",
+    "description": "ISX",
+    "category": "ROCKER LEVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM4298199.jpg",
+    "dateAdded": "2025-05-22T19:22:15.661Z"
+  },
+  {
+    "stockCode": "CUM4972817-CUM",
+    "name": "LEVER ROCKER EXHAUST [ REAR ]",
+    "description": "ISX",
+    "category": "ROCKER LEVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 3,
+    "image": "CUM4972817-CUM.jpg",
+    "dateAdded": "2025-05-22T19:24:51.133Z"
+  },
+  {
+    "stockCode": "CUM3680199-GB",
+    "name": "MANIFOLD EXHAUST [ CENTRE ]",
+    "description": "ISX - ARGOSY",
+    "category": "MANIFOLD EXHAUST",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM3680199-GB.jpg",
+    "dateAdded": "2025-05-22T19:26:39.862Z"
+  },
+  {
+    "stockCode": "CUM3679139",
+    "name": "O RING TURBO",
+    "description": "ISX",
+    "category": "TURBOCHARGER",
+    "extraNotes": "P.A.I.",
+    "quantity": 10,
+    "image": "CUM3679139.jpg",
+    "dateAdded": "2025-05-22T19:28:22.405Z"
+  },
+  {
+    "stockCode": "CUM3678756-PAI",
+    "name": "O RING OIL PUMP UP PIPE",
+    "description": "ISX",
+    "category": "PAN OIL",
+    "extraNotes": "P.A.I.",
+    "quantity": 3,
+    "image": "CUM3678756-PAI.jpg",
+    "dateAdded": "2025-05-22T19:30:06.012Z"
+  },
+  {
+    "stockCode": "PBT550391BXW",
+    "name": "POTENTIOMETER [ PETERBILT ]",
+    "description": "ISX",
+    "category": "",
+    "extraNotes": "",
+    "quantity": 2,
+    "image": "PBT550391BXW.jpg",
+    "dateAdded": "2025-05-22T19:32:12.486Z"
+  },
+  {
+    "stockCode": "CUM4059182",
+    "name": "SEAL RING GEAR COVER",
+    "description": "ISX",
+    "category": "FRONT GEAR COVER",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 2,
+    "image": "CUM4059182.jpg",
+    "dateAdded": "2025-05-22T19:33:51.519Z"
+  },
+  {
+    "stockCode": "CUM3678737-GB",
+    "name": "SEAL RING LINER [ BLACK ]",
+    "description": "ISX",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 12,
+    "image": "CUM3678737-GB.jpg",
+    "dateAdded": "2025-05-22T19:37:00.449Z"
+  },
+  {
+    "stockCode": "CUM3678737-MCB",
+    "name": "SEAL RING LINER [ PINK ]",
+    "description": "ISX",
+    "category": "CYLINDER BLOCK",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 6,
+    "image": "CUM3678737-MCB.jpg",
+    "dateAdded": "2025-05-22T19:38:47.687Z"
+  },
+  {
+    "stockCode": "CUM3335548",
+    "name": "SEAL THERMOSTAT",
+    "description": "N14 | ISX",
+    "category": "THERMOSTAT",
+    "extraNotes": "P.A.I.",
+    "quantity": 17,
+    "image": "CUM3335548.jpg",
+    "dateAdded": "2025-05-22T19:40:27.174Z"
+  },
+  {
+    "stockCode": "CUM4312008-FED",
+    "name": "SEAL VALVE STEM",
+    "description": "ISX [ EARLY TYPE - FLAT ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "FP DIESEL",
+    "quantity": 72,
+    "image": "CUM4312008-FED.jpg",
+    "dateAdded": "2025-05-22T19:43:58.380Z"
+  },
+  {
+    "stockCode": "CUM4026791-PAI",
+    "name": "SEAL VALVE STEM",
+    "description": "ISX [ EARLY TYPE ]",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 24,
+    "image": "CUM4026791-PAI.jpg",
+    "dateAdded": "2025-05-22T19:45:55.946Z"
+  },
+  {
+    "stockCode": "CUM3679445-PAI",
+    "name": "SPACER BOLT EXHAUST MANIFOLD",
+    "description": "ISX",
+    "category": "MANIFOLD EXHAUST",
+    "extraNotes": "P.A.I.",
+    "quantity": 12,
+    "image": "CUM3679445-PAI.jpg",
+    "dateAdded": "2025-05-22T19:47:44.447Z"
+  },
+  {
+    "stockCode": "NAV3544262C2",
+    "name": "SUPPORT FAN BRACKET [ RHS ]",
+    "description": "9800 [ ISX ]",
+    "category": "FAN DRIVE",
+    "extraNotes": "NAVISTAR",
+    "quantity": 1,
+    "image": "default.jpg",
+    "dateAdded": "2025-05-22T19:49:51.070Z"
+  },
+  {
+    "stockCode": "CUM4952629-MCB",
+    "name": "THERMOSTAT OIL COOLER",
+    "description": "ISX",
+    "category": "ENGINE OIL COOLER",
+    "extraNotes": "INTERSTATE MCBEE",
+    "quantity": 7,
+    "image": "CUM4952629-MCB.jpg",
+    "dateAdded": "2025-05-22T19:51:16.802Z"
+  },
+  {
+    "stockCode": "CUM4010077-GB",
+    "name": "VALVE CHECK NON RETURN",
+    "description": "ISX",
+    "category": "",
+    "extraNotes": "GENUINE CUMMINS",
+    "quantity": 1,
+    "image": "CUM4010077-GB.jpg",
+    "dateAdded": "2025-05-22T19:53:02.931Z"
+  },
+  {
+    "stockCode": "CUM4101454-PAI",
+    "name": "VALVE EXHAUST",
+    "description": "ISX",
+    "category": "CYLINDER HEAD",
+    "extraNotes": "P.A.I.",
+    "quantity": 11,
+    "dateAdded": "2025-05-22T19:54:26.517Z",
+    "image": "CUM4101454-PAI.jpg",
+    "imageUpdatedAt": "2025-05-22T19:55:00.622Z"
+  },
+  {
+    "stockCode": "NAV3544415C91",
+    "name": "YOKE INPUT REAR REAR",
+    "description": "9800 ISX",
+    "category": "",
+    "extraNotes": "NAVISTAR",
+    "quantity": 2,
+    "image": "NAV3544415C91.jpg",
+    "dateAdded": "2025-05-22T19:56:58.358Z"
   }
 ]

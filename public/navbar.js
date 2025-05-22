@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <li><a href="products-edit.html" class="admin-only">Admin</a></li>
         <li><a href="categories.html" class="admin-only">Category Admin</a></li>
         <li><a href="messages.html" class="admin-only">View Messages</a></li>
+        <li><a href="cleanup-stockcodes.html" class="admin-only">🧹 Cleanup Stock Codes</a></li>
+        <li><a href="cleanup-images.html" class="admin-only">🖼️ Cleanup Images</a></li>
       </ul>
     </nav>
     <div class="spacer"></div>

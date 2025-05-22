@@ -1,0 +1,67 @@
+/* === Cleanup Images Page Styles === */
+
+body {
+    background-color: #f5faff;
+    font-family: "Segoe UI", sans-serif;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #007acc;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1.2rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: disc inside;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+#deletedImagesList h3 {
+    color: #007acc;
+}
+
+#deletedList,
+#deletedImagesList {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#deletedList h3,
+#deletedImagesList h3 {
+    color: #007acc;
+    margin-bottom: 1rem;
+}
+
+#deletedList ul,
+#deletedImagesList ul {
+    list-style: none;
+    padding: 0;
+}

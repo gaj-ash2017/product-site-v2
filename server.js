@@ -425,6 +425,104 @@ app.get("/messages.json", (req, res) => {
   res.sendFile(path.join(__dirname, "messages.json"));
 });
 
+// === CLEANUP UNUSED STOCK CODES ===
+
+// Utility: Load and save products
+function loadProducts() {
+  try {
+    const data = fs.readFileSync(productsFile, "utf-8");
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+}
+
+function saveProducts(products) {
+  fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
+}
+
+// 1. Get products with invalid/empty/malformed stock codes
+app.get("/api/unused-stockcodes", (req, res) => {
+  const products = loadProducts();
+  const unused = products.filter(
+    (p) => !p.stockCode || p.stockCode.trim() === "" || /[^a-zA-Z0-9_-]/.test(p.stockCode)
+  );
+  res.json(unused);
+});
+
+// 2. Delete product by stock code
+app.delete("/api/delete-product-by-stockcode/:code", (req, res) => {
+  const stockCode = req.params.code.trim();
+  let products = loadProducts();
+  const product = products.find((p) => p.stockCode === stockCode);
+  if (!product) return res.status(404).send("Product not found");
+
+  products = products.filter((p) => p.stockCode !== stockCode);
+  saveProducts(products);
+
+  // Remove image if needed
+  const img = product.image;
+  const imgPath = path.join(__dirname, "public", "uploads", img);
+  if (img && img !== "default.jpg" && fs.existsSync(imgPath)) {
+    fs.unlinkSync(imgPath);
+  }
+
+  res.json({ success: true, deleted: stockCode });
+});
+
+// 3. Bulk delete unused stock code entries
+app.post("/api/cleanup-unused-stockcodes", (req, res) => {
+  let products = loadProducts();
+  const unused = products.filter(
+    (p) => !p.stockCode || p.stockCode.trim() === "" || /[^a-zA-Z0-9_-]/.test(p.stockCode)
+  );
+  const remaining = products.filter(
+    (p) => p.stockCode && p.stockCode.trim() !== "" && !/[^a-zA-Z0-9_-]/.test(p.stockCode)
+  );
+
+  saveProducts(remaining);
+
+  // Delete their images
+  const deleted = [];
+  unused.forEach((p) => {
+    if (p.image && p.image !== "default.jpg") {
+      const imgPath = path.join(__dirname, "public", "uploads", p.image);
+      if (fs.existsSync(imgPath)) {
+        fs.unlinkSync(imgPath);
+      }
+    }
+    deleted.push(p.stockCode);
+  });
+
+  res.json({ success: true, deleted });
+});
+
+// === SAVE CLEANUP LOG TO SERVER ===
+const logsDir = path.join(__dirname, "logs");
+if (!fs.existsSync(logsDir)) fs.mkdirSync(logsDir);
+
+app.post("/api/save-cleanup-log", (req, res) => {
+  const { filename, items } = req.body;
+  console.log("🛠️ Log Request Received:", { filename, items });
+
+  if (!filename || !Array.isArray(items)) {
+    console.error("❌ Invalid log request");
+    return res.status(400).send("Invalid filename or data.");
+  }
+
+  const safeName = filename.replace(/[^a-z0-9_-]/gi, "_") + ".txt";
+  const logPath = path.join(logsDir, safeName);
+
+  fs.writeFile(logPath, items.join("\n"), (err) => {
+    if (err) {
+      console.error("❌ Failed to write log file:", err);
+      return res.status(500).send("Failed to save log.");
+    }
+    console.log(`✅ Log written: ${safeName}`);
+    res.send(`✅ Log saved to logs/${safeName}`);
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log("💡 Tip: Use 'nodemon server.js' so your changes auto-refresh!");
