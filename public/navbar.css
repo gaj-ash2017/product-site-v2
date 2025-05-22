@@ -87,6 +87,7 @@ body {
     cursor: pointer;
 }
 
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -96,20 +97,27 @@ body {
     }
 
     .main-navbar {
-        position: relative;
+        position: fixed;
+        top: 80px;
+        /* header height */
+        left: 0;
+        width: 100%;
+        z-index: 2000;
     }
 
     .navbar-menu {
         display: none;
         flex-direction: column;
         background: #007acc;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
+        /* below header */
         left: 0;
         width: 100%;
-        max-height: 80vh;
+        height: calc(100vh - 80px);
+        /* full screen minus header */
         overflow-y: auto;
-        z-index: 2000;
+        z-index: 9999;
         padding: 1rem 0;
     }
 
