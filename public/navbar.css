@@ -20,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 9999;
-        /* was 1000 before, bump it up */
+    /* was 1000 before, bump it up */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -90,7 +90,25 @@ body {
 
 .spacer {
     height: 75px;
-    /* 80px header + ~60px navbar on mobile */ }
+    /* 80px header + ~60px navbar on mobile */
+}
+
+.hamburger-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.close-menu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .close-menu {
+        display: block;
+    } }
 
 @media (max-width: 768px) {
     .hamburger {
@@ -136,4 +154,5 @@ body {
 
     .company-name {
         text-align: center;
-    } }
+    }
+}

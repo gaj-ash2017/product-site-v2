@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <div>T/A Just Parts</div>
           <div>Heavy Duty Spares</div>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger-controls">
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <div class="close-menu" id="closeMenu">&times;</div>
+</div>
       </div>
     </header>
 
@@ -32,11 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="spacer"></div>
   `;
 
-  // Mobile toggle
   const hamburger = document.getElementById("hamburger");
+  const closeMenu = document.getElementById("closeMenu");
   const menu = document.querySelector(".navbar-menu");
+
+  // Show menu
   hamburger?.addEventListener("click", () => {
-    menu.classList.toggle("show");
+    menu.classList.add("show");
+  });
+
+  // Hide menu
+  closeMenu?.addEventListener("click", () => {
+    menu.classList.remove("show");
+  });
+
+  // Auto-collapse after clicking a menu item
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
   });
 
   // Admin hide logic
