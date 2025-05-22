@@ -41,6 +41,7 @@ body {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.2;
+    text-align: left;
 }
 
 /* === NAVBAR === */
@@ -80,7 +81,7 @@ body {
 /* === SPACER === */
 .spacer {
     height: 140px;
-    /* 80px header + room for navbar on mobile */
+    /* Makes space for fixed header + navbar */
 }
 
 /* === HAMBURGER CONTROLS === */
@@ -89,7 +90,7 @@ body {
     gap: 1rem;
 }
 
-/* Hide both icons by default */
+/* Default hidden on desktop */
 .hamburger,
 .close-menu {
     display: none;
@@ -105,7 +106,6 @@ body {
         gap: 1rem;
     }
 
-    /* Show hamburger by default, hide close icon */
     .hamburger {
         display: block;
     }
@@ -114,7 +114,6 @@ body {
         display: none;
     }
 
-    /* When menu is open, swap icons */
     .hamburger-controls.menu-open .hamburger {
         display: none;
     }
@@ -156,5 +155,4 @@ body {
 
     .company-name {
         text-align: center;
-    }
-}
+    } }

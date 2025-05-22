@@ -38,22 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const closeMenu = document.getElementById("closeMenu");
   const menu = document.querySelector(".navbar-menu");
+  const hamburgerControls = document.querySelector(".hamburger-controls");
 
-  // Show menu
   hamburger?.addEventListener("click", () => {
     menu.classList.add("show");
+    hamburgerControls.classList.add("menu-open");
   });
 
-  // Hide menu
   closeMenu?.addEventListener("click", () => {
     menu.classList.remove("show");
-  });
-
-  // Auto-collapse after clicking a menu item
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
+    hamburgerControls.classList.remove("menu-open");
   });
 
   // Admin hide logic
