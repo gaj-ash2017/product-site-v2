@@ -10,7 +10,6 @@ body {
 }
 
 /* === HEADER === */
-/* === HEADER === */
 .site-header {
     background: #0d6efd;
     color: white;
@@ -20,7 +19,6 @@ body {
     left: 0;
     width: 100%;
     z-index: 9999;
-    /* was 1000 before, bump it up */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,10 +49,9 @@ body {
     padding: 0.75rem 1rem;
     position: fixed;
     top: 80px;
-    /* height of the header */
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 2000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -80,24 +77,20 @@ body {
     border-radius: 5px;
 }
 
-/* === HAMBURGER === */
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
+/* === SPACER === */
 .spacer {
-    height: 75px;
-    /* 80px header + ~60px navbar on mobile */
+    height: 140px;
+    /* 80px header + room for navbar on mobile */
 }
 
+/* === HAMBURGER CONTROLS === */
 .hamburger-controls {
     display: flex;
     gap: 1rem;
 }
 
+/* Hide both icons by default */
+.hamburger,
 .close-menu {
     display: none;
     font-size: 2rem;
@@ -105,23 +98,34 @@ body {
     cursor: pointer;
 }
 
+/* === MOBILE === */
 @media (max-width: 768px) {
-    .close-menu {
-        display: block;
-    } }
+    .hamburger-controls {
+        display: flex;
+        gap: 1rem;
+    }
 
-@media (max-width: 768px) {
+    /* Show hamburger by default, hide close icon */
     .hamburger {
         display: block;
-        font-size: 2rem;
-        z-index: 2001;
-        position: relative;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    /* When menu is open, swap icons */
+    .hamburger-controls.menu-open .hamburger {
+        display: none;
+    }
+
+    .hamburger-controls.menu-open .close-menu {
+        display: block;
     }
 
     .main-navbar {
         position: fixed;
         top: 80px;
-        /* header height */
         left: 0;
         width: 100%;
         z-index: 2000;
@@ -133,11 +137,9 @@ body {
         background: #007acc;
         position: fixed;
         top: 80px;
-        /* below header */
         left: 0;
         width: 100%;
         height: calc(100vh - 80px);
-        /* full screen minus header */
         overflow-y: auto;
         z-index: 9999;
         padding: 1rem 0;
