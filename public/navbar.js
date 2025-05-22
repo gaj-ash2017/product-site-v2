@@ -1,21 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const currentPage = window.location.pathname.split("/").pop();
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarContainer = document.getElementById("navbar");
+  if (!navbarContainer) return;
 
-  const header = `
+  navbarContainer.innerHTML = `
     <header class="site-header">
       <div class="logo-area">
         <img src="./images/9800i.jpeg" alt="Logo" class="logo" />
         <div class="company-name">
-          <div>ASHWIN GAJAN</div>
-          <div>T/A JUST PARTS</div>
-          <div>Specialising in Heavy Duty American Truck Parts</div>
+          <div>Ashwin Gajan</div>
+          <div>T/A Just Parts</div>
+          <div>Heavy Duty Spares</div>
         </div>
         <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
     </header>
-  `;
 
-  const navbar = `
     <nav class="main-navbar" id="mainNavbar">
       <ul class="navbar-menu">
         <li><a href="index.html">Home</a></li>
@@ -33,30 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="spacer"></div>
   `;
 
-  const navbarContainer = document.getElementById("navbar");
-  if (navbarContainer) {
-    navbarContainer.innerHTML = header + navbar;
+  // Mobile toggle
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".navbar-menu");
+  hamburger?.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
 
-    const links = navbarContainer.querySelectorAll(".navbar-menu a");
-    links.forEach((link) => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
+  // Admin hide logic
+  const isAdmin =
+    window.location.hostname.includes("localhost") ||
+    window.location.hostname.includes("admin");
+  if (!isAdmin) {
+    document.querySelectorAll(".admin-only").forEach((el) => {
+      el.style.display = "none";
     });
-
-    const hamburger = document.getElementById("hamburger");
-    const navbarMenu = document.querySelector(".navbar-menu");
-    hamburger.addEventListener("click", () => {
-      navbarMenu.classList.toggle("show");
-    });
-
-    const isAdmin =
-      window.location.hostname.includes("localhost") ||
-      window.location.hostname.includes("admin");
-    if (!isAdmin) {
-      document
-        .querySelectorAll(".admin-only")
-        .forEach((el) => (el.style.display = "none"));
-    }
   }
 });
