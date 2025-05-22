@@ -87,24 +87,27 @@ body {
     cursor: pointer;
 }
 
-/* === MOBILE === */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        z-index: 2001;
+        position: relative;
     }
 
     .navbar-menu {
         display: none;
         flex-direction: column;
         background: #007acc;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        margin-top: 1rem;
+        z-index: 2000;
 
-        /* NEW! Make the menu scrollable */
+        /* Make it scrollable */
         max-height: 80vh;
         overflow-y: auto;
-        padding-bottom: 1rem;
-        z-index: 1000;
+        padding: 1rem 0;
     }
 
     .navbar-menu.show {
@@ -118,10 +121,4 @@ body {
 
     .company-name {
         text-align: center;
-    }
-}
-
-/* === SPACER === */
-.spacer {
-    height: 75px;
-}
+    } }
