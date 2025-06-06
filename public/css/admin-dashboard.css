@@ -1,0 +1,136 @@
+/* === Admin Dashboard Styles === */
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4faff;
+    margin: 0;
+    padding: 2rem;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+.subheading {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 200px;
+    max-width: 350px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #007acc;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.quick-actions {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.quick-actions h2 {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.action-btn {
+    display: inline-block;
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-card {
+    background: #f9f9f9;
+    border-left: 5px solid #0d6efd;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.dashboard-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+#lastCleanupText {
+    font-size: 1rem;
+    color: #444;
+    cursor: help;
+}
+
+#lastCleanupText {
+    cursor: default;
+    /* or try cursor: help if you want a tooltip-style hint */
+}
+
+#cleanupClock {
+    cursor: default;
+}

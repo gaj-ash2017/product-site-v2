@@ -4,5 +4,8 @@
     "titleBar.activeBackground": "#014752",
     "titleBar.activeForeground": "#EDFCFF"
   },
-  "cSpell.words": ["Uncategorized"]
+  "cSpell.words": [
+    "Uncategorized"
+  ],
+  "editor.guides.bracketPairs": true
 }

@@ -1,0 +1,156 @@
+/* ✅ products-public.css */
+
+/* === Base Reset === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    height: 100%;
+}
+
+/* === Layout Container === */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === Sticky Top Controls === */
+.top-controls {
+    position: fixed;
+    top: 150px;
+    /* Header (90px) + navbar (60px) */
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 1rem 2rem;
+    z-index: 800;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.top-controls h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.top-controls label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.top-controls select,
+.top-controls input {
+    width: 300px;
+    max-width: 90%;
+    padding: 8px;
+    margin-top: 4px;
+    font-size: 1rem;
+}
+
+#productCount {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0a58ca;
+}
+
+/* Push product list down below top-controls */
+.right-panel {
+    margin-top: 325px;
+    /* Enough to clear header + navbar + top-controls */
+    padding: 20px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.product img {
+    display: block;
+    margin: 0 auto 12px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+}
+
+.product h3 {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #c1121f;
+}
+
+.product p {
+    font-size: 0.80rem;
+    margin: 4px 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.label {
+    width: 100px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.colon {
+    margin-right: 6px;
+    color: #666;
+}
+
+.value {
+    flex: 1;
+}
+
+.masked-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #060606;
+    background-color: greenyellow;
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.footnote {
+    background-color: #d0f7ae;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: blue;
+    text-align: center;
+    margin-top: 8px;
+    display: block;
+}

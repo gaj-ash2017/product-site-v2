@@ -1,0 +1,417 @@
+[
+  {
+    "id": "sub-3aabb5",
+    "name": "CONNECTING ROD AND PISTON",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-f92085",
+    "name": "ACCESSORY DRIVE PULLEY",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-80b2d8",
+    "name": "AFTERCOOLER PLUMBING",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-d7e4c7",
+    "name": "AIR INTAKE CONNECTION",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-50f8c4",
+    "name": "ALTERNATOR LOCATION",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-e6158f",
+    "name": "CAM FOLLOWER COVER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-3e58d1",
+    "name": "CAMSHAFT",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-37ee89",
+    "name": "CRANKSHAFT",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-50ef3e",
+    "name": "CYLINDER BLOCK",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-d9c2aa",
+    "name": "CYLINDER BLOCK COVER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-f5b5d1",
+    "name": "CYLINDER HEAD",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-83a147",
+    "name": "EXHAUST CONNECTION",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-c95a49",
+    "name": "EXHAUST MANIFOLD",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-f165f6",
+    "name": "FAN DRIVE",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-6da860",
+    "name": "FLYWHEEL",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-33b448",
+    "name": "FLYWHEEL HOUSING",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-8d35b7",
+    "name": "FRONT GEAR COVER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-ae5560",
+    "name": "FUEL SYSTEM ACCESSORIES",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-9c23a0",
+    "name": "LUBRICATING OIL COOLER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-6b69ac",
+    "name": "LUBRICATING OIL PUMP",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-64a5b9",
+    "name": "MECHANICAL TACH DRIVE",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-0b2478",
+    "name": "OIL LEVEL GAUGE",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-dc8f34",
+    "name": "OIL PAN",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-8a42a1",
+    "name": "PUMP WATER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-448994",
+    "name": "ROCKER LEVERS",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-116155",
+    "name": "GASKET SETS",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-572fcc",
+    "name": "THERMOSTAT",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-836322",
+    "name": "THERMOSTAT HOUSING",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-d35914",
+    "name": "TURBOCHARGER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-c550b4",
+    "name": "TURBOCHARGER LOCATION",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-a720ca",
+    "name": "TURBOCHARGER PLUMBING",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-1b9b81",
+    "name": "VALVE COVER",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-3c2a05",
+    "name": "VALVE TAPPET",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-d38700",
+    "name": "WATER INLET CONNECTION",
+    "mainCategory": "B-SERIES"
+  },
+  {
+    "id": "sub-506bb6",
+    "name": "AIR COMPRESSOR",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-3c02fe",
+    "name": "AIR INTAKE CONNECTION",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-987aa1",
+    "name": "AIR TRANSFER CONNECTION",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-fe738f",
+    "name": "ALTERNATOR MOUNTING",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-4dab30",
+    "name": "CAMSHAFT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-fef033",
+    "name": "CRANKSHAFT BREATHER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-8e9c24",
+    "name": "CRANKSHAFT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-c96570",
+    "name": "CYLINDER BLOCK",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-7b2899",
+    "name": "CYLINDER HEAD AND CAM BUSHES",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-5d8e9b",
+    "name": "CYLINDER LINER KIT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-e4bfc6",
+    "name": "ELECTRICAL ACCESSORIES",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-3b2d24",
+    "name": "ELECTRONIC CONTROL MODULE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-70ea15",
+    "name": "ENGINE CONTROL MODULE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-d19490",
+    "name": "ENGINE MONITORING SYSTEM",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-f77bd4",
+    "name": "ENGINE OIL COOLER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-5be619",
+    "name": "ENGINE PISTON",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-cde456",
+    "name": "FAN DRIVE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-7f7f25",
+    "name": "FLYWHEEL",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-6e93b8",
+    "name": "FLYWHEEL HOUSING",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-5e2062",
+    "name": "FRONT ENGINE SUPPORT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-75a708",
+    "name": "FRONT GEAR COVER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-bf8a9d",
+    "name": "FUEL CONTROL MODULE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-6a495a",
+    "name": "GASKET SETS",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-aaf4bf",
+    "name": "GEAR HOUSING / IDLER GEARS",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-5ff53c",
+    "name": "INJECTOR",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-98f209",
+    "name": "LIFITING ARRANGEMENT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-e07d44",
+    "name": "LUBE OIL PUMP",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-7099e2",
+    "name": "OIL FILLER ARRANGEMENT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-2a3cff",
+    "name": "OIL LEVEL GAUGE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-d902fb",
+    "name": "OIL PAN",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-bacec3",
+    "name": "ENGINE OIL COOLER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-365535",
+    "name": "PISTON COOLING NOZZLE",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-465b04",
+    "name": "ROCKER LEVER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-805621",
+    "name": "STARTING MOTOR",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-426149",
+    "name": "STARTING MOTOR MOUNTING",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-e17688",
+    "name": "THERMOSTAT",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-02f22e",
+    "name": "THERMOSTAT HOUSING",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-048a23",
+    "name": "TURBOCHARGER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-babded",
+    "name": "TURBOCHARGER ARRANGEMENT EXHAUST MANIFOLD",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-9a75b4",
+    "name": "TURBOCHARGER PLUMBING",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-399cff",
+    "name": "VALVE COVER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-124c6b",
+    "name": "VIBRATION DAMPER",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-10347f",
+    "name": "WATER INLET CONNECTION",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-a4bfbf",
+    "name": "WATER PUMP",
+    "mainCategory": "ISX"
+  },
+  {
+    "id": "sub-e29e71",
+    "name": "ACCESSORY DRIVE",
+    "mainCategory": "BIG CAM"
+  },
+  {
+    "id": "1749144771581",
+    "name": "GASKET SETS",
+    "mainCategory": "ISB4"
+  },
+  {
+    "id": "1749146600104",
+    "name": "GASKET SETS",
+    "mainCategory": "ISBE"
+  },
+  {
+    "id": "1749146708690",
+    "name": "GASKET SETS",
+    "mainCategory": "NH220"
+  },
+  {
+    "id": "1749151792933",
+    "name": "GASKET SETS",
+    "mainCategory": "QSL9"
+  }
+]

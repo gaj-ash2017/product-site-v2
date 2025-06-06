@@ -1,0 +1,84 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+form#editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left-panel label,
+.right-panel label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.left-panel input,
+.left-panel textarea,
+.left-panel select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.image-section {
+  margin-top: 1rem;
+}
+
+.image-section img,
+#newImagePreview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+}
+
+.form-buttons {
+  margin-top: 1.5rem;
+}
+
+.form-buttons .btn {
+  padding: 0.5rem 1.2rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive: Stack panels on small screens */
+@media (max-width: 768px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+}

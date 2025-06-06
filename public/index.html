@@ -4,64 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <!-- 🧭 Navbar will be inserted here -->
+    <!-- 🧭 NAVBAR SECTION - DISPLAY THE NAVBAR FROM JAVASCRIPT -->
     <div id="navbar"></div>
-  <script src="navbar.js"></script>
+    <script src="./js/navbar.js"></script>
 
-  <div class="page-content">
-    
-    <!-- more content -->
-  
+    <!-- PAGE CONTENT STARTS -->
+    <div class="page-content">
+      <section class="hero">
+        <h2>Welcome to our Website</h2>
+        <p>Delivering quality products with speed and care.</p>
+        <button onclick="location.href='products.html'">View Products</button>
+      </section>
 
-    <section class="hero">
-      <h2>Welcome to our Website</h2>
-      <p>Delivering quality products with speed and care.</p>
-      <button onclick="location.href='products.html'">View Products</button>
-    </section>
-
-    <!-- FEATURE CARDS DISPLAY -->
-    <section class="features-section">
-      <h2>Our Highlights</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <img src="images/cummins.png" alt="Cummins" />
-          <div class="caption">Cummins</div>
+      <!-- FEATURE CARDS DISPLAY -->
+      <section class="features-section">
+        <h2>Our Highlights</h2>
+        <!-- FEATURE CARDS GRID STARTS -->
+        <div class="features-grid">
+          <!-- FEATURE CARD 1 STARTS -->
+          <div class="feature-card">
+            <img src="images/cummins.png" alt="Cummins" />
+            <div class="caption">Cummins</div>
+          </div>
+          <!-- FEATURE CARD 1 ENDS -->
+          <!-- FEATURE CARD 2 STARTS -->
+          <div class="feature-card">
+            <img src="images/navistar.png" alt="Navistar" />
+            <div class="caption">Navistar International</div>
+          </div>
+          <!-- FEATURE CARD 2 ENDS -->
+          <!-- FEATURE CARD 3 STARTS -->
+          <div class="feature-card">
+            <img src="images/automann.png" alt="Automann" />
+            <div class="caption">Automann</div>
+          </div>
+          <!-- FEATURE CARD 3 ENDS -->
+          <!-- FEATURE CARD 4 STARTS -->
+          <div class="feature-card">
+            <img src="images/fp-diesel.jpeg" alt="FP Diesel" />
+            <div class="caption">FP Diesel</div>
+          </div>
+          <!-- FEATURE CARD 4 ENDS -->
+          <!-- FEATURE CARD 5 STARTS -->
+          <div class="feature-card">
+            <img src="images/mcbee.png" alt="Interstate McBee" />
+            <div class="caption">Interstate McBee</div>
+          </div>
+          <!-- FEATURE CARD 5 ENDS -->
+          <!-- FEATURE CARD 6 STARTS -->
+          <div class="feature-card">
+            <img src="images/pai.jpeg" alt="P.A.I." />
+            <div class="caption">P.A.I.</div>
+          </div>
+          <!-- FEATURE CARD 6 ENDS -->
+          <!-- FEATURE CARD 7 STARTS -->
+          <div class="feature-card">
+            <img src="images/dayco.png" alt="DAYCO" />
+            <div class="caption">DAYCO</div>
+          </div>
+          <!-- FEATURE CARD 7 ENDS -->
         </div>
-        <div class="feature-card">
-          <img src="images/navistar.png" alt="Navistar" />
-          <div class="caption">Navistar International</div>
-        </div>
-        <div class="feature-card">
-          <img src="images/automann.png" alt="Automann" />
-          <div class="caption">Automann</div>
-        </div>
-        <div class="feature-card">
-          <img src="images/fp-diesel.jpeg" alt="Feature 4" />
-          <div class="caption">FP Diesel</div>
-        </div>
-        <div class="feature-card">
-          <img src="images/mcbee.png" alt="Feature 5" />
-          <div class="caption">Interstate McBee</div>
-        </div>
-        <div class="feature-card">
-          <img src="images/pai.jpeg" alt="Feature 6" />
-          <div class="caption">P.A.I.</div>
-        </div>
-        <div class="feature-card">
-          <img src="images/dayco.png" alt="Feature 6" />
-          <div class="caption">DAYCO</div>
-        </div>
-      </div>
-    </section>
-  </div>
-
+        <!-- FEATURE CARDS GRID ENDS -->
+      </section>
+    </div>
+    <!-- PAGE CONTENT ENDS -->
+    <!-- FOOTER SECTION STARTS -->
     <footer id="contact">
       <p>&copy; 2025 Ashwin Gajan T/A Just Parts. All rights reserved.</p>
     </footer>
+    <!-- FOOTER SECTION ENDS -->
   </body>
 </html>

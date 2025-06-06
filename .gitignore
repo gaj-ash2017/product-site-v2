@@ -10,3 +10,7 @@ package-lock.json
 # VS Code, Mac system files, etc.
 .DS_Store
 *.log
+
+# Admin Files
+# .gitignore
+public/admin/

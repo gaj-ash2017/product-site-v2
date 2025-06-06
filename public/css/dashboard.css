@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f8;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.tab-bar {
+  display: flex;
+  background-color: #2e86de;
+  padding: 0;
+}
+
+.tab-button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 14px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #1b4f72;
+}
+
+.tab-button.active {
+  background-color: #145a96;
+  font-weight: bold;
+}
+
+.tab-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/**/
+.import-export-panel {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.import-controls,
+.export-controls {
+  margin-bottom: 20px;
+}
+
+#importFileTab2 {
+  margin-right: 10px;
+}
+/**/
+.cleanup-panel {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.cleanup-panel button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cleanup-panel button:hover {
+  background-color: #ca6f1e;
+}
+
+.cleanup-result {
+  margin-top: 20px;
+  background-color: #fef6e4;
+  border-left: 4px solid #f39c12;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+/**/
+.missing-image-list {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.missing-image-card {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background: #fff3cd;
+  border-left: 4px solid #f0ad4e;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.missing-image-card code {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.missing-image-card button {
+  background: #2e86de;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.missing-image-card button:hover {
+  background-color: #145a96;
+}
+/**/
