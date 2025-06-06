@@ -1631,9 +1631,9 @@
     "dateAdded": "2025/05/11 21:26",
     "image": "CUM3803738-AKM.jpg",
     "maskedCode": "EXD6196261_QAD",
-    "mainCategory": "N14",
-    "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "mainCategory": "Uncategorized",
+    "subCategory": "Uncategorized",
+    "lastUpdated": "2025-06-06T11:24:55.683Z",
     "imagePath": "/uploads/CUM3803738-AKM.jpg",
     "sourcePath": "/uploads/CUM3803738-AKM.jpg"
   },
@@ -1648,8 +1648,8 @@
     "image": "CUM3803903.jpg",
     "maskedCode": "EXD6196096",
     "mainCategory": "BIG CAM",
-    "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "subCategory": "Uncategorized",
+    "lastUpdated": "2025-06-06T11:26:09.148Z",
     "imagePath": "/uploads/CUM3803903.jpg",
     "sourcePath": "/uploads/CUM3803903.jpg"
   },
@@ -1828,11 +1828,11 @@
     "extraNotes": "FP DIESEL",
     "quantity": 4,
     "dateAdded": "2025/05/10 23:28",
-    "image": "3901306.jpg",
+    "image": "CUM3901306-FED.jpg",
     "imageUpdatedAt": null,
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
-    "imagePath": "/uploads/3901306.jpg",
-    "sourcePath": "/uploads/3901306.jpg"
+    "lastUpdated": "2025-06-06T11:27:00.981Z",
+    "imagePath": "/uploads/CUM3901306-FED.jpg",
+    "sourcePath": "/uploads/CUM3901306-FED.jpg"
   },
   {
     "stockCode": "CUM3901306-MCB",
@@ -1842,13 +1842,13 @@
     "extraNotes": "INTERSTATE MCBEE",
     "quantity": 8,
     "dateAdded": "2025/05/10 23:28",
-    "image": "3901306.jpg",
+    "image": "CUM3901306-MCB.jpg",
     "maskedCode": "EXD6098693_DEW",
     "mainCategory": "B-SERIES",
     "subCategory": "CYLINDER BLOCK",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
-    "imagePath": "/uploads/3901306.jpg",
-    "sourcePath": "/uploads/3901306.jpg"
+    "lastUpdated": "2025-06-06T11:27:19.904Z",
+    "imagePath": "/uploads/CUM3901306-MCB.jpg",
+    "sourcePath": "/uploads/CUM3901306-MCB.jpg"
   },
   {
     "stockCode": "CUM3901306-PAI",
@@ -1858,13 +1858,13 @@
     "extraNotes": "P.A.I.",
     "quantity": 8,
     "dateAdded": "2025/05/10 23:28",
-    "image": "3901306.jpg",
+    "image": "CUM3901306-PAI.jpg",
     "maskedCode": "EXD6098693_HQO",
     "mainCategory": "B-SERIES",
     "subCategory": "CYLINDER BLOCK",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
-    "imagePath": "/uploads/3901306.jpg",
-    "sourcePath": "/uploads/3901306.jpg"
+    "lastUpdated": "2025-06-06T11:27:37.152Z",
+    "imagePath": "/uploads/CUM3901306-PAI.jpg",
+    "sourcePath": "/uploads/CUM3901306-PAI.jpg"
   },
   {
     "stockCode": "CUM3901356-PAI",
@@ -2251,9 +2251,9 @@
     "dateAdded": "2025/05/11 21:26",
     "image": "CUM3923478-AKM.jpg",
     "maskedCode": "EXD6076521_QAD",
-    "mainCategory": "C-SERIES",
-    "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "mainCategory": "Uncategorized",
+    "subCategory": "Uncategorized",
+    "lastUpdated": "2025-06-06T11:28:27.672Z",
     "imagePath": "/uploads/CUM3923478-AKM.jpg",
     "sourcePath": "/uploads/CUM3923478-AKM.jpg"
   },
@@ -2301,7 +2301,7 @@
     "maskedCode": "EXD6070958",
     "mainCategory": "B-SERIES",
     "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "lastUpdated": "2025-06-06T11:29:10.930Z",
     "imagePath": "/uploads/CUM3929041.jpg",
     "sourcePath": "/uploads/CUM3929041.jpg"
   },
@@ -2317,7 +2317,7 @@
     "maskedCode": "EXD6070265",
     "mainCategory": "B-SERIES",
     "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "lastUpdated": "2025-06-06T11:30:00.794Z",
     "imagePath": "/uploads/CUM3929734.jpg",
     "sourcePath": "/uploads/CUM3929734.jpg"
   },
@@ -2333,7 +2333,7 @@
     "maskedCode": "EXD6070114",
     "mainCategory": "B-SERIES",
     "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "lastUpdated": "2025-06-06T11:30:41.838Z",
     "imagePath": "/uploads/CUM3929885.jpg",
     "sourcePath": "/uploads/CUM3929885.jpg"
   },
@@ -2349,7 +2349,7 @@
     "maskedCode": "EXD6070113_YTR",
     "mainCategory": "B-SERIES",
     "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "lastUpdated": "2025-06-06T11:31:17.733Z",
     "imagePath": "/uploads/CUM3929886-FED.jpg",
     "sourcePath": "/uploads/CUM3929886-FED.jpg"
   },
@@ -2445,9 +2445,9 @@
     "dateAdded": "2025/05/11 21:26",
     "image": "CUM3938163-PAI.jpg",
     "maskedCode": "EXD6061836_HQO",
-    "mainCategory": "QSC",
-    "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "mainCategory": "Uncategorized",
+    "subCategory": "Uncategorized",
+    "lastUpdated": "2025-06-06T11:31:55.329Z",
     "imagePath": "/uploads/CUM3938163-PAI.jpg",
     "sourcePath": "/uploads/CUM3938163-PAI.jpg"
   },
@@ -2509,13 +2509,13 @@
     "extraNotes": "FP DIESEL",
     "quantity": 3,
     "dateAdded": "2025/05/10 23:28",
-    "image": "3940059.jpg",
+    "image": "CUM3940059-FED.jpg",
     "maskedCode": "EXD6059940_YTR",
     "mainCategory": "B-SERIES",
     "subCategory": "CYLINDER BLOCK",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
-    "imagePath": "/uploads/3940059.jpg",
-    "sourcePath": "/uploads/3940059.jpg"
+    "lastUpdated": "2025-06-06T11:33:01.347Z",
+    "imagePath": "/uploads/CUM3940059-FED.jpg",
+    "sourcePath": "/uploads/CUM3940059-FED.jpg"
   },
   {
     "stockCode": "CUM3942915",
@@ -2709,9 +2709,9 @@
     "dateAdded": "2025/05/11 21:26",
     "image": "CUM4024849-AKM.jpg",
     "maskedCode": "EXD5975150_QAD",
-    "mainCategory": "N14",
-    "subCategory": "CAMSHAFT",
-    "lastUpdated": "2025-05-31T13:40:07.035Z",
+    "mainCategory": "Uncategorized",
+    "subCategory": "Uncategorized",
+    "lastUpdated": "2025-06-06T11:33:39.634Z",
     "imagePath": "/uploads/CUM4024849-AKM.jpg",
     "sourcePath": "/uploads/CUM4024849-AKM.jpg"
   },
